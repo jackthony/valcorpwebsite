@@ -1,0 +1,34 @@
+
+
+
+.content_img_proyecto{
+    width: 700px;
+    height: 500px;
+    background-image: url('../../../../public/assets/image.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    border: 5px solid #fff;
+}
+.precio_span{
+    padding: 5px 10px;
+    background-color: #91BF24;
+    color: #fff;
+}
+
+.content_proyecto_detalle{
+    width: 400px;
+    height: 250px;
+    border-radius: 0 0 15px 15px;
+} 
+
+.titulo_proyecto_detalle{
+    color: #2457A1;
+    font-size: 20px;
+}
+
+.wrapper_datalles span {
+    font-size: 15px;
+    color: #111;
+}

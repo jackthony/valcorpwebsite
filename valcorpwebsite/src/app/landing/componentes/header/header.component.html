@@ -1,4 +1,19 @@
-<mat-toolbar>
-    <span>Valcorp</span>
+<mat-toolbar class="container_nav">
+     <div class="logo">
+     </div>
+    <nav class="content_nav">
+        @for (link of links; track link) {
+            <a
+              [routerLink]="link.url"
+              routerLinkActive="bg-gray-navbarHover"
+              class="nav_link"
+            >
+              {{ link.title }}
+            </a>
+          }
+    </nav>
+    <div class="content_contact">
+        <span class="numero_contact">916 792 621</span>
+    </div>
   </mat-toolbar>
   

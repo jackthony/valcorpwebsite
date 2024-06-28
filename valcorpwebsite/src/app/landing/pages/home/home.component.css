@@ -1,0 +1,10 @@
+.container_home{
+    position: relative;
+    z-index: 100;
+    width: 100%;
+    height: 800px;
+    background-image: url('../../../../public/assets/homeImg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
