@@ -14,9 +14,9 @@ export class HeaderComponent {
   links = [
     { url: '/', title: 'Inicio' },
     { url: '/nosotros', title: 'Nosotros' },
-    { url: '/Proyectos', title: 'Proyectos' },
-    { url: '/Promociones', title: 'Nuestro Propósito' },
-    { url: '/Escribenos', title: 'Escribenos' },
+    { url: '/proyectos', title: 'Proyectos' },
+    { url: '/promociones', title: 'Nuestro Propósito' },
+    { url: '/escribenos', title: 'Escribenos' },
   ];
 }
    

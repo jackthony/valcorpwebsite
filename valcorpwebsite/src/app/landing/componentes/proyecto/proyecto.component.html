@@ -1,23 +1,24 @@
 <div class="containr_proyecto">
-    <div class="content_img_proyecto">
-        <span class="precio_span">Desde: S/ 51,899</span>
+    <div class="content_img_proyecto" [ngStyle]="{'background-image': 'url(' + urlImg + ')'}" > 
+        <span class="precio_span" [ngStyle]="{'background-color':colorIcono}">Desde: S/ 51,899</span>
+        <div class="logo_proyecto_marca" [ngStyle]="{'background-image': 'url(' + marcaAguaLogoProyecto + ')'}"></div>
      </div> 
      <div class="content_proyecto_detalle">
          <div class="wrapper_datalles">
-            <h3 class="titulo_proyecto_detalle">Urb. Villa Los Robles</h3>
+            <h3 class="titulo_proyecto_detalle">{{titulo}}</h3>
             <span>Chimbote</span>
             <div class="content_detalles_urb">
-                <div><fa-icon [icon]="casa"></fa-icon>
+                <div><fa-icon [icon]="casa"[ngStyle]="{'color' :colorIcono}"></fa-icon>
                     <p>Lotes desde: 75m</p></div>
                 <div>
-                    <fa-icon [icon]="casa"></fa-icon>
+                    <fa-icon [icon]="casa" [ngStyle]="{'color' :colorIcono}"></fa-icon>
                     <p>Hasta 60 meses - Sin interes</p>
                 </div>
             </div>
          </div>
          <div class="content_couta_precio">
              <span>Cuotas desde :</span>
-             <p>s/845</p>
+             <p class="precio_coutas" [ngStyle]="{'background-color':colorPrecio}">s/845</p>
          </div>
      </div>
 </div>

@@ -1,14 +1,27 @@
-import { Component } from '@angular/core';
+import { NgStyle } from '@angular/common';
+import { Component, Input, input } from '@angular/core';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-proyecto',
   standalone: true,
-  imports: [FontAwesomeModule],
+  imports: [FontAwesomeModule,NgStyle],
   templateUrl: './proyecto.component.html',
   styleUrl: './proyecto.component.scss'
 })
 export class ProyectoComponent {
+[x: string]: any;
+  
+  @Input() colorPrecio?: string ;
+  @Input() colorIcono?: string ;
+  @Input() urlImg?: string ;
+  @Input() titulo?: string ;
+  @Input() marcaAguaLogoProyecto?: string ;
+
+  
+
+
+
 
   casa = faHouseChimney;
 }

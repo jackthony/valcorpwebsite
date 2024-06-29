@@ -1,1 +1,7 @@
-<app-proyecto></app-proyecto>
+<section class="container_proyectos">
+    <h2>Nuestros Proyectos</h2>
+    @for (proyecto of ProyectosImg; track proyecto) {
+      <app-proyecto [colorPrecio]="proyecto.colorPrecio" [colorIcono]="proyecto.colorIcono" [urlImg]="proyecto.urlImg" [titulo]="proyecto.titulo" [marcaAguaLogoProyecto]="proyecto.marcaAguaLogoProyecto"></app-proyecto>
+         
+    }
+</section>
