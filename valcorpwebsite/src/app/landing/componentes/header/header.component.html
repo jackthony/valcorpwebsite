@@ -3,14 +3,29 @@
      </div>
     <nav class="content_nav">
         @for (link of links; track link) {
-            <a
-              [routerLink]="link.url"
-              routerLinkActive="bg-gray-navbarHover"
-              class="nav_link"
-            >
-              {{ link.title }}
-            </a>
+             @if (link.url) { 
+             <a
+             [routerLink]="link.url"
+             routerLinkActive="bg-gray-navbarHover"
+             class="nav_link"
+           >
+             {{ link.title }}
+           </a> }@else{
+            <button mat-button [matMenuTriggerFor]="menu">{{link.title}}</button>
+            <mat-menu #menu="matMenu">
+                  @for (subUrl of link.subUrl; track subUrl) {
+                    <a
+                    mat-menu-item
+                    [routerLink]="['/proyectos',subUrl.linkUrl]"
+                    routerLinkActive="bg-gray-navbarHover"
+                    class="nav_link"
+      
+             > {{subUrl.titulo}}</a>
+                  }
+            </mat-menu>
           }
+        }
+
     </nav>
     <div class="content_contact">
         <span class="numero_contact">916 792 621</span>

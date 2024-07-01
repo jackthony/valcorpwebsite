@@ -9,7 +9,7 @@ export const routes: Routes = [
     path:'nosotros', loadComponent : ()=> import('../app/landing/pages/nosotros/nosotros.component')
 },
 {
-    path:'proyectos', loadComponent : ()=> import('../app/landing/pages/proyectos-page/proyectos-page.component')
+    path:'proyectos', loadChildren : ()=> import('../app/landing/pages/proyectos-pages/proyectos-pages.component')
 },
 {
     path:'', redirectTo:'home', pathMatch:'full'
