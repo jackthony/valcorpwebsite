@@ -11,16 +11,16 @@
            >
              {{ link.title }}
            </a> }@else{
-            <button mat-button [matMenuTriggerFor]="menu">{{link.title}}</button>
+            <button  mat-button [matMenuTriggerFor]="menu" style="color: #FFF; font-size: 15px; font-weight: 600;">{{link.title}}</button>
             <mat-menu #menu="matMenu">
-                  @for (subUrl of link.subUrl; track subUrl) {
+                  @for ( proyecto of proyectos; track proyecto) {
                     <a
                     mat-menu-item
-                    [routerLink]="['/proyectos',subUrl.linkUrl]"
+                    [routerLink]="['/proyectos',proyecto.alt]"
                     routerLinkActive="bg-gray-navbarHover"
                     class="nav_link"
       
-             > {{subUrl.titulo}}</a>
+             > {{proyecto.titulo}}</a>
                   }
             </mat-menu>
           }

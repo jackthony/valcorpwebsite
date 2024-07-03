@@ -1,0 +1,38 @@
+h3{
+    color: #fff;
+    font-size: 50px;
+    display: block;
+    background-color: #245CB5;
+   padding: 10px 0;
+   text-align: center;
+   margin: 0;
+}
+
+.imgBx_info_precios{
+    width: 100%;
+}
+
+.imgBx_modelo{
+    width: 650px;
+}
+
+.imgBx_modelo img{
+    transform: scaleX(-1);
+}
+
+.imgBx_promo{
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    object-fit: contain;
+}
+
+.content_facilidad_pago{
+    display: flex;
+    justify-content: center;
+}
