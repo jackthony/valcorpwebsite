@@ -40,7 +40,6 @@ img{
 
 
  .content_info_proyecto_detalles {  
-    width: 400px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     place-items: center;

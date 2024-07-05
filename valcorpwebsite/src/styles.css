@@ -5,3 +5,21 @@ body {
   margin: 0;
   padding: 0;
 }
+
+
+
+::view-transition-new(root){
+  animation: Enter 1.4s ease-in-out 0s 1 normal forwards;
+}
+
+@keyframes Enter {
+	from {
+		opacity: 0;
+		transform: translateY(-10px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}

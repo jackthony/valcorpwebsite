@@ -13,11 +13,13 @@ h3{
 }
 
 .imgBx_modelo{
-    width: 650px;
+    width: 700px;
 }
 
 .imgBx_modelo img{
-    transform: scaleX(-1);
+    position: relative;
+    transform: scaleX(-1) translateY(50px);
+    z-index: 1;
 }
 
 .imgBx_promo{
@@ -29,10 +31,15 @@ h3{
 
 img{
     width: 100%;
-    object-fit: contain;
 }
 
 .content_facilidad_pago{
     display: flex;
     justify-content: center;
+}
+.modelo{
+    position: relative;
+    width: 100%;
+    top: 5px;
+    z-index: 10;
 }

@@ -8,3 +8,36 @@
 .contenedor{
     position: relative;
 }
+
+::view-transition-old(root){
+    animation: Exit 1.5s ease  1 normal forwards;
+}
+
+::view-transition-new(root){
+    animation: Enter 1.5s ease 0s 1 normal forwards;
+}
+
+@keyframes Enter {
+	from {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+
+@keyframes Exit {
+	from {
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	to {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+}

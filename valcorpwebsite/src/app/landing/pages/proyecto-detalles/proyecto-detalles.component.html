@@ -3,7 +3,7 @@
         <app-banner [imgUrlBanner]="proyecto.bgUrlImg" [logoUrlProyecto]="proyecto.logoUrl" [colorParrafoInicio]="proyecto.color" [vidUrl]="proyecto.vidUrl"></app-banner>
         <app-info-proyecto [imgModelo]="" [color]="proyecto.color"></app-info-proyecto>
         <app-facilidades-pago [imgPromo]="proyecto.promo" [imgPrecio]="proyecto.precio" [color]="proyecto.color"></app-facilidades-pago>
-        <app-ubicacion></app-ubicacion>
+        <app-ubicacion [color]="proyecto.color"></app-ubicacion>
         <app-contacto></app-contacto>
     }   
 }
