@@ -4,12 +4,30 @@ section{
     justify-content: center;
     align-items: center;
     height: 800px;
+    background: linear-gradient(to bottom right, #66cc99, #3366cc); /* Degradado de verde a azul */
+    position: relative;
+    overflow: hidden;
 }
 
+section::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1) 10px,
+      transparent 10px,
+      transparent 20px
+    ); /* Líneas verticales */
+    opacity: 0.2; /* Efecto sutil */
+}
 
 .imgBx_modelo{
     left: 80px;
-    transform: translateX(100px);
     z-index: 10;
     height: 100%;
     width: 750px;
@@ -28,7 +46,6 @@ img{
     top: 0;
     width: 50%;
     padding-right: 50px;
-    transform: translateX(-50px);
 
 }
 

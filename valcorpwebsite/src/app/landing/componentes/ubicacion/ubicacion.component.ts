@@ -12,5 +12,7 @@ export class UbicacionComponent {
 
      imagen = input<string>();
      color = input<string>();
+     ubiMaps = input<string>();
+     proyectoMap = input<string>();
 
 }

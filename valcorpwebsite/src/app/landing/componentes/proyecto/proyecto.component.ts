@@ -10,7 +10,6 @@ import { faHouseChimney } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './proyecto.component.scss'
 })
 export class ProyectoComponent {
-[x: string]: any;
   
   @Input() colorPrecio?: string ;
   @Input() colorIcono?: string ;

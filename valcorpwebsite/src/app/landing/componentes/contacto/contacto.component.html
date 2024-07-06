@@ -1,1 +1,37 @@
-<p>contacto works!</p>
+<section >
+    <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F'}">Contactonos</h3>
+    <div class="content_contact">
+        <div class="imgBx_Modelo">
+            <img src="../../../../public/assets/BANNER 2.png" alt="modelo" />
+        </div>
+        <form class="Formulario" for="" [ngStyle]="{'background-color':color()}">
+            <label class="titulo_formulario">Contactanos</label>
+            <div class="conten_input">
+                <input type="text"  placeholder="Nombre Completo"/>
+            </div>
+            <div class="conten_input" >
+                <input type="number" placeholder="Numero"/>
+            </div>
+            <div class="conten_input">
+                <input type="email" placeholder="Correo" />
+            </div>
+            <div class="conten_input" >
+                <input type="text"  placeholder="Proyecto de interes" />
+            </div>
+            <div>
+                <textarea placeholder="Mensaje"></textarea>
+            </div>
+            <div class="content_permisos">
+                <div class="permiso">
+                    <input type="checkbox">
+                    <span>He leído y acepto el Tratamiento de mis datos personales.</span>
+                </div>
+                <div class="permiso">
+                    <input type="checkbox">
+                    <span>He leído y acepto la Política para envío de comunicaciones comerciales.</span>
+                </div>
+            </div>
+                <button class="btn_send_form_contact" type="submit" >Enviar</button>
+        </form>
+    </div>
+</section>
