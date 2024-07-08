@@ -1,4 +1,6 @@
 .containr_proyecto{
+    position: relative;
+    z-index: 10;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,69 @@
+.phone-number {
+    color: yellow;
+  }
+  
+  .hero {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  
+  .hero h1 {
+    color: white;
+    font-size: 3em;
+    margin: 0;
+  }
+  
+  section {
+    padding: 40px 20px;
+  }
+  
+  #about {
+    background: #f0f0f0;
+  }
+  
+  #about .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  #about p {
+    width: 60%;
+    margin-right: 20px;
+  }
+  
+  #about img {
+    width: 35%;
+    border-radius: 10px;
+  }
+  
+  #mission-vision {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+  }
+  
+  .mission, .vision {
+    width: 45%;
+    background: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  #more {
+    background: #e0e0e0;
+  }
+  
+  .gallery {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .gallery img {
+    width: 30%;
+    border-radius: 10px;
+  }

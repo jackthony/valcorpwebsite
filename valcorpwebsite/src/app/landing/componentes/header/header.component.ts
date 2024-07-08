@@ -19,7 +19,7 @@ export class HeaderComponent {
     { url: '/', title: 'Inicio' },
     { url: '/nosotros', title: 'Nosotros' },
     { title: 'Proyectos', subUrl:[{linkUrl:'robles',titulo:'Robles'}, {linkUrl:'huertos',titulo:'Huertos'},{linkUrl:'prados',titulo:'Prados'}] },
-    { url: '/proposito', title: 'Nuestro Propósito' },
+    { url: '/nuestro-proposito', title: 'Nuestro Propósito' },
     { url: '/contacto', title: 'Escribenos' },
   ];
 

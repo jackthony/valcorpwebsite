@@ -3,9 +3,23 @@ section{
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #15223b;
     min-height: fit-content;
+    background: linear-gradient(331deg, #245CB5, #0062ff);
+    position: relative;
+    overflow: hidden;
 }
+
+section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: rotateZ('180deg');
+    background: url('../../../public/assets/bg.webp') no-repeat center center/cover;
+    opacity: 0.2;
+  }
 
 h2{
     font-size: 45px;

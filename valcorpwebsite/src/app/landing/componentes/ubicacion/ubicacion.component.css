@@ -4,7 +4,7 @@ section{
     justify-content: center;
     align-items: center;
     height: 800px;
-    background: linear-gradient(to bottom right, #66cc99, #3366cc); /* Degradado de verde a azul */
+    background: linear-gradient(to bottom left, #2595ae, #1e40af); /* Degradado de verde a azul */
     position: relative;
     overflow: hidden;
 }

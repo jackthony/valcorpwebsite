@@ -6,7 +6,10 @@ export const routes: Routes = [
 
     },
     {
-        path: 'nosotros', loadComponent: () => import('../app/landing/pages/nosotros/nosotros.component')
+        path: 'nosotros', loadComponent: () => import('./landing/componentes/nosotros/nosotros.component')
+    },
+    {
+        path: 'nuestro-proposito', loadComponent: () => import('./landing/pages/nuestro-proposito/nuestro-proposito.component')
     },
     {
 
