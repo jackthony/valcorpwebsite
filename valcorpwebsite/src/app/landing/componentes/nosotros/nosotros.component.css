@@ -1,7 +1,15 @@
 .phone-number {
     color: yellow;
   }
-  
+
+  .imagen_incio_nosotros{
+    width: 100%;
+  }
+  .imagen_incio_nosotros img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
   .hero {
     position: absolute;
     bottom: 20px;
@@ -16,54 +24,141 @@
     margin: 0;
   }
   
-  section {
-    padding: 40px 20px;
-  }
-  
+ h2{
+  font-size: 40px;
+  color: #f0f0f0;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+ }
+
+
+ .content_titulo{
+  display: flex;
+  justify-content: space-around;
+  transform: translateY(70px);
+  background-color: #2457A1;
+  padding: 15px 0;
+  margin-bottom: 15px;
+ }
+
   #about {
     background: #f0f0f0;
   }
   
   #about .content {
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
+    gap: 20px;
   }
   
-  #about p {
-    width: 60%;
-    margin-right: 20px;
+
+  #mission-vision{
+    padding: 7rem 2rem;
+  }
+  .about_text {
+    width: 30%;
+    margin: 45px 20px 0 0;
+    font-size: 1.8em;
+     font-weight: 300;
   }
   
-  #about img {
-    width: 35%;
-    border-radius: 10px;
-  }
-  
-  #mission-vision {
+  .mission{
     display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 40px;
+  }
+
+  .contet_info{
+    padding: 10px 35px;
+    background-color: #2457A1;
+    border-radius: 45px;
+
   }
   
-  .mission, .vision {
-    width: 45%;
-    background: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
+  .info {
+    width: 550px;
+    font-size: 1.4rem;
+    font-weight: 300;
+    color: #f0f0f0;
+
   }
   
   #more {
     background: #e0e0e0;
-  }
-  
-  .gallery {
     display: flex;
-    justify-content: space-around;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .content img{
+    width: 30%;
+    height: 450px;
+    border-radius: 40px;
+    position: relative;
+    z-index: 10;
+  }
+  .mission img,.vision img{
+    width: 450px;
+    height: 380px;
+    object-fit: cover;
+    margin-right: 20px;
+
+  }
+
+  #vision{
+    height: 250px;
+    width: 320px;
+    padding-left: 35px;
+  }
+
+  .gallery{
+    grid-gap: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr 25%;
+    margin: 50px 20px;
+    min-height: 550px;
+    width: 80%;
   }
   
-  .gallery img {
-    width: 30%;
-    border-radius: 10px;
+
+  
+  .gallery img{
+    object-position: 50%;
+    object-fit: cover;
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .imagen_uno{
+    grid-column: 1 / 1;
+    grid-row: 1 / 2;
+  }
+  
+  .side-galley{
+    display: grid;
+    gap: 10px;
+  }
+
+  .side-galley img{
+    height: 200px;
+  }
+
+  h3{
+    color: #fff;
+    font-size: 45px;
+    font-weight: 900;
+    background-color: #37BADB;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 0;
   }

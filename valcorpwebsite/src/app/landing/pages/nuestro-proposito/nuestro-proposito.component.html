@@ -1,19 +1,24 @@
-<div class="faq-background">
-    <div class="faq-container">
-      <h2>Preguntas Frecuentes</h2>
-      @for ( faq of faqs; track faq.question) {
-        <div class="faq-item">
-          <div class="faq-question" (click)="toggleFAQ(faq)">
-            <span>{{ faq.question }}</span>
-            <fa-icon [icon]="faq.open ? up : down"></fa-icon>
-          </div>
-          @if (faq.open) {
-            <div class="faq-answer">
-              <p>{{ faq.answer }}</p>
-            </div>
-          }
-        </div>
-      }
+<section>
+  <div class="faq-background">
+    <div class="title-container">
+      <span class="title-text">Preguntas</span>
+      <span class="title-highlight">Frecuentes</span>
     </div>
-  </div>
-  
+      <div class="faq-container">
+        @for ( faq of faqs; track faq.question) {
+          <div class="faq-item">
+            <div class="faq-question" (click)="toggleFAQ(faq)">
+              <span>{{ faq.question }}</span>
+              <fa-icon [icon]="faq.open ? up : down" class="icon"></fa-icon>
+            </div>
+            @if (faq.open) {
+              <div class="faq-answer">
+                <p>{{ faq.answer }}</p>
+              </div>
+            }
+          </div>
+        }
+      </div>
+    </div>
+    
+</section>
