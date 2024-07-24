@@ -10,27 +10,34 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 70px;
+    height: 80px;
     z-index: 1000;
     background: transparent;
     font-family: 'Roboto', sans-serif;
 }
 
+.container_nav.active{
+    background-color: #2225;
+}
+
 
 .content_nav{
     display: flex;
-    padding: 2px 25px;
+    padding: 0 25px;
     background-color: rgba(182, 182, 182, 0.548);
     border-radius: 25px;
-    gap: 25px;
 }
 
 .nav_link{
     text-decoration: none;
     font-size: 15px;
+    padding: 0 20px ;
     font-family: "Roboto", sans-serif;;
     font-weight: 600;
     color: #fff;
+}
+.nav_link:hover{
+    background-color: #2222;
 }
 
 .content_contact{
