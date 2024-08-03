@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, Input,input } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -15,8 +15,7 @@ export class BannerComponent {
   @Input() color?: string;
   @Input() colorParrafoInicio?: string;
   @Input() vidUrl?: string;
+   
 
-  
-
-
+   @Input('desconocido') nombre?: string;
 }

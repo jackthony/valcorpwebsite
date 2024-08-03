@@ -1,9 +1,6 @@
 <section>
     <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F'}">Contactonos</h3>
     <div class="content_contact">
-        <div class="imgBx_Modelo">
-            <img src="../../../../public/assets/BANNER 2.png" alt="modelo" />
-        </div>
             <form [formGroup]="formContact" class="Formulario" for="" (ngSubmit)="enviar()">
             <label class="titulo_formulario">Contactanos</label>
             <div class="conten_input">
@@ -33,5 +30,8 @@
             </div>
                 <button class="btn_send_form_contact" type="submit" >Enviar</button>
         </form>
+        <div class="imgBx_Modelo">
+            <img src="../../../../public/assets/BANNER 2.png" alt="modelo" />
+        </div>
     </div>
 </section>

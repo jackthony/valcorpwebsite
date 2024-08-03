@@ -6,13 +6,14 @@ import { ProyectosComponent } from "./landing/proyectos/proyectos.component";
 import { FamiliaComponent } from './landing/familia/familia.component';
 import HomeComponent from './landing/pages/home/home.component';
 import { effect, signal } from '@angular/core';
+import { PieDePaginaComponent } from './landing/componentes/pie-de-pagina/pie-de-pagina.component';
 
 @Component({
     selector: 'app-root',
     standalone: true,
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    imports: [CommonModule, RouterOutlet, HeaderComponent, ProyectosComponent, FamiliaComponent,HomeComponent]
+    imports: [CommonModule, RouterOutlet, HeaderComponent, ProyectosComponent, FamiliaComponent,HomeComponent,PieDePaginaComponent]
 })
 export class AppComponent {
 

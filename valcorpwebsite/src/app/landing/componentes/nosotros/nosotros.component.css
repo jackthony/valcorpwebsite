@@ -2,10 +2,10 @@
     color: yellow;
   }
 
-  .imagen_incio_nosotros{
+  source{
     width: 100%;
   }
-  .imagen_incio_nosotros img{
+  source{
     width: 100%;
     height: 100%;
     object-fit: cover;

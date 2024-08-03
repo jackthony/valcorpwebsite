@@ -1,5 +1,5 @@
 import { NgStyle } from '@angular/common';
-import {Component, input} from '@angular/core';
+import {Component, Input, input} from '@angular/core';
 import { MatButtonModule } from '@angular/material/button';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
@@ -16,7 +16,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class ContactoComponent {
     color = input<string>();
     formContact!: FormGroup;
-
+   
+     
     constructor(private fb: FormBuilder) { }
   
     ngOnInit(): void {

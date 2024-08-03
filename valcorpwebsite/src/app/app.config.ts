@@ -11,5 +11,5 @@ export const appConfig: ApplicationConfig = {
     [provideRouter(
       routes, withComponentInputBinding(),withViewTransitions())
       , provideClientHydration(),
-    provideAnimationsAsync(),ScrollService]
+    provideAnimationsAsync(),ScrollService, provideAnimationsAsync()]
 };
