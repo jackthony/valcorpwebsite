@@ -30,18 +30,18 @@ export class HeaderComponent {
      
      {
       id:1,
-      titulo: 'Los Huertos de San Jose',
-      alt: 'Huertos'
+      titulo: 'Urb. Villa Los Robles',
+      alt: 'Robles'
      },
      {
       id:2,
-      titulo: 'Los Prados',
-      alt: 'Prados'
+      titulo: 'Urb. Los Huertos de San Jose',
+      alt: 'Huertos'
      },
      {
       id:3,
-      titulo:'Urb. Villa Los Robles',
-      alt: 'Robles'
+      titulo:'Urb. Los Prados',
+      alt: 'Prados'
      },
 
   ]

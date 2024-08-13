@@ -40,7 +40,7 @@ h3{
 }
 .content_info_proyecto_mas_detalles{
     width: 220px;
-    height: 220px;
+    height: 180px;
     cursor: pointer;
 }
 .content_img_info_proyecto img{
@@ -67,7 +67,7 @@ img{
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-gap: 10px;
-    margin-left: 50px;
+    margin-left: 100px;
     place-items: center;
     justify-content: center;
     transform: translateY(-45px);
