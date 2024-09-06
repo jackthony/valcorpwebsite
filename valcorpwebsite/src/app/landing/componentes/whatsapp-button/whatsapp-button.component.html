@@ -1,0 +1,14 @@
+<div class="whatsapp-button" (click)="toggleChat()">
+  <img src="../../../../public/assets/whatsapp-icon.png" alt="Chat via WhatsApp">
+</div>
+
+<div *ngIf="isChatOpen" class="chat-box">
+  <div class="chat-header">
+    <svg class="joinchat__wa" width="120" height="28" viewBox="0 0 120 28"><title>WhatsApp</title><path d="...el path que proporcionaste..."></path></svg>
+    <button class="close-button" (click)="toggleChat()">&#10005;</button>
+  </div>
+  <div class="chat-messages">
+    <div class="chat-message">Clic para comunicarnos con nosotros</div>
+    <div class="send-message-button" (click)="sendWhatsAppMessage()">Clic para Chat</div>
+  </div>
+</div>

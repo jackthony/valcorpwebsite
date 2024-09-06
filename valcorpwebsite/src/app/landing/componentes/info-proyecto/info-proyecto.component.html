@@ -8,34 +8,56 @@
          </div>
          <div class="content_info_proyecto_detalles">
             <div class="content_info_proyecto_mas_detalles" >
-                <img src="../../../../public/assets/AGUA-POTABLE.png" (mouseover)="openModalDetalles($event)" (mouseleave)="outModal()"/>
-                 @if (openModalXD) {
-                    <div class="modal_detalles">
-                        <h3>modal</h3>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sint </p>
-                   </div>
-                 }
+                <img src="../../../../public/assets/AGUA-POTABLE.png" 
+                (mouseover)="openModalDetalles('agua-potable')" (mouseleave)="outModal()"/>
+                    <div class="modal_detalles" *ngIf="hoveredIcon === 'agua-potable'">
+                        <img src="../../../../public/assets/FT-AGUA-POTABLE - ROBLES.png" />
+                    </div>
+            </div>  
+            <div class="content_info_proyecto_mas_detalles">
+                <img src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png"
+                (mouseover)="openModalDetalles('energia-electrica')" (mouseleave)="outModal()" />
+                <div class="modal_detalles" *ngIf="hoveredIcon === 'energia-electrica'">
+                    <img src="../../../../public/assets/FT-ENERGÍA-ELÉCTRICA---HUERTOS.png" />
+                </div>
             </div>
             <div class="content_info_proyecto_mas_detalles">
-                <img src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png"/>
+                <img src="../../../../public/assets/DESAGÜE.png" 
+                (mouseover)="openModalDetalles('desague')" (mouseleave)="outModal()"/>
+                <div class="modal_detalles" *ngIf="hoveredIcon === 'desague'">
+                    <img src="../../../../public/assets/FT-DESAGUE---HUERTOS.png" />
+                </div>
             </div>
             <div class="content_info_proyecto_mas_detalles">
-                <img src="../../../../public/assets/DESAGÜE.png"/>
+                <img src="../../../../public/assets/CERCO-PERIMÉTRICO.png" 
+                (mouseover)="openModalDetalles('cerco-perimetrico')" (mouseleave)="outModal()"/>
+                <div class="modal_detalles" *ngIf="hoveredIcon === 'cerco-perimetrico'">
+                    <img src="../../../../public/assets/FT-CERCO-PERIMÉTRICO---HUERTOS.png" />
+                </div>
             </div>
             <div class="content_info_proyecto_mas_detalles">
-                <img src="../../../../public/assets/CERCO-PERIMÉTRICO.png"/>
-            </div>
-            <div class="content_info_proyecto_mas_detalles">
-                <img src="../../../../public/assets/PISTAS-Y-VEREDAS.png"/>
+                <img src="../../../../public/assets/PISTAS-Y-VEREDAS.png" 
+                (mouseover)="openModalDetalles('pistas-veredas')" (mouseleave)="outModal()"/>
+                <div class="modal_detalles" *ngIf="hoveredIcon === 'oistas-veredas'">
+                    <img src="../../../../public/assets/FT-PISTAS-Y-VEREDAS---HUERTOS.png" />
+                </div>
             </div>
             <div class="content_info_proyecto_mas_detalles ">
-                <img src="../../../../public/assets/PÓRTICO-DE-INGRESO.png"/>
+                <img src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" 
+                (mouseover)="openModalDetalles('portico')" (mouseleave)="outModal()"/>
+                <div class="modal_detalles" *ngIf="hoveredIcon === 'portico-ingreso'">
+                    <img src="../../../../public/assets/FT-PÓRTICO-DE-INGRESO---HUERTOS.png" />
+                </div>
             </div>
                 <div class="content_info_proyecto_mas_detalles ">
                     <img src="../../../../public/assets/CANCHA-DE-FÚTBOL.png"/>
                 </div>
                 <div class="content_info_proyecto_mas_detalles ">
-                    <img src="../../../../public/assets/PARQUES-BIOSALUDABLES.png"/>
+                    <img src="../../../../public/assets/PARQUES-BIOSALUDABLES.png" 
+                    (mouseover)="openModalDetalles('parques-biosaludable')" (mouseleave)="outModal()"/>
+                    <div class="modal_detalles" *ngIf="hoveredIcon === 'parques-biosaludable'">
+                        <img src="../../../../public/assets/FT-PARQUES-RECREATIVOS---HUERTOS.png" />
+                    </div>
                 </div>
                 <div class="content_info_proyecto_mas_detalles  ">
                     <img src="../../../../public/assets/ZONA-DE-PARRILLAS.png"/>
@@ -45,9 +67,14 @@
                         <img src="../../../../public/assets/VÓLEY-PLAYA.png"/>
                     </div>
                     <div class="content_info_proyecto_mas_detalles  ">
-                        <img src="../../../../public/assets/HIDRANTES.png"/>
+                        <img src="../../../../public/assets/HIDRANTES.png" 
+                        (mouseover)="openModalDetalles('hidrantes')" (mouseleave)="outModal()"/>
+                        <div class="modal_detalles" *ngIf="hoveredIcon === 'hidrantes'">
+                            <img src="../../../../public/assets/FT-HIDRANTES - HUERTOS.png" />
+                        </div>
                     </div>
             </div>
          </div>
     </div>
 </section>
+
