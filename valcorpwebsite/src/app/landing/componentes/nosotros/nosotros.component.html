@@ -24,7 +24,7 @@
             </p>
            </div>
       </div>
-      <div class="mission">
+      <div class="mission revers">
         <div class="contet_info">
           <p class="info">
             Somos una empresa conformada por profesionales 100% chimbotanos. <br> <br> Nuestro amor por Chimbote nos compromete a impulsar el crecimiento urbano ordenado. Solo requiere de perseverancia y compromiso por hacer de Chimbote una de las mejores ciudades del Perú.
@@ -33,7 +33,7 @@
           <img src="../../../../public/assets/VISIÓN.png" alt="ojo-vision" id="vision"/>
       </div>
     </div>
-    <div id="more">
+    <div id="more" *ngIf="currentWidth! > 650 ; else block">
       <h3>MÁS DE NOSOTROS</h3>
       <div class="gallery">
         <div class="imagen_uno">
@@ -42,9 +42,31 @@
         <div class="side-galley">
           <img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 2">
           <img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 3">
-          <img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 3">
+          <img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 4">
         </div>
       </div>
     </div>
+    
+    <ng-template #block>
+      <h3>MÁS DE NOSOTROS</h3>
+         <div style="padding: 50px 20px;">
+          <swiper-container style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff" class="mySwiper"
+          thumbs-swiper=".mySwiper2" space-between="10" navigation="true">
+             <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 1"></swiper-slide>
+             <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 2"></swiper-slide>
+             <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 1"></swiper-slide>
+             <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 2"></swiper-slide>
+         </swiper-container>
+         <swiper-container class="mySwiper2" space-between="10" slides-per-view="4" free-mode="true"
+         watch-slides-progress="true">
+         <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 1"></swiper-slide>
+         <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 2"></swiper-slide>
+         <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 1"></swiper-slide>
+         <swiper-slide><img src="../../../../public/assets/nuestra-familia.jpg" alt="Nuestro equipo 2"></swiper-slide>
+        </swiper-container>
+
+         </div>
+    </ng-template>
+    
   </section>
   

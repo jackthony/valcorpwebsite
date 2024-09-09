@@ -1,13 +1,14 @@
 
 .container_home{
     width: 100%;
-    height: 800px;
+    filter: brightness(0.8);
+    height: 100vh;
 }
 
 video{
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     object-fit: cover;
     z-index: -1;
 }

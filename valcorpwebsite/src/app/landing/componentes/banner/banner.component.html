@@ -1,10 +1,16 @@
+    
+ <div *ngIf="!bannerLoaded" class="spinner">
+        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+      </div>
 <section >
     <video autoplay>
         <source src={{vidUrl}}>
     </video>
     <div class="content_banner">
          <div class="imgBx">
-            <img src={{logoUrlProyecto}} alt="logo del proyecto">
+            <img src={{logoUrlProyecto}} alt="logo del proyecto"   
+         (load)="onBannerLoad()"
+            [hidden]="!bannerLoaded">
          </div>
          <button [ngStyle]="{'background-color': colorParrafoInicio}">Ver Portafolio</button>
     </div>

@@ -20,6 +20,7 @@ section::before{
     height: fit-content;
     width: 100%;
     display: flex;
+    padding: 15px 0;
     justify-content: start;
 }
 
@@ -69,4 +70,25 @@ img{
     width: 100%;
     top: 5px;
     z-index: 10;
+}
+
+@media screen and (max-width:1200px) {
+    .content_titulo h3{
+        font-size: 35px;
+    }
+}
+
+@media screen and (max-width:950px) {
+
+    .content_titulo h3{
+        font-size: 25px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .content_titulo h3{
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
 }

@@ -2,14 +2,17 @@
     color: yellow;
   }
 
-  source{
-    width: 100%;
-  }
-  source{
+.imagen_incio_nosotros{
+  width: 100%;
+  height: 100vh;
+}
+
+  video{
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
+
   .hero {
     position: absolute;
     bottom: 20px;
@@ -162,3 +165,130 @@
     padding: 10px 0;
     margin-bottom: 0;
   }
+ 
+  swiper-container {
+    width: 100%;
+    height: 100%;
+  }
+
+  swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  body {
+    background: #000;
+    color: #000;
+  }
+
+  swiper-container {
+    width: 100%;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  swiper-slide {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .mySwiper {
+    height: 80%;
+    width: 100%;
+  }
+
+  .mySwiper2 {
+    height: 20%;
+    box-sizing: border-box;
+    padding: 10px 0;
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;
+    height: 100%;
+    opacity: 0.4;
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1;
+  }
+
+  swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  @media screen and (max-width:1200px) {
+    .about_text{
+      font-size: 1.4rem;
+    }
+    .content img{
+      object-fit: cover;
+    }
+    .info , .contet_info{
+      width: fit-content;
+      font-size: 1.1rem;
+    }
+    .mission img{
+       width: 350px;
+       height: 300px;
+    }
+  }
+
+  @media screen and (max-width:900px) {
+    .about_text{
+      font-size: 1.1rem;
+    }
+    .content_titulo h2{
+      font-size: 1.5rem;
+    }
+    .content img{
+      object-fit: cover;
+    }
+    .info , .contet_info{
+      width: fit-content;
+      font-size: 1rem;
+    }
+    .mission img , #vision{
+       height: 200px;
+    }
+}
+
+@media screen and (max-width:650px) {
+   .mission,.content{
+      flex-direction: column;
+   }
+   #mission-vision{
+    padding: 2rem 2rem;
+   }
+   .content img{
+    width: 90%;
+   }
+   .about_text{
+    width: 90%;
+    margin: 65px 20px 0 35px;
+   }
+   .revers{
+    flex-direction: column-reverse;
+   }
+   .content_titulo{
+    margin-bottom: 35px;
+   }
+   h3{
+    font-size: 1.8rem;
+   }
+}

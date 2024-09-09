@@ -3,7 +3,7 @@ export const proyectoList:proyecto[] = [
  
     {
         id: 1,
-        name: 'Los Huertos de San Jose',
+        name: 'Urb. Los Huertos de San Jose',
         titulo : 'Huertos',
         logoUrl : '../../public/assets/LOGO-BLANGO-HUERTOS.png',
         promo : '../../public/assets/PROMO_HUERTOS.png' ,
@@ -17,7 +17,7 @@ export const proyectoList:proyecto[] = [
      },
      {
        id: 2,
-       name: 'Los Prados',
+       name: 'Urb. Los Prados',
        titulo : 'Prados',
        logoUrl : '../../public/assets/PRADOS-NUEVO.png',
        promo : '../../public/assets/PROMO_ROBLES.png' ,

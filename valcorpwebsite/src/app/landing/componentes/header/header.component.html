@@ -1,35 +1,52 @@
 <mat-toolbar class="container_nav"  [ngClass]="{ 'active': scrollY }">
      <div class="logo">
-        <h1>{{scrollY}}</h1>
-        <span>inmobiliaria</span>
+        <img src="../../../../public/assets/LOGO.png" alt="logotipo valcorp" >
      </div>
-    <nav class="content_nav">
-        @for (link of links; track link) {
-             @if (link.url) { 
-             <a
-             [routerLink]="link.url"
-             routerLinkActive="bg-gray-navbarHover"
-             class="nav_link"
-           >
-             {{ link.title }}
-           </a> }@else{
-            <button  mat-button [matMenuTriggerFor]="menu" style="color: #FFF; font-size: 15px; font-weight: 600;">{{link.title}}</button>
-            <mat-menu #menu="matMenu">
-                  @for ( proyecto of proyectos; track proyecto) {
-                    <a
-                    mat-menu-item
-                    [routerLink]="['/proyectos',proyecto.alt]"
-                    routerLinkActive="bg-gray-navbarHover"
-                    class="nav_link"
-      
-             > {{proyecto.titulo}}</a>
-                  }
-            </mat-menu>
-          }
-        }
+    <nav class="content_nav" [ngClass]="{'active': isActive()} ">
+        <div class="bg" [ngClass]="{'active': isActive()} ">
+          @for (link of links; track link) {
+            @if (link.url) { 
+            <a
+            [routerLink]="link.url"
+            routerLinkActive="active_link"
+            [routerLinkActiveOptions]="{ exact: true }" 
+            class="nav_link"
+            (click)="navLinkActive($event,link)"
 
-    </nav>
-    <div class="content_contact">
+          >
+            {{ link.title }}
+          </a> }@else{
+            
+            <button  mat-button [matMenuTriggerFor]="menu" class="nav_link mat"  (click)="toggleFAQ()">{{link.title}}<fa-icon [icon]="isActiveArrow ? up  : down " class="icon"></fa-icon>   </button>
+           <mat-menu #menu="matMenu"  >
+                 @for ( proyecto of proyectos; track proyecto) {
+                   <a
+                   mat-menu-item
+                   [routerLink]="['/proyectos',proyecto.alt]"
+                   routerLinkActive="active_proyectos"
+                   
+                  (click)="toggle()"
+
+                   
+            > {{proyecto.titulo}}</a>
+
+                 }
+           </mat-menu>
+         }
+       }
+       <div class="content_contact menu">
         <span class="numero_contact">916 792 621</span>
+    </div>
+        </div>
+        <div class="content_contact">
+          <span class="numero_contact">916 792 621</span>
+      </div>
+    </nav>
+    <div class="content_menu_bar" >
+      <div class="menu-burger" id="menuBurger" [ngClass]="{'active': isActive()} " (click)="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
     </div>
   </mat-toolbar>

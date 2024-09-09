@@ -7,6 +7,7 @@ section{
     background: linear-gradient(to bottom left, #2595ae, #1e40af); /* Degradado de verde a azul */
     position: relative;
     overflow: hidden;
+    
 }
 
 section::before{
@@ -73,4 +74,72 @@ button{
     color: #fff;
     font-size: 30px;
     font-weight: 600;
+}
+
+
+@media screen and (max-width:1200px) {
+    .content_titulo h3{
+        font-size: 35px;
+    
+    }
+    section{
+        flex-direction: column;
+    }
+    .container_google_maps{
+        width: 95%;
+        padding-right: 0;
+    }
+    }
+    
+    @media screen and (max-width:950px) {
+        .content_titulo h3{
+            font-size: 25px;
+        }
+
+        .content_mapa{
+            border:  8px solid #fff;
+            width: 90%;
+            height: 380px;
+        }
+      .content_btn button{
+           font-size: 18px;
+           padding: 10px 15px;
+      }
+
+      .container_google_maps{
+        height: 450px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+      }
+      .imgBx_modelo{
+        height: 400px;
+        width: 400px;
+      }
+      
+      .imgBx_modelo img{
+        height: unset;
+    }
+    
+    
+    @media screen and (max-width:500px) {
+        .content_titulo h3{
+            font-size: 20px;
+            width: 100%;
+            text-align: center;
+        }
+    
+        .imgBx_modelo{
+            width: fit-content;
+            height: 50%;
+        }
+        .container_google_maps{
+            padding-top: 30px;
+            width: 92%;
+            height: 50%;
+        }
+        .content_mapa{
+            height: 250px;
+        }
 }

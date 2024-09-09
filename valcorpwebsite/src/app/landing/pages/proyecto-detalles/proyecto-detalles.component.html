@@ -1,6 +1,10 @@
+<div *ngIf="!spinner" class="spinner">
+    <mat-spinner></mat-spinner> 
+</div><!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
 @for(proyecto of proyectoList; track proyecto){
     @if(proyecto.titulo == proyectoId){
-        <app-banner [imgUrlBanner]="proyecto.bgUrlImg" [logoUrlProyecto]="proyecto.logoUrl" [colorParrafoInicio]="proyecto.color" [vidUrl]="proyecto.vidUrl"></app-banner>
+
+        <app-banner  [imgUrlBanner]="proyecto.bgUrlImg" [logoUrlProyecto]="proyecto.logoUrl" [colorParrafoInicio]="proyecto.color" [vidUrl]="proyecto.vidUrl" (load)="recibir($event)"></app-banner>
         <app-info-proyecto [imgModelo]="" [color]="proyecto.color"></app-info-proyecto>
         <app-facilidades-pago [imgPromo]="proyecto.promo" [imgPrecio]="proyecto.precio" [color]="proyecto.color"></app-facilidades-pago>
         <app-ubicacion [color]="proyecto.color"  [proyectoMap]="proyecto.titulo"></app-ubicacion>

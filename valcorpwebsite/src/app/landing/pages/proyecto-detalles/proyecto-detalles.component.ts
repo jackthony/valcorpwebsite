@@ -5,15 +5,22 @@ import { InfoProyectoComponent } from '../../componentes/info-proyecto/info-proy
 import { UbicacionComponent } from '../../componentes/ubicacion/ubicacion.component';
 import { ContactoComponent } from '../../componentes/contacto/contacto.component';
 import { proyectoList } from '../../../mock/proyectos.mock';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-proyecto-detalles',
   standalone: true,
-  imports: [BannerComponent,FacilidadesPagoComponent,InfoProyectoComponent,UbicacionComponent,ContactoComponent],
+  imports: [BannerComponent,FacilidadesPagoComponent,NgIf,InfoProyectoComponent,UbicacionComponent,ContactoComponent,MatProgressSpinner],
   templateUrl: './proyecto-detalles.component.html',
   styleUrl: './proyecto-detalles.component.css'
 })
 export default class ProyectoDetallesComponent {
 @Input('id') proyectoId!: string;
 proyectoList = proyectoList;
+spinner :boolean = false;
+ recibir(bool:boolean){
+     this.spinner = bool;
+     console.log(this.spinner)
+ }
 }

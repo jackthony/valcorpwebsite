@@ -3,7 +3,7 @@
     background: linear-gradient(to bottom, #002699, #00ccff);
     position: relative;
     overflow: hidden;
-    padding: 20px;
+    padding: 7rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,3 +110,16 @@
     padding: 0 10px;
     line-height: 1.2;
   }
+  @media screen and (max-width:900px) {
+    .faq-question span{
+      font-size: 1rem;
+    }
+    @media screen and (max-width:450px) {
+      .faq-question span{
+        font-size: .8rem;
+      }
+      .faq-answer p{
+         font-size: .7rem;
+      }
+  }
+}

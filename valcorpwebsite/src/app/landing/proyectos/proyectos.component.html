@@ -1,7 +1,13 @@
 <section class="container_proyectos">
-    <h2>Nuestros Proyectos</h2>
-    @for (proyecto of ProyectosImg; track proyecto) {
-      <app-proyecto [colorPrecio]="proyecto.colorPrecio" [colorIcono]="proyecto.colorIcono" [urlImg]="proyecto.urlImg" [titulo]="proyecto.titulo" [marcaAguaLogoProyecto]="proyecto.marcaAguaLogoProyecto"></app-proyecto>
-         
+    <h2 class="titulo_proyectos">Nuestros Proyectos</h2>
+      @for (proyecto of ProyectosImg; track proyecto) {
+      <app-proyecto [colorPrecio]="proyecto.colorPrecio" 
+      [colorIcono]="proyecto.colorIcono" 
+      [urlImg]="proyecto.urlImg" 
+      [titulo]="proyecto.titulo" 
+      [marcaAguaLogoProyecto]="proyecto.marcaAguaLogoProyecto"
+      [precioDesde]="proyecto.precioDesde"
+      style="width: 100%;"
+      ></app-proyecto>
     }
 </section>
