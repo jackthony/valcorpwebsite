@@ -109,7 +109,7 @@ p{
     font-weight: bolder;
     color: #fff;
     display: inline-block;
-    padding: 5px 10px;
+    padding:  20px 10px;
     border-radius: 15px;
 
 }
@@ -266,6 +266,9 @@ p{
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .precio_coutas{
+        padding: 5px 10px;
     }
     .content_detalles_urb {
 
