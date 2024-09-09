@@ -1,7 +1,11 @@
+
 <section class="container_home">
-    <video autoplay muted>
-        <source src='../../../../public/assets/INTRO-1.mp4'>
+    <video autoplay muted   (loadedmetadata)="onVideoLoad()" (error)="onVideoError()" loading="lazy">
+        <source src='../../../../public/assets/INTRO-1.mp4' type="video/mp4">
     </video>
+    <div *ngIf="!loading" class="spinner">
+        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+      </div>
 </section>
 <app-proyectos></app-proyectos>
 <app-familia></app-familia>

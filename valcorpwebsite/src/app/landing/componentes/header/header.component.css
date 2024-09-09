@@ -25,7 +25,11 @@ body {
 }
 
 .container_nav.active{
-    background-color: #2225;
+    background-color: rgba(127, 127, 127, 0.334);
+}
+
+.container_nav.active .menu-burger span{
+background-color: #266fdc;
 }
 
 a.active_proyectos{
@@ -269,7 +273,14 @@ a.active_proyectos{
     }
 
     @media screen and (max-width:450px) {
+        .container_nav.active{
+            background-color: rgba(246, 248, 255, 0.898);
+        }
 
+        .container_nav.active .menu-burger span{
+            background-color: #266fdc;
+            }
+            
         .nav_link,.numero_contact{
             font-size: 20px;
         }

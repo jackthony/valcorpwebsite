@@ -91,4 +91,7 @@ img{
         width: 100%;
         text-align: center;
     }
+    .content_titulo{
+        padding: 5px 0;
+    }
 }

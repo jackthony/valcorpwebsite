@@ -1,3 +1,8 @@
+
+*{
+  font-family: 'Montserrat', sans-serif;
+
+}
 section{
     padding-top: 35px;
     position: relative;
@@ -32,12 +37,14 @@ section::before{
   }
 
 h3{
-    width: 53%;
+    width: 55%;
     color: #fff;
-    font-size: 65px;
+    font-size: 55px;
     display: block;
+    font-weight: 600;
    padding: 10px 0;
    text-align: start;
+   font-family: 'Montserrat', sans-serif;
    margin: 0;
 }
 
@@ -48,7 +55,10 @@ h3{
     width: 220px;
     height: 220px;
     cursor: pointer;
+    position: relative;
 }
+
+
 .content_img_info_proyecto img{
     transform: translateY(10px) scale(1.8);
     height: 120%;
@@ -174,21 +184,50 @@ img{
 }
 
 .modal_detalles{
-  padding: 20px 10px;
-  height: 350px;
-  height: 250px;
-  background-color: #fff;
+  width: 300px;
+  height: 300px;
   color: #ccc;
+  position: absolute;
+  border-radius: 10px;
+  z-index: 1000;
+  top: 25px;
+  opacity: 0;
+  visibility: hidden;
+  left: 25px;
+  transition: .5s ease-in;
+  padding: 0; /* Ajusta según sea necesario */
+  margin: 0; /* Ajusta según sea necesario */
+  box-sizing: border-box;
 }
 
-@media screen and (max-width:1200px) {
+.modal_detalles img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.5);
+}
+.agua:hover .modal_detalles, .energia:hover .modal_detalles,.parques:hover .modal_detalles,.desague:hover .modal_detalles,.cerco:hover .modal_detalles,
+ .pistas:hover .modal_detalles,.portico:hover .modal_detalles,.parques:hover .modal_detalles, .parrilas:hover .modal_detalles{
+   opacity: 1;
+   visibility: visible;
+}
+
+
+
+
+@media screen and (max-width:1250px) {
     .content_titulo h3{
         font-size: 35px;
     }
     .content_info_proyecto_mas_detalles{
-        width: 120px;
-        height: 120px;
+        width: 150px;
+        height: 150px;
     }
+    .modal_detalles{
+      width: 200px;
+      height: 200px;
+    }
+    
     .content_img_info_proyecto[_ngcontent-ng-c4245189850] img[_ngcontent-ng-c4245189850]{
         transform: translateY(10px) scale(1);
         height: 120%
@@ -196,6 +235,16 @@ img{
 }
 
 @media screen and (max-width:950px) {
+
+    .skeleton-img,.skeleton-item{
+      width: 250px;
+      height: 250px;
+    }
+
+    .skeleton-header{
+      width: 70%;
+    }
+
     .content_titulo h3{
         font-size: 25px;
     }
@@ -215,6 +264,12 @@ img{
     }
 
 }
+@media screen and (max-width:650px) {
+  .skeleton-content{
+    display:flex;
+    flex-direction: column;
+}
+}
 
 @media screen and (max-width:500px) {
     .content_titulo h3{
@@ -223,12 +278,18 @@ img{
         text-align: center;
     }
 
-    .skeleton-content{
-        flex-direction: column;
-    }
+    .modal_detalles{
+      width: 150px;
+      height: 150px;
+  left: 10px;
 
-    .skeleton-img,.skeleton-item{
-        width: 90%;
+    }
+    .content_info_proyecto .content_info_proyecto_mas_detalles.desague .modal_detalles, .content_info_proyecto .content_info_proyecto_mas_detalles.portico .modal_detalles{
+      left: -65px;
+    }
+  
+    .content_titulo{
+      padding: 5px 0;
     }
     
     
