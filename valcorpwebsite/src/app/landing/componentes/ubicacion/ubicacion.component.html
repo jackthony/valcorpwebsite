@@ -1,4 +1,5 @@
 <section [ngStyle]="{'background-color': color()}">
+@defer (on viewport) {
   <div class="container_google_maps">
     <div class="content_mapa">
        @if(proyectoMap() == 'Huertos'){
@@ -17,4 +18,9 @@
     <div class="imgBx_modelo">
         <img src='../../../../public/assets/V1 copia.png' alt="modelo" />
     </div>
+}@placeholder {
+  <div  class="spinner">
+    <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+  </div>
+}
 </section>  

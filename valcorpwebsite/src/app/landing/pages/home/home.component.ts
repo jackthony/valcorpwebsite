@@ -5,12 +5,13 @@ import { ProyectosComponent } from "../../proyectos/proyectos.component";
 import { FamiliaComponent } from "../../familia/familia.component";
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { NgIf } from '@angular/common';
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 @Component({
     selector: 'app-home',
     standalone: true,
     templateUrl: './home.component.html',
     styleUrl: './home.component.scss',
-    imports: [HeaderComponent, ProyectosComponent, FamiliaComponent,MatProgressSpinner,NgIf]
+    imports: [HeaderComponent, ProyectosComponent, FamiliaComponent,MatProgressSpinner,NgIf,NgxSkeletonLoaderModule]
 })
 export default class HomeComponent {
     loading: boolean = true; // Controla la visibilidad del spinner

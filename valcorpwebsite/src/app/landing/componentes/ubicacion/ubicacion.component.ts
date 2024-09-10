@@ -1,10 +1,11 @@
 import { NgStyle } from '@angular/common';
 import { Component, input, signal } from '@angular/core';
+import { MatProgressSpinner } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-ubicacion',
   standalone: true,
-  imports: [NgStyle],
+  imports: [NgStyle,MatProgressSpinner],
   templateUrl: './ubicacion.component.html',
   styleUrl: './ubicacion.component.css'
 })
