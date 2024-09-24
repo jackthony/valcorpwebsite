@@ -123,7 +123,7 @@
 /* ------------ content-redSociales-icon -------------- */
 
 .content-iconos{
-  background-image: url(../../../../public/assets/icon-home.jpeg);
+  background-image: url(../../../../public/assets/icon-home.png);
   position: relative;
   background-repeat: no-repeat;
   background-size: cover;
@@ -133,8 +133,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 10px;
 }
-
 .footer-socials{
   display: flex;
   align-items: center;

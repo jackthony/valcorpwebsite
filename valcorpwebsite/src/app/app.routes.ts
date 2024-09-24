@@ -17,6 +17,11 @@ export const routes: Routes = [
     },
 
     {
+        path: 'legales-comerciales',
+        loadComponent: () => import('./landing/componentes/legales-comerciales/legales-comerciales.component').then(m => m.LegalesComercialesComponent)
+      },
+
+    {
         path: '', redirectTo: 'home', pathMatch: 'full'
     },
     {

@@ -20,7 +20,10 @@ export class ProyectosComponent {
       colorIcono:'#91BF24', 
       titulo:'Urb. Villa Los Robles', 
       marcaAguaLogoProyecto:'../../../../public/assets/ROBLES-SIN-FONDO.png', 
-      precioDesde:'Promixamente'
+      precioDesde:'51,899',
+      lotesDesde:'75m',
+      cuotasDesde:'s/845',
+      ruta:'/proyectos/Robles',
     },
     { urlImg: '../../../../public/assets/imagen-robles.webp' , 
       alt:'Proyecto Prados Nuevo',
@@ -28,7 +31,10 @@ export class ProyectosComponent {
       colorIcono:'#EF8619',
       titulo:'Urb. Los Huertos de San Jose' , 
       marcaAguaLogoProyecto:'../../../../public/assets/HUERTOS-SIN-FONDO.png',
-      precioDesde:'s/ 52,000'
+      precioDesde:'s/ 51,322',
+      cuotasDesde:'s/811',
+      lotesDesde:'90m',
+      ruta:'/proyectos/Huertos',
     },
     { urlImg: '../../../../public/assets/imagen-prados.webp' , 
       alt:'Proyecto Robles',
@@ -36,7 +42,11 @@ export class ProyectosComponent {
       colorIcono:'#473374',
       titulo:'Urb. Los Prados',
       marcaAguaLogoProyecto:'../../../../public/assets/PRADOS-NUEVO.png',
-      precioDesde:'s/ 53,000' },
+      precioDesde:'Proximamente',
+      cuotasDesde:'s/795',
+      lotesDesde:'60m',
+      ruta:'/proyectos/Prados',
+    },
 
   ]
 

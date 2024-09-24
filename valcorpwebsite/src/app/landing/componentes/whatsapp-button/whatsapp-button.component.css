@@ -1,0 +1,98 @@
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    background-color: #25d366;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 10000;
+  }
+  
+  .whatsapp-button:hover {
+    transform: scale(1.1);
+  }
+  
+  .whatsapp-icon svg {
+    fill: #ffffff;
+  }
+  
+  .whatsapp-button:hover .whatsapp-tooltip {
+    display: block;
+  }
+  
+  .whatsapp-tooltip {
+    position: absolute;
+    bottom: 70px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: none;
+  }
+  
+  .chat-box {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+  }
+  
+  .chat-header {
+    background-color: #25d366;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .chat-messages {
+    padding: 10px;
+    min-height: 20px;
+    margin-bottom: 10px;
+    overflow-y: auto;
+  }
+  
+  .chat-message {
+    background: #f0f0f0;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .send-message-button {
+    background-color: #25d366;
+    color: white;
+    padding: 8px 10px;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  input[type="text"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin-bottom: 10px;
+  }

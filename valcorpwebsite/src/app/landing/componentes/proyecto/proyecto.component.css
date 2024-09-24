@@ -89,6 +89,10 @@
     gap: 8px;
 }
 
+.content_img_proyecto:hover img{
+    transform: scale(1.1);
+  }
+
 span{
     font-weight: bolder;
     font-size: 15px;

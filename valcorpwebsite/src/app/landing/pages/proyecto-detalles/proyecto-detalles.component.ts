@@ -7,6 +7,7 @@ import { ContactoComponent } from '../../componentes/contacto/contacto.component
 import { proyectoList } from '../../../mock/proyectos.mock';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { NgIf } from '@angular/common';
+import { OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-proyecto-detalles',
@@ -15,7 +16,11 @@ import { NgIf } from '@angular/common';
   templateUrl: './proyecto-detalles.component.html',
   styleUrl: './proyecto-detalles.component.css'
 })
-export default class ProyectoDetallesComponent {
+export default class ProyectoDetallesComponent implements OnInit{
+
+  ngOnInit(): void {
+    this.scrollToTop()
+  }
 @Input('id') proyectoId!: string;
 proyectoList = proyectoList;
 spinner :boolean = false;
@@ -23,4 +28,11 @@ spinner :boolean = false;
      this.spinner = bool;
      console.log(this.spinner)
  }
+
+ scrollToTop() {
+  window.scrollTo({
+    top: 0,     // Posición deseada (0px en este caso)
+    behavior: 'smooth'  // Opcional: animación suave
+  });
+}
 }

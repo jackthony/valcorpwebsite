@@ -104,8 +104,8 @@ button{
 
         .content_mapa{
             border:  8px solid #fff;
-            width: 90%;
-            height: 300px;
+            width: 95%;
+            height: 350px;
         }
       .content_btn button{
            font-size: 18px;
@@ -135,17 +135,19 @@ button{
             width: 100%;
             text-align: center;
         }
-    
+       section{
+        padding: 5rem 0rem;
+       }
         .imgBx_modelo{
             width: fit-content;
             height: 50%;
         }
         .container_google_maps{
             padding-top: 30px;
-            width: 92%;
+            width: 100%;
             height: 50%;
         }
         .content_mapa{
-            height: 250px;
+            height: 400px;
         }
 }
