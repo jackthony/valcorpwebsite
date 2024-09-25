@@ -21,6 +21,10 @@ export const routes: Routes = [
         loadComponent: () => import('./landing/componentes/legales-comerciales/legales-comerciales.component').then(m => m.LegalesComercialesComponent)
       },
 
+      {
+        path: 'libro-reclamaciones', loadComponent: () => import('./landing/componentes/libro-reclamaciones/libro-reclamaciones.component')
+    },
+
     {
         path: '', redirectTo: 'home', pathMatch: 'full'
     },

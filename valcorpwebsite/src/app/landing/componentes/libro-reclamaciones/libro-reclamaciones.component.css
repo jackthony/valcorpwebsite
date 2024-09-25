@@ -1,0 +1,126 @@
+/* Estilos base para pantallas grandes */
+form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 16px;
+    width: 100%;
+    max-width: 900px; /* Aumenta el ancho máximo del formulario */
+    margin: 0 auto;
+  }
+  
+  mat-form-field {
+    width: 100%;
+  }
+  
+  input, select {
+    padding: 10px; /* Aumenta el padding para mayor comodidad */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
+    transition: border-color 0.3s; /* Agrega una transición suave para el borde */
+  }
+  
+  input:focus, select:focus {
+    border-color: #1976d2; /* Cambia el color del borde al enfocar */
+    outline: none; /* Elimina el contorno predeterminado */
+  }
+  
+  button {
+    padding: 15px 40px; /* Botón más grande */
+    background-color: #1976d2;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px; /* Tamaño de fuente más grande */
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-align: center; /* Centra el texto dentro del botón */
+    justify-self: center; /* Centra el botón horizontalmente */
+    grid-column: span 2; /* Hace que el botón ocupe todo el ancho en una fila */
+    margin-bottom: 30px; /* Añade más espacio en la parte inferior */
+  }
+  
+  button:hover {
+    background-color: #1565c0;
+  }
+  
+  .mat-form-field textarea {
+    min-height: 120px;  /* Ajusta la altura mínima */
+    resize: vertical;   /* Permite que el usuario ajuste la altura */
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial', sans-serif;
+    margin-top: 80px;
+  }
+  
+  /* Título restaurado */
+  .content_titulo h2 {
+    color: black; /* Color original */
+    text-align: left; /* Alineación a la izquierda */
+    font-size: 2rem; /* Tamaño de fuente restaurado a 2rem */
+    margin-bottom: 20px;
+  }
+  
+  /* Estilos para el texto descriptivo */
+  .about_text {
+    color: #555; /* Texto en gris oscuro */
+    font-size: 1rem; /* Tamaño de fuente más pequeño */
+    line-height: 1.6; /* Espaciado entre líneas */
+    text-align: left; /* Justificación del texto */
+    max-width: 600px; /* Limitar el ancho del párrafo */
+  }
+  
+  /* Espacio adicional entre secciones */
+  section {
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor del formulario */
+  .component-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Mejora la sombra */
+  }
+  
+  /* Ajustes para pantallas medianas */
+  @media (max-width: 900px) {
+    form {
+      grid-template-columns: repeat(1, 1fr); /* Una sola columna en pantallas medianas */
+    }
+  
+    button {
+      grid-column: span 1; /* Asegura que el botón ocupe una columna en pantallas más pequeñas */
+    }
+  }
+  
+  /* Estilos responsivos para pantallas pequeñas (móviles) */
+  @media (max-width: 600px) {
+    form {
+      gap: 12px;
+      padding: 10px;
+      grid-template-columns: 1fr; /* Formulario en una sola columna */
+    }
+  
+    input, select {
+      font-size: 16px; /* Mantiene el tamaño de la fuente en móviles */
+      padding: 8px; /* Ajusta el padding */
+    }
+  
+    button {
+      padding: 15px 30px; /* Mantiene el botón más grande en móviles */
+      font-size: 18px; /* Mantiene el tamaño de la fuente más grande */
+      justify-self: center; /* Sigue centrando el botón en móviles */
+      grid-column: span 1;
+      margin-bottom: 30px; /* Espacio inferior consistente */
+    }
+  
+    .component-container {
+      padding: 15px; /* Aumenta el padding para mayor espacio */
+    }
+  }
+

@@ -1,0 +1,149 @@
+<div class="container">
+    <div class="content_titulo">
+      <h2>Libro de Reclamaciones</h2>
+    </div>
+    <div class="content">
+      <p class="about_text">
+        Conforme a lo establecido en el Código de Protección y Defensa del Consumidor aprobado mediante Ley N°29571 y su Reglamento aprobado mediante Decreto Supremo No.011-2011-PCM y modificatorias, este establecimiento cuenta con un libro de reclamaciones de naturaleza virtual a su disposición, a efectos de que pueda formular su queja o reclamo. <br> <br>
+        *Los campos indicados con asterisco son obligatorios.
+      </p>
+    </div>
+  </div>
+  
+  <form [formGroup]="reclamoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Nombre Completo</mat-label>
+      <input matInput formControlName="nombreCompleto" required />
+      <small class="error" *ngIf="reclamoForm.get('nombreCompleto')?.hasError('required') && reclamoForm.get('nombreCompleto')?.touched">
+        Este campo es requerido
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido Paterno</mat-label>
+      <input matInput formControlName="apellidoPaterno" required />
+      <small class="error" *ngIf="reclamoForm.get('apellidoPaterno')?.hasError('required') && reclamoForm.get('apellidoPaterno')?.touched">
+        Este campo es requerido
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Apellido Materno</mat-label>
+      <input matInput formControlName="apellidoMaterno" required />
+      <small class="error" *ngIf="reclamoForm.get('apellidoMaterno')?.hasError('required') && reclamoForm.get('apellidoMaterno')?.touched">
+        Este campo es requerido
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Teléfono</mat-label>
+      <input matInput formControlName="telefono" required />
+      <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('required') && reclamoForm.get('telefono')?.touched">
+        Este campo es requerido
+      </small>
+      <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('pattern') && reclamoForm.get('telefono')?.touched">
+        Solo se permiten números en este campo
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Correo</mat-label>
+      <input matInput formControlName="correo" required />
+      <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('required') && reclamoForm.get('correo')?.touched">
+        Este campo es requerido
+      </small>
+      <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('email') && reclamoForm.get('correo')?.touched">
+        Introduce un correo válido
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+        <mat-label>Documento</mat-label>
+        <input matInput formControlName="documento" placeholder="DNI" />
+        <small class="error" *ngIf="reclamoForm.get('documento')?.hasError('required') && reclamoForm.get('documento')?.touched">
+          Este campo es requerido
+        </small>
+        <small class="error" *ngIf="reclamoForm.get('documento')?.hasError('pattern') && reclamoForm.get('documento')?.touched">
+          El documento solo debe contener números
+        </small>
+      </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Dirección</mat-label>
+      <input matInput formControlName="direccion" required />
+      <small class="error" *ngIf="reclamoForm.get('direccion')?.hasError('required') && reclamoForm.get('direccion')?.touched">
+        Este campo es requerido
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Departamento</mat-label>
+      <mat-select formControlName="departamento" required>
+        <mat-option *ngFor="let dep of departamentos" [value]="dep">
+          {{ dep }}
+        </mat-option>
+      </mat-select>
+      <small class="error" *ngIf="reclamoForm.get('departamento')?.hasError('required') && reclamoForm.get('departamento')?.touched">
+        Selecciona un departamento
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Provincia</mat-label>
+      <mat-select formControlName="provincia" required>
+        <mat-option *ngFor="let prov of provincias" [value]="prov">
+          {{ prov }}
+        </mat-option>
+      </mat-select>
+      <small class="error" *ngIf="reclamoForm.get('provincia')?.hasError('required') && reclamoForm.get('provincia')?.touched">
+        Selecciona una provincia
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Distrito</mat-label>
+      <mat-select formControlName="distrito" required>
+        <mat-option *ngFor="let dist of distritos" [value]="dist">
+          {{ dist }}
+        </mat-option>
+      </mat-select>
+      <small class="error" *ngIf="reclamoForm.get('distrito')?.hasError('required') && reclamoForm.get('distrito')?.touched">
+        Selecciona un distrito
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Proyectos</mat-label>
+      <mat-select formControlName="proyectoList" required>
+        <mat-option *ngFor="let proy of proyectos" [value]="proy">
+          {{ proy }}
+        </mat-option>
+      </mat-select>
+      <small class="error" *ngIf="reclamoForm.get('proyectoList')?.hasError('required') && reclamoForm.get('proyectoList')?.touched">
+        Selecciona un proyecto
+      </small>
+    </mat-form-field>
+  
+    <mat-form-field appearance="fill">
+      <mat-label>Monto Reclamado</mat-label>
+      <input matInput formControlName="montoReclamado" placeholder="Ingrese el monto" />
+      <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('required') && reclamoForm.get('montoReclamado')?.touched">
+        Este campo es requerido
+      </small>
+      <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('pattern') && reclamoForm.get('montoReclamado')?.touched">
+        Introduce una cantidad válida (por ejemplo: 100 o 100.50)
+      </small>
+    </mat-form-field>
+    
+    <mat-form-field appearance="fill">
+      <mat-label>Detalle del Reclamo</mat-label>
+      <textarea matInput formControlName="detalleReclamo" rows="5" placeholder="Escriba los detalles de su reclamo"></textarea>
+      <small class="error" *ngIf="reclamoForm.get('detalleReclamo')?.hasError('required') && reclamoForm.get('detalleReclamo')?.touched">
+        Este campo es requerido
+      </small>
+    </mat-form-field>
+    
+  
+    <button mat-raised-button type="submit">Enviar</button>
+  </form>
+  
