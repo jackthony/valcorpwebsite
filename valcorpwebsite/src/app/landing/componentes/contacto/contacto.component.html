@@ -1,37 +1,56 @@
 <section>
     <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F'}">Contactonos</h3>
     <div class="content_contact">
-            <form [formGroup]="formContact" class="Formulario" for="" (ngSubmit)="enviar()">
-            <label class="titulo_formulario">Contactanos</label>
-            <div class="conten_input">
-                <input type="text"  placeholder="Nombre Completo" formControlName="nombreCompleto"/>
-            </div>
-            <div class="conten_input" >
-                <input type="number" placeholder="Numero" formControlName="numero"/>
-            </div>
-            <div class="conten_input">
-                <input type="email" placeholder="Correo" formControlName="correo" />
-            </div>
-            <div class="conten_input" >
-                <input type="text"  placeholder="Proyecto de interes" formControlName="proyecto" />
-            </div>
-            <div>
-                <textarea placeholder="Mensaje"></textarea>
-            </div>
-            <div class="content_permisos">
-                <div class="permiso">
-                    <input type="checkbox">
-                    <span>He leído y acepto el Tratamiento de mis datos personales.</span>
-                </div>
-                <div class="permiso">
-                    <input type="checkbox">
-                    <span>He leído y acepto la Política para envío de comunicaciones comerciales.</span>
-                </div>
-            </div>
-                <button class="btn_send_form_contact" type="submit" >Enviar</button>
-        </form>
-        <div class="imgBx_Modelo">
-            <img src="../../../../public/assets/BANNER 2.png" alt="modelo" />
+      <form [formGroup]="formContact" class="Formulario" (ngSubmit)="enviar()">
+        <label class="titulo_formulario">Contactanos</label>
+  
+        <div class="conten_input">
+          <input type="text" placeholder="Nombre Completo" formControlName="nombreCompleto"/>
+          <div *ngIf="hasError('nombreCompleto', 'required')">El nombre es requerido.</div>
+          <div *ngIf="hasError('nombreCompleto', 'minlength')">El nombre debe tener al menos 3 caracteres.</div>
         </div>
+  
+        <div class="conten_input">
+          <input type="number" placeholder="Número" formControlName="numero"/>
+          <div *ngIf="hasError('numero', 'required')">El número es requerido.</div>
+          <div *ngIf="hasError('numero', 'pattern')">Debe ingresar solo dígitos.</div>
+        </div>
+  
+        <div class="conten_input">
+          <input type="email" placeholder="Correo" formControlName="correo"/>
+          <div *ngIf="hasError('correo', 'required')">El correo es requerido.</div>
+          <div *ngIf="hasError('correo', 'email')">El formato del correo es incorrecto.</div>
+        </div>
+  
+        <div class="conten_input">
+          <input type="text" placeholder="Proyecto de interés" formControlName="proyecto"/>
+          <div *ngIf="hasError('proyecto', 'required')">El proyecto es requerido.</div>
+        </div>
+  
+        <div class="conten_input">
+          <textarea placeholder="Mensaje" formControlName="mensaje"></textarea>
+        </div>
+  
+        <div class="content_permisos">
+          <div class="permiso">
+            <input type="checkbox" formControlName="aceptarTerminos"/>
+            <span>He leído y acepto el Tratamiento de mis datos personales.</span>
+          </div>
+          <div *ngIf="hasError('aceptarTerminos', 'requiredTrue')">Debe aceptar el tratamiento de datos.</div>
+  
+          <div class="permiso">
+            <input type="checkbox" formControlName="aceptarComunicaciones"/>
+            <span>He leído y acepto la Política para envío de comunicaciones comerciales.</span>
+          </div>
+          <div *ngIf="hasError('aceptarComunicaciones', 'requiredTrue')">Debe aceptar la política de comunicaciones comerciales.</div>
+        </div>
+  
+        <button class="btn_send_form_contact" type="submit" [disabled]="formContact.invalid">Enviar</button>
+      </form>
+  
+      <div class="imgBx_Modelo">
+        <img src="../../../../public/assets/BANNER 2.png" alt="modelo"/>
+      </div>
     </div>
-</section>
+  </section>
+  
