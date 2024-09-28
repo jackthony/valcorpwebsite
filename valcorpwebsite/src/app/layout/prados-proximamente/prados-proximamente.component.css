@@ -1,0 +1,26 @@
+h1{
+    font-size: 80px !important;
+    color: #fff;
+    font-weight: 600;
+    font-family: 'Montserrat', sans-serif;
+    -webkit-text-stroke: 2px rgb(255, 255, 255); /* Borde negro */
+    -webkit-text-fill-color: rgb(255, 255, 255); /* Relleno blanco */
+}
+.image-container {
+    position: relative;
+    width: 100vw; /* w=2830 */
+    height: 1500vh; /* h=1500 */
+    overflow: hidden;
+  }
+  
+
+  
+  .imgBx {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #dedfe2; /* blend=111827 */
+    mix-blend-mode: multiply; /* blend-mode=multiply */
+  }

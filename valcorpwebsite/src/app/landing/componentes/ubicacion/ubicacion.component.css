@@ -9,6 +9,8 @@ section{
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
+
+
 .spinner {
     display: flex;
     justify-content: center;
@@ -52,7 +54,7 @@ img{
     justify-content: center;
     top: 0;
     width: 50%;
-    padding-right: 50px;
+    padding-left: 50px;
 
 }
 
@@ -82,20 +84,28 @@ button{
     font-weight: 600;
 }
 
-
+.col{
+    flex-direction: unset;
+}
 @media screen and (max-width:1200px) {
     .content_titulo h3{
         font-size: 35px;
     
     }
     section{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
     .container_google_maps{
         width: 95%;
         padding-right: 0;
     }
     }
+
+   @media screen and (min-width:800px) {
+     .screen{
+        transform: scale(1.5) !important;
+     }
+   } 
     
     @media screen and (max-width:950px) {
         .content_titulo h3{
@@ -130,9 +140,13 @@ button{
     
     
     @media screen and (max-width:500px) {
+        .container_google_maps[_ngcontent-ng-c2107646317]{
+            padding: 0;
+        }
         .content_titulo h3{
             font-size: 20px;
             width: 100%;
+            padding: 10px !important;
             text-align: center;
         }
        section{
@@ -140,7 +154,6 @@ button{
        }
         .imgBx_modelo{
             width: fit-content;
-            height: 50%;
         }
         .container_google_maps{
             padding-top: 30px;
@@ -150,4 +163,13 @@ button{
         .content_mapa{
             height: 400px;
         }
+        .imgBx_modelo[_ngcontent-ng-c1384552460] img[_ngcontent-ng-c1384552460]{
+            transform: scale(1) !important;
+          }
+}
+
+@media screen and (max-width:800px) {
+    .col{
+        flex-direction: column !important;
+    }
 }

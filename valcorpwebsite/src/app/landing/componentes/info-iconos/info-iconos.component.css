@@ -297,8 +297,12 @@ img{
    }
    .content_img_info_proyecto{
     height: 500px;
+    display: none;
+   }
+   .content_info_proyecto_detalles[_ngcontent-ng-c892757967] {
+    transform: translateY(115px);
    }
    .content_img_info_proyecto[_ngcontent-ng-c4245189850] img[_ngcontent-ng-c4245189850]{
-    transform: translateY(10px) scale(.9);
+    transform: translateY(10px) scale(.9) !important;
 }
 }

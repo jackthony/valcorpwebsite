@@ -52,6 +52,8 @@ button{
     cursor: pointer;
 }
 
+
+
 @media screen and (max-width:700px) {
     .content_banner
       {
@@ -60,10 +62,11 @@ button{
 
 }
 
+
 @media screen and (max-width:450px) {
     .content_banner
       {
-        height: 200px;
+        height: 150px;
       }
       .content_banner button{
          font-size: 18px;

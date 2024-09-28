@@ -197,8 +197,10 @@ span{
     .titulo_seccion {
         font-size: 26px;
         width: 100%;
+        padding: 10px 0 !important;
         text-align: center;
     }
+
     .conten_input{
         width: 300px;
     }

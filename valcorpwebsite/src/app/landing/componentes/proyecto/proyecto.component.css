@@ -28,7 +28,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    position: absolute;
     transition: .5s ease-in-out;
 }
 .content_img_proyecto img:hover{
@@ -146,23 +145,38 @@ p{
     letter-spacing: .5px;
     background-color: #ffffff;
     border-radius: 0 0 0 45px;
-    background-image: url('../../../../public/assets/PRADOS-NUEVO.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
+@media screen and (max-width:1180px) {
+    .proximamente{
+        padding: 10px !important;
+        width: 45% !important;
+    }
+}
+
 @media screen and (max-width: 900px) {
  
+  .titulo_proximamente{
+    padding: 0 !important;
+  }
+
     .content_img_proyecto{
         width: 92%;
         height: 350px;
     }
+    span[_ngcontent-ng-c1617021110]{
+        font-size: 11px;
+    }
      .precio_coutas{
-         font-size: 25px;
+         font-size: 15px;
     }
     .content_proyecto_detalle{
         width: 60%;
+        padding:  0 10px;
+        padding-bottom: 20px;
     }
     .titulo_proyecto_detalle{
         font-size: 15px;
@@ -174,7 +188,9 @@ p{
     }
 
     .content_couta_precio::after{
-        height: 65px;
+        height: 70%;
+        top: 30%;
+        opacity: 1;
         
     }
     .wrapper_datalles {
@@ -182,8 +198,12 @@ p{
         padding: 5px 15px 15px 30px;
         line-height: 21px;
     }
-    .content_couta_precio{
-        flex-direction: column;
+    .precio_coutas[_ngcontent-ng-c1617021110]{
+        font-size: 12px;
+        padding: 10px 8px;
+    }
+    .content_couta_precio[_ngcontent-ng-c1617021110]{
+        padding: 0;
     }
 }
 
@@ -237,24 +257,27 @@ p{
         display: flex;
         justify-content: center;
         align-items: center;
-        padding-bottom: 10px;
         flex-direction: unset;
+        top: -7.5px;
     }
     .content_couta_precio{
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-direction: column;
+        gap: 0;
     }
 
     .content_proyecto_detalle .precio_coutas,.content_couta_precio span{
         font-size: 10px;
     }
-    .content_couta_precio::after{
-        opacity: 0;
-    }
+
     .logo_proyecto_marca{
         width: 80px;
     height: 50px;
+    }
+    .content_couta_precio[_ngcontent-ng-c3768530747]{
+        padding: 0;
     }
 
     .precio_span{
@@ -265,10 +288,10 @@ p{
         line-height: 13px;
     }
     .wrapper_datalles{
-        padding: 5px 0;
+        padding: 5px 0 8px 15px;
         display: flex;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
     }
     .precio_coutas{
@@ -279,4 +302,47 @@ p{
          gap: 2px;
         }
     
+}
+@media screen and (max-width:460px) {
+    .proximamente[_ngcontent-ng-c2844566257] {
+        padding: 10px !important;
+        width: 60% !important;
+    }
+    .wrapper_datalles.proximamente{
+        width: 100% !important;
+    }
+   .aea{
+    text-align: center;
+    width: 97%;
+   }
+    .col{
+        flex-direction: column;
+        gap: 5px;
+    }
+    .content_couta_precio[_ngcontent-ng-c1933162572]::after{
+        opacity: 0;
+        visibility: 0;
+    }
+    .wrapper_datalles[_ngcontent-ng-c1933162572] {
+        align-items: center;
+    }
+    .content_couta_precio::after{
+        opacity: 0;
+        visibility: 0;
+    }
+    .content_proyecto_detalle[_ngcontent-ng-c2844566257]{
+        padding-bottom: 5px;
+    }
+}
+@media screen and (min-width:699px) {
+    .titulo_proyecto_detalle{
+        padding-left: 30px;
+    }
+}
+
+
+@media screen and (min-width:900px) {
+    .titulo_proyecto_detalle{
+        padding-left: 45px;
+    }
 }

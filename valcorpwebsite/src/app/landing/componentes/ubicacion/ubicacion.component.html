@@ -1,5 +1,8 @@
-<section [ngStyle]="{'background-color': color()}">
+<section [ngStyle]="{'background-color': color()}" [ngClass]="{'col': proyectoMap()==='Huertos'}" >
 @defer (on viewport) {
+  <div class="imgBx_modelo" *ngIf="proyectoMap() !== 'Huertos'">
+    <img [src]="imgModelo()" alt="modelo"  class="scale-110 sm:scale-150 invertir " loading="lazy" />
+</div>
   <div class="container_google_maps">
     <div class="content_mapa">
        @if(proyectoMap() == 'Huertos'){
@@ -11,13 +14,15 @@
          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3313.514595221012!2d-78.55390472436648!3d-9.0221793779252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ab87a64d4f6883%3A0x5c8a2e182d75f0d6!2sUrb.%20Villa%20los%20Robles!5e0!3m2!1ses!2spe!4v1720232626703!5m2!1ses!2spe" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
        }
     </div>
+
     <div class="content_btn">
      <button> Ver Avances de Obras</button>
     </div>
  </div>
-    <div class="imgBx_modelo">
-        <img src='../../../../public/assets/V1 copia.png' alt="modelo"  class="scale-150"/>
-    </div>
+ <div class="imgBx_modelo" *ngIf="proyectoMap()=== 'Huertos'">
+  <img [src]="imgModelo()" alt="modelo"  class="scale-130  screen" loading="lazy" />
+</div>  
+
 }@placeholder {
   <div  class="spinner">
     <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->

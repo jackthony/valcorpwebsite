@@ -8,11 +8,12 @@ import { proyectoList } from '../../../mock/proyectos.mock';
 import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { NgIf } from '@angular/common';
 import { OnInit } from '@angular/core';
+import { PradosProximamenteComponent } from "../../../layout/prados-proximamente/prados-proximamente.component";
 
 @Component({
   selector: 'app-proyecto-detalles',
   standalone: true,
-  imports: [BannerComponent,FacilidadesPagoComponent,NgIf,InfoProyectoComponent,UbicacionComponent,ContactoComponent,MatProgressSpinner],
+  imports: [BannerComponent, FacilidadesPagoComponent, NgIf, InfoProyectoComponent, UbicacionComponent, ContactoComponent, MatProgressSpinner, PradosProximamenteComponent],
   templateUrl: './proyecto-detalles.component.html',
   styleUrl: './proyecto-detalles.component.css'
 })
@@ -28,7 +29,9 @@ spinner :boolean = false;
      this.spinner = bool;
      console.log(this.spinner)
  }
-
+ recibirLoad(bool:boolean){
+  this.spinner = bool;
+ }
  scrollToTop() {
   window.scrollTo({
     top: 0,     // Posición deseada (0px en este caso)

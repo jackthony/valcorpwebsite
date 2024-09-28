@@ -11,14 +11,16 @@
         </span>
         <span class="precio_span py-2" [ngStyle]="{'background-color':colorIcono}" *ngIf="precioDesde == undefined" >PROXIMAMENTE
         </span>
-        <div class="logo_proyecto_marca" [ngStyle]="{'background-image': 'url(' + marcaAguaLogoProyecto + ')'}"></div>
+        <div class="logo_proyecto_marca">
+            <img [src]="marcaAguaLogoProyecto" alt="logo_proyecto_marca" loading="lazy">
+        </div>
      </div> 
      <div class="content_proyecto_detalle flex flex-col" [ngStyle]="{'width':lotesDesde == undefined?'35%':'fit',
-     'padding':lotesDesde == undefined?'0px 45px 0px 45px':'','text-align': lotesDesde==undefined? 'center': ''}">
-        <h3 class="titulo_proyecto_detalle pl-[45px]">{{titulo}}</h3>
-        <div class="flex justify-between items-center">
-            <div class="wrapper_datalles">
-                <span *ngIf="lotesDesde != undefined">Chimbote</span>
+     'padding':lotesDesde == undefined?'0px 45px 0px 45px':'','text-align': lotesDesde==undefined? 'center': ''}" [ngClass]="{'proximamente': lotesDesde ===undefined}">
+        <h3 class="titulo_proyecto_detalle  " [ngClass]="{'titulo_proximamente': lotesDesde ===undefined}">{{titulo}}</h3>
+        <div class="flex justify-between items-center col">
+            <div class="wrapper_datalles"  [ngClass]="{'proximamente': lotesDesde===undefined}">
+                <span *ngIf="lotesDesde != undefined" class="aea">Chimbote</span>
                 <div class="content_detalles_urb" *ngIf="lotesDesde!= undefined">
                     <div><fa-icon [icon]="casa"[ngStyle]="{'color' :colorIcono}"></fa-icon>
                         <p>Lotes desde: {{lotesDesde}}</p></div>
@@ -27,7 +29,7 @@
                         <p >Hasta 60 meses - Sin interes</p>
                     </div>
                 </div>
-                <p class="text-center w-full bg-[#2457A1] py-4 rounded-xl text-[#fff] text-[25px] font-[600]" *ngIf="lotesDesde == undefined">PROXIMAMENTE</p>
+                <p class="text-center w-full bg-[#2457A1] py-4 rounded-xl text-[#fff] text-[25px] font-[600] sm:px-3 " *ngIf="lotesDesde == undefined">PROXIMAMENTE</p>
              </div>
              <div class="content_couta_precio" *ngIf="cuotasDesde != undefined">
                  <span>Cuotas desde :</span>
