@@ -15,6 +15,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 })
 export  class ContactoComponent {
     color = input<string>();
+    imgModelo = input<string>();
     formContact!: FormGroup;
    
      

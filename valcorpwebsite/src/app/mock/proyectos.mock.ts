@@ -10,6 +10,8 @@ export const proyectoList:proyecto[] = [
         precio :'../../public/assets/INFO-PRECIOS-HUERTOS.png' ,
         bgUrlImg : '../../public/assets/imagen-robles.webp',
         color: '#EF8619',
+        urlModelo:"../../public/assets/V1 copia.png",
+        urlModeloContacto:"../../public/assets/V1 copia.png",
         estado: true,
         vidUrl: '../../public/assets/VIDEO-HUERTOS-SAN-JOSE.webm',
         pdfUrl:"../../public/assets/HUERTOS.pdf",
@@ -20,6 +22,7 @@ export const proyectoList:proyecto[] = [
        name: 'Urb. Los Prados',
        titulo : 'Prados',
        estado: false,
+       urlModelo:'',
        logoUrl : '../../public/assets/PRADOS-NUEVO.png',
        bgUrlImg : '../../public/assets/imagen-prados.webp',
        color: '#483374',
@@ -33,10 +36,13 @@ export const proyectoList:proyecto[] = [
        id: 3,
        name: 'Urb. Villa Los Robles',
        titulo : 'Robles',
+       estado: true,
+       urlModelo:"../../public/assets/MODELO-ROBLES-3.webp",
        logoUrl : '../../public/assets/LOGO-BLANGO-ROBLES.png',
        promo : '../../public/assets/PROMO_ROBLES.png' ,
        precio :'../../public/assets/INFO-PRECIOS-ROBLES.png',
        bgUrlImg : '../../public/assets/image.webp',
+       urlModeloContacto:"../../public/assets/V1 copia.png",
        color: '#91BF24',
        vidUrl: '../../public/assets/VIDEO-URB VILLA LOS ROBLES.webm',
        pdfUrl:"../../public/assets/ROBLES.pdf",
@@ -53,7 +59,9 @@ export const proyectoList:proyecto[] = [
 name?: string;
 titulo?: string;
 estado?:boolean,
+urlModelo:string;
 promo?: string;
+urlModeloContacto?:string,
 precio?: string;
 bgUrlImg?: string;
 logoUrl?: string,

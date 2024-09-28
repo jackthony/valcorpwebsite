@@ -10,8 +10,8 @@
         [vidUrl]="proyecto.vidUrl" (load)="recibir($event)" [pdfUrl]="proyecto.pdfUrl" ></app-banner>
         <app-info-proyecto [imgModelo]="" [color]="proyecto.color" [titulo]="proyecto.titulo" ></app-info-proyecto>
         <app-facilidades-pago [imgPromo]="proyecto.promo" [imgPrecio]="proyecto.precio" [color]="proyecto.color"></app-facilidades-pago>
-        <app-ubicacion [color]="proyecto.color"  [proyectoMap]="proyecto.titulo"></app-ubicacion>
-        <app-contacto [color]="proyecto.color"></app-contacto>
+        <app-ubicacion [color]="proyecto.color"  [proyectoMap]="proyecto.titulo" [imgModelo]="proyecto.urlModelo"></app-ubicacion>
+        <app-contacto [color]="proyecto.color" [imgModelo]="proyecto.urlModeloContacto" ></app-contacto>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 

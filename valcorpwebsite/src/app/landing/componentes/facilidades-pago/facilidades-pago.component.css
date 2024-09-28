@@ -94,6 +94,7 @@ img{
     .content_titulo h3{
         font-size: 20px;
         width: 100%;
+        padding: 10px;
         text-align: center;
     }
     .content_titulo{
