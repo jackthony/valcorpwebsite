@@ -2,7 +2,7 @@
     <mat-spinner></mat-spinner> 
 </div><!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
 @for(proyecto of proyectoList; track proyecto){
-    @if(proyecto.titulo == proyectoId){
+    @if(proyecto.titulo == proyectoId && proyecto.estado === true){
          @defer (on viewport) {
         <app-banner  [imgUrlBanner]="proyecto.bgUrlImg" 
         [logoUrlProyecto]="proyecto.logoUrl" 
@@ -21,5 +21,8 @@
                 <mat-spinner></mat-spinner> 
             </div>
          }
-    }   
+    
+    }
 }
+<app-prados-proximamente (sendLoad)="recibirLoad($event)" *ngIf="proyectoId === 'Prados'" ></app-prados-proximamente>
+

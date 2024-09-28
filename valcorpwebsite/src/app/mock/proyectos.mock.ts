@@ -7,11 +7,10 @@ export const proyectoList:proyecto[] = [
         titulo : 'Huertos',
         logoUrl : '../../public/assets/LOGO-BLANGO-HUERTOS.png',
         promo : '../../public/assets/PROMO_HUERTOS.png' ,
-        separarPrecio : 12,
         precio :'../../public/assets/INFO-PRECIOS-HUERTOS.png' ,
         bgUrlImg : '../../public/assets/imagen-robles.webp',
-        description : 'Gasolina refina en los centros de combustibles mas eficientes.',
         color: '#EF8619',
+        estado: true,
         vidUrl: '../../public/assets/VIDEO-HUERTOS-SAN-JOSE.webm',
         pdfUrl:"../../public/assets/HUERTOS.pdf",
         ubicacionMaps : 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3313.514595221012!2d-78.55390472436648!3d-9.0221793779252!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91ab87a64d4f6883%3A0x5c8a2e182d75f0d6!2sUrb.%20Villa%20los%20Robles!5e0!3m2!1ses!2spe!4v1720232626703!5m2!1ses!2spe'
@@ -20,12 +19,9 @@ export const proyectoList:proyecto[] = [
        id: 2,
        name: 'Urb. Los Prados',
        titulo : 'Prados',
+       estado: false,
        logoUrl : '../../public/assets/PRADOS-NUEVO.png',
-       promo : '../../public/assets/PROMO_ROBLES.png' ,
-       separarPrecio : 12,
-       precio :'../../public/assets/INFO-PRECIOS-ROBLES.png',
        bgUrlImg : '../../public/assets/imagen-prados.webp',
-       description : 'Gasolina refina en los centros de combustibles mas eficientes.',
        color: '#483374',
        vidUrl: '../../public/assets/VIDEO-HUERTOS-DE-SAN-JOSE.mp4',
        pdfUrl:"../../public/assets/ROBLES.pdf",
@@ -37,12 +33,11 @@ export const proyectoList:proyecto[] = [
        id: 3,
        name: 'Urb. Villa Los Robles',
        titulo : 'Robles',
+       estado:true,
        logoUrl : '../../public/assets/LOGO-BLANGO-ROBLES.png',
        promo : '../../public/assets/PROMO_ROBLES.png' ,
-       separarPrecio : 12,
        precio :'../../public/assets/INFO-PRECIOS-ROBLES.png',
        bgUrlImg : '../../public/assets/image.webp',
-       description : 'Gasolina refina en los centros de combustibles mas eficientes.',
        color: '#91BF24',
        vidUrl: '../../public/assets/VIDEO-URB VILLA LOS ROBLES.webm',
        pdfUrl:"../../public/assets/ROBLES.pdf",
@@ -58,10 +53,9 @@ export const proyectoList:proyecto[] = [
    id:number | string;
 name?: string;
 titulo?: string;
+estado?:boolean,
 promo?: string;
-separarPrecio?: number;
 precio?: string;
-description?: string;
 bgUrlImg?: string;
 logoUrl?: string,
 color?: string,
