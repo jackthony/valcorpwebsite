@@ -13,7 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   templateUrl: './contacto.component.html',
   styleUrl: './contacto.component.css',
 })
-export class ContactoComponent {
+export  class ContactoComponent {
     color = input<string>();
     formContact!: FormGroup;
    

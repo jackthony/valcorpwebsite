@@ -12,3 +12,7 @@ video{
     object-fit: cover;
     z-index: -1;
 }
+
+body {
+	font-family: 'Montserrat', sans-serif;
+  }

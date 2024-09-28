@@ -1,4 +1,8 @@
 <div class="container">
+  <mat-spinner color="primary" diameter="100" class="spinner" *ngIf="loading"></mat-spinner>
+  @if(mostrarNotificacion){
+    <app-notificacion (ocultarNoti)="close($event)" [tipo]="mostrarNotiError" ></app-notificacion>
+  }
     <div class="content_titulo">
       <h2>Libro de Reclamaciones</h2>
     </div>
@@ -10,55 +14,72 @@
     </div>
   </div>
   
-  <form [formGroup]="reclamoForm" (ngSubmit)="onSubmit()">
-    <mat-form-field appearance="fill">
-      <mat-label>Nombre Completo</mat-label>
-      <input matInput formControlName="nombreCompleto" required />
-      <small class="error" *ngIf="reclamoForm.get('nombreCompleto')?.hasError('required') && reclamoForm.get('nombreCompleto')?.touched">
-        Este campo es requerido
-      </small>
-    </mat-form-field>
+  <form [formGroup]="reclamoForm" (ngSubmit)="onSubmit() " >
+    <!-- Nombres completos -->
+    <div class=" gap-4 gridContent">
+    <div class="flex flex-col gap-3">
+      <label for="nombreCompleto" class="text-[16px] font-[500] pl-2 text-[#235799]">Nombres Completos</label>
+      <mat-form-field>
+        <input matInput formControlName="nombreCompleto" required matTooltip="Ingresar Nombre"    tooltipPosition="above"/>
+        <small class="error" *ngIf="reclamoForm.get('nombreCompleto')?.hasError('required') && reclamoForm.get('nombreCompleto')?.touched">
+          Este campo es requerido
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Apellido Paterno</mat-label>
-      <input matInput formControlName="apellidoPaterno" required />
-      <small class="error" *ngIf="reclamoForm.get('apellidoPaterno')?.hasError('required') && reclamoForm.get('apellidoPaterno')?.touched">
-        Este campo es requerido
-      </small>
-    </mat-form-field>
+    <!-- Apellidos completos -->
+    <div class="flex flex-col gap-3">
+      <label for="apellidoPaterno" class="text-[16px] font-[500] pl-2 text-[#235799]">Apellido Paterno</label>
+      <mat-form-field>
+        <input matInput formControlName="apellidoPaterno" required  Matto/>
+        <small class="error" *ngIf="reclamoForm.get('apellidoPaterno')?.hasError('required') && reclamoForm.get('apellidoPaterno')?.touched">
+          Este campo es requerido
+        </small>
+      </mat-form-field>
+    </div>
+
+    <div class="flex flex-col gap-3">
+      <label for="apellidoMaterno" class="text-[16px] font-[500] pl-2 text-[#235799]">Apellido Materno</label>
+      <mat-form-field>
+        <input matInput formControlName="apellidoMaterno" required />
+        <small class="error" *ngIf="reclamoForm.get('apellidoMaterno')?.hasError('required') && reclamoForm.get('apellidoMaterno')?.touched">
+          Este campo es requerido
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Apellido Materno</mat-label>
-      <input matInput formControlName="apellidoMaterno" required />
-      <small class="error" *ngIf="reclamoForm.get('apellidoMaterno')?.hasError('required') && reclamoForm.get('apellidoMaterno')?.touched">
-        Este campo es requerido
-      </small>
-    </mat-form-field>
+    <!-- Teléfono -->
+    <div class="flex flex-col gap-3">
+      <label for="telefono" class="text-[16px] font-[500] pl-2 text-[#235799]">Teléfono</label>
+      <mat-form-field>
+        <input matInput formControlName="telefono" required />
+        <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('required') && reclamoForm.get('telefono')?.touched">
+          Este campo es requerido
+        </small>
+        <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('pattern') && reclamoForm.get('telefono')?.touched">
+          Solo se permiten números en este campo
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Teléfono</mat-label>
-      <input matInput formControlName="telefono" required />
-      <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('required') && reclamoForm.get('telefono')?.touched">
-        Este campo es requerido
-      </small>
-      <small class="error" *ngIf="reclamoForm.get('telefono')?.hasError('pattern') && reclamoForm.get('telefono')?.touched">
-        Solo se permiten números en este campo
-      </small>
-    </mat-form-field>
+    <!-- Correo -->
+    <div class="flex flex-col gap-3">
+      <label for="correo" class="text-[16px] font-[500] pl-2 text-[#235799]">Correo</label>
+      <mat-form-field>
+        <input matInput formControlName="correo" required />
+        <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('required') && reclamoForm.get('correo')?.touched">
+          Este campo es requerido
+        </small>
+        <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('email') && reclamoForm.get('correo')?.touched">
+          Introduce un correo válido
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Correo</mat-label>
-      <input matInput formControlName="correo" required />
-      <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('required') && reclamoForm.get('correo')?.touched">
-        Este campo es requerido
-      </small>
-      <small class="error" *ngIf="reclamoForm.get('correo')?.hasError('email') && reclamoForm.get('correo')?.touched">
-        Introduce un correo válido
-      </small>
-    </mat-form-field>
-  
-    <mat-form-field appearance="fill">
-        <mat-label>Documento</mat-label>
+    <!-- Documento -->
+    <div class="flex flex-col gap-3">
+      <label for="documento" class="text-[16px] font-[500] pl-2 text-[#235799]">Documento</label>
+      <mat-form-field appearance="fill">
         <input matInput formControlName="documento" placeholder="DNI" />
         <small class="error" *ngIf="reclamoForm.get('documento')?.hasError('required') && reclamoForm.get('documento')?.touched">
           Este campo es requerido
@@ -67,83 +88,109 @@
           El documento solo debe contener números
         </small>
       </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Dirección</mat-label>
-      <input matInput formControlName="direccion" required />
-      <small class="error" *ngIf="reclamoForm.get('direccion')?.hasError('required') && reclamoForm.get('direccion')?.touched">
-        Este campo es requerido
-      </small>
-    </mat-form-field>
+    <!-- Dirección -->
+    <div class="flex flex-col gap-3">
+      <label for="direccion" class="text-[16px] font-[500] pl-2 text-[#235799]">Dirección</label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="direccion" required />
+        <small class="error" *ngIf="reclamoForm.get('direccion')?.hasError('required') && reclamoForm.get('direccion')?.touched">
+          Este campo es requerido
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Departamento</mat-label>
-      <mat-select formControlName="departamento" required>
-        <mat-option *ngFor="let dep of departamentos" [value]="dep">
-          {{ dep }}
-        </mat-option>
-      </mat-select>
-      <small class="error" *ngIf="reclamoForm.get('departamento')?.hasError('required') && reclamoForm.get('departamento')?.touched">
-        Selecciona un departamento
-      </small>
-    </mat-form-field>
+    <!-- Departamento -->
+    <div class="flex flex-col gap-3">
+      <label for="departamento" class="text-[16px] font-[500] pl-2 text-[#235799]">Departamento</label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="departamento" required>
+          <mat-option *ngFor="let dep of departamentos" [value]="dep">
+            {{ dep }}
+          </mat-option>
+        </mat-select>
+        <small class="error" *ngIf="reclamoForm.get('departamento')?.hasError('required') && reclamoForm.get('departamento')?.touched">
+          Selecciona un departamento
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Provincia</mat-label>
-      <mat-select formControlName="provincia" required>
-        <mat-option *ngFor="let prov of provincias" [value]="prov">
-          {{ prov }}
-        </mat-option>
-      </mat-select>
-      <small class="error" *ngIf="reclamoForm.get('provincia')?.hasError('required') && reclamoForm.get('provincia')?.touched">
-        Selecciona una provincia
-      </small>
-    </mat-form-field>
+    <!-- Provincia -->
+    <div class="flex flex-col gap-3">
+      <label for="provincia" class="text-[16px] font-[500] pl-2 text-[#235799]">Provincia</label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="provincia" required>
+          <mat-option *ngFor="let prov of provincias" [value]="prov">
+            {{ prov }}
+          </mat-option>
+        </mat-select>
+        <small class="error" *ngIf="reclamoForm.get('provincia')?.hasError('required') && reclamoForm.get('provincia')?.touched">
+          Selecciona una provincia
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Distrito</mat-label>
-      <mat-select formControlName="distrito" required>
-        <mat-option *ngFor="let dist of distritos" [value]="dist">
-          {{ dist }}
-        </mat-option>
-      </mat-select>
-      <small class="error" *ngIf="reclamoForm.get('distrito')?.hasError('required') && reclamoForm.get('distrito')?.touched">
-        Selecciona un distrito
-      </small>
-    </mat-form-field>
+    <!-- Distrito -->
+    <div class="flex flex-col gap-3">
+      <label for="distrito" class="text-[16px] font-[500] pl-2 text-[#235799]">Distrito</label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="distrito" required>
+          <mat-option *ngFor="let dist of distritos" [value]="dist">
+            {{ dist }}
+          </mat-option>
+        </mat-select>
+        <small class="error" *ngIf="reclamoForm.get('distrito')?.hasError('required') && reclamoForm.get('distrito')?.touched">
+          Selecciona un distrito
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Proyectos</mat-label>
-      <mat-select formControlName="proyectoList" required>
-        <mat-option *ngFor="let proy of proyectos" [value]="proy">
-          {{ proy }}
-        </mat-option>
-      </mat-select>
-      <small class="error" *ngIf="reclamoForm.get('proyectoList')?.hasError('required') && reclamoForm.get('proyectoList')?.touched">
-        Selecciona un proyecto
-      </small>
-    </mat-form-field>
+    <!-- Proyectos -->
+    <div class="flex flex-col gap-3">
+      <label for="proyectoList" class="text-[16px] font-[500] pl-2 text-[#235799]">Proyectos</label>
+      <mat-form-field appearance="fill">
+        <mat-select formControlName="proyectoList" required>
+          <mat-option *ngFor="let proy of proyectos" [value]="proy">
+            {{ proy }}
+          </mat-option>
+        </mat-select>
+        <small class="error" *ngIf="reclamoForm.get('proyectoList')?.hasError('required') && reclamoForm.get('proyectoList')?.touched">
+          Selecciona un proyecto
+        </small>
+      </mat-form-field>
+    </div>
   
-    <mat-form-field appearance="fill">
-      <mat-label>Monto Reclamado</mat-label>
-      <input matInput formControlName="montoReclamado" placeholder="Ingrese el monto" />
-      <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('required') && reclamoForm.get('montoReclamado')?.touched">
-        Este campo es requerido
-      </small>
-      <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('pattern') && reclamoForm.get('montoReclamado')?.touched">
-        Introduce una cantidad válida (por ejemplo: 100 o 100.50)
-      </small>
-    </mat-form-field>
-    
-    <mat-form-field appearance="fill">
-      <mat-label>Detalle del Reclamo</mat-label>
-      <textarea matInput formControlName="detalleReclamo" rows="5" placeholder="Escriba los detalles de su reclamo"></textarea>
-      <small class="error" *ngIf="reclamoForm.get('detalleReclamo')?.hasError('required') && reclamoForm.get('detalleReclamo')?.touched">
-        Este campo es requerido
-      </small>
-    </mat-form-field>
-    
+    <!-- Monto Reclamado -->
+    <div class="flex flex-col gap-3">
+      <label for="montoReclamado" class="text-[16px] font-[500] pl-2 text-[#235799]">Monto Reclamado</label>
+      <mat-form-field appearance="fill">
+        <input matInput formControlName="montoReclamado" placeholder="Ingrese el monto" />
+        <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('required') && reclamoForm.get('montoReclamado')?.touched">
+          Este campo es requerido
+        </small>
+        <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('pattern') && reclamoForm.get('montoReclamado')?.touched">
+          Introduce una cantidad válida (por ejemplo: 100 o 100.50)
+        </small>
+      </mat-form-field>
+    </div>
   
-    <button mat-raised-button type="submit">Enviar</button>
+    <!-- Detalle del Reclamo -->
+    <div class="flex flex-col gap-3"  id="tarea" >
+      <label for="detalleReclamo" class="text-[16px] font-[500] pl-2 text-[#235799]">Detalle del Reclamo</label>
+      <mat-form-field appearance="fill">
+        <textarea matInput formControlName="detalleReclamo" rows="5" placeholder="Escriba los detalles de su reclamo"></textarea>
+        <small class="error" *ngIf="reclamoForm.get('detalleReclamo')?.hasError('required') && reclamoForm.get('detalleReclamo')?.touched">
+          Este campo es requerido
+        </small>
+      </mat-form-field>
+    </div>
+  
+
+     <div class="text-center divbtn">
+    <p class="text-left">**Al brindar su correo electrónico, usted autoriza que, cualquier comunicación referente al reclamo se realice a través del mismo medio.<br> ***El tratamiento de sus datos personales en este portal tiene por finalidad gestionar de manera correcta los datos consignados en el reclamo o queja, conforme a las disposiciones legales aplicables.</p>
+      <button mat-raised-button type="submit" class="text-[#fff]"  [disabled]="!reclamoForm.valid">Enviar</button>
+     </div>
+    </div>
   </form>
   

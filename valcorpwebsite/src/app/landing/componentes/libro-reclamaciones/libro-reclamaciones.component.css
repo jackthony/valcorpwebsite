@@ -1,20 +1,37 @@
 /* Estilos base para pantallas grandes */
+body{
+	font-family: 'Montserrat', sans-serif;
+
+}
+
 form {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+	font-family: 'Montserrat', sans-serif;
+
     gap: 16px;
     width: 100%;
+    padding: 10px;
     max-width: 900px; /* Aumenta el ancho máximo del formulario */
     margin: 0 auto;
   }
+
+  .spinner {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
   
   mat-form-field {
     width: 100%;
+    transition: 0.5s;
   }
   
   input, select {
     padding: 10px; /* Aumenta el padding para mayor comodidad */
     border-radius: 4px;
+	font-family: 'Montserrat', sans-serif;
     border: 1px solid #ccc;
     font-size: 16px; /* Aumenta el tamaño de la fuente para mejor legibilidad */
     transition: border-color 0.3s; /* Agrega una transición suave para el borde */
@@ -28,8 +45,9 @@ form {
   button {
     padding: 15px 40px; /* Botón más grande */
     background-color: #1976d2;
-    color: white;
+    color: #1976d2 !important;
     border: none;
+	font-family: 'Montserrat', sans-serif;
     border-radius: 4px;
     font-size: 18px; /* Tamaño de fuente más grande */
     cursor: pointer;
@@ -38,10 +56,12 @@ form {
     justify-self: center; /* Centra el botón horizontalmente */
     grid-column: span 2; /* Hace que el botón ocupe todo el ancho en una fila */
     margin-bottom: 30px; /* Añade más espacio en la parte inferior */
+    transition: 0.3s ease;
   }
   
   button:hover {
     background-color: #1565c0;
+    color: #f9f9f9 !important;
   }
   
   .mat-form-field textarea {
@@ -63,14 +83,17 @@ form {
     text-align: left; /* Alineación a la izquierda */
     font-size: 2rem; /* Tamaño de fuente restaurado a 2rem */
     margin-bottom: 20px;
+	font-family: 'Montserrat', sans-serif;
+
   }
   
   /* Estilos para el texto descriptivo */
   .about_text {
+	font-family: 'Montserrat', sans-serif;
     color: #555; /* Texto en gris oscuro */
     font-size: 1rem; /* Tamaño de fuente más pequeño */
     line-height: 1.6; /* Espaciado entre líneas */
-    text-align: left; /* Justificación del texto */
+    text-align: justify; /* Justificación del texto */
     max-width: 600px; /* Limitar el ancho del párrafo */
   }
   
@@ -95,6 +118,16 @@ form {
   
     button {
       grid-column: span 1; /* Asegura que el botón ocupe una columna en pantallas más pequeñas */
+    }
+
+  }
+
+  @media screen and (min-width:900px) {
+    .gridContent{
+      display: grid;
+      gap: 15px;
+      grid-template-columns: repeat(2, 1fr); /* Una sola columna en pantallas medianas */
+
     }
   }
   
@@ -124,3 +157,10 @@ form {
     }
   }
 
+.divbtn{
+  grid-column: 1/span 2;
+}
+
+#tarea{
+  grid-column:1/span 2;
+}

@@ -16,6 +16,7 @@ export class BannerComponent {
   @Input() color?: string;
   @Input() colorParrafoInicio?: string;
   @Input() vidUrl?: string;
+  @Input() pdfUrl?: string;
   @Output() load = new EventEmitter<boolean>();  // Emite un booleano
 
 
@@ -29,4 +30,9 @@ export class BannerComponent {
      this.bannerLoaded = true;
      this.load.emit(true);
    }
+   openPdf(){
+    const url = this.pdfUrl;
+     window.open(url, '_blank'); // Abre en una nueva pestaña
+   }
+
 }

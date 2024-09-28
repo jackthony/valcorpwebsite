@@ -1,28 +1,45 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormBuilder, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatButtonModule } from '@angular/material/button';
 import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
 import { filter } from 'rxjs/operators';  // Necesitamos 'filter' para evitar entradas repetitivas
-
+import {TooltipPosition, MatTooltipModule} from '@angular/material/tooltip';
+import { MatDialog } from '@angular/material/dialog';
+import { AlertComponent } from '../../../layout/alert/alert.component';
+import { Observable } from 'rxjs';
+import { NotificacionComponent } from '../../../layout/notificacion/notificacion.component';
+import { ChangeDetectorRef } from '@angular/core';
+import { MatSpinner } from '@angular/material/progress-spinner';
+import { faL } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-libro-reclamaciones',
   standalone: true,
-  imports: [CommonModule, ReactiveFormsModule, FormsModule, MatInputModule, MatSelectModule, MatFormFieldModule, MatButtonModule],
+  imports: [CommonModule, ReactiveFormsModule, FormsModule,
+     MatInputModule, MatSelectModule, MatFormFieldModule, 
+     MatButtonModule, MatTooltipModule,NotificacionComponent,MatSpinner],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './libro-reclamaciones.component.html',
   styleUrls: ['./libro-reclamaciones.component.css']
 })
 export default class LibroReclamacionesComponent {
+
+
+  positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
+  position = new FormControl(this.positionOptions[0]);
+  @Input() mostrarNotificacion:boolean = false;
+  mostrarNotiError!:boolean;
   reclamoForm: FormGroup;
+  loading:boolean = false;
   departamentos = ['Amazonas', 'Ancash', 'Apurimac', 'Arequipa'];
   provincias = ['Provincia 1', 'Provincia 2', 'Provincia 3'];
   distritos = ['Distrito 1', 'Distrito 2', 'Distrito 3'];
   proyectos = ['Proyecto1', 'Proyecto2'];
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder,private dialog:MatDialog,private cdr: ChangeDetectorRef) {
     this.reclamoForm = this.fb.group({
       nombreCompleto: ['', Validators.required],
       apellidoPaterno: ['', Validators.required],
@@ -49,24 +66,54 @@ export default class LibroReclamacionesComponent {
       });
   }
 
+
   onSubmit() {
-    if (this.reclamoForm.valid) {
-      // Enviar el correo usando EmailJS
-      emailjs.send(
-        'service_0jss4tb',  // Tu Service ID
-        'template_29ybmsm', // Tu Template ID
-        this.reclamoForm.value,  // Los valores del formulario
-        'U8AJSYKAdhYUS25Qs'      // Tu User ID
-      ).then((result: EmailJSResponseStatus) => {
-        console.log(result.text);
-        alert('Correo enviado exitosamente');
-      }, (error) => {
-        console.error(error.text);
-        alert('Error al enviar el correo');
-      });
-    } else {
-      // Si el formulario no es válido, marcar todos los campos como "tocados"
-      this.reclamoForm.markAllAsTouched();
-    }
+    
+    this.loading = true;
+    const dialogRef = this.dialog.open(AlertComponent,{
+    })
+    dialogRef.afterClosed().subscribe((res)=>{
+      console.log(this.mostrarNotificacion)
+        if(res){
+          if (this.reclamoForm.valid) {
+            // Enviar el correo usando EmailJS
+            emailjs.send(
+              'service_0jss4tb',  // Tu Service ID
+              'template_29ybmsm', // Tu Template ID
+              this.reclamoForm.value,  // Los valores del formulario
+              'U8AJSYKAdhYUS25Qs'      // Tu User ID
+            ).then((result: EmailJSResponseStatus) => {
+              console.log(result.text);
+              this.mostrarNotificacion = true;
+              this.mostrarNotiError = true;
+    this.loading = false;
+              this.cdr.detectChanges();
+              console.log('Correo enviado exitosamente');
+            }, (error) => {
+              this.loading = false;
+              this.mostrarNotiError = false;
+              this.cdr.detectChanges();
+              console.error(error.text);
+              alert('Error al enviar el correo');
+            });
+          } else {
+            this.loading = false;
+            this.mostrarNotificacion = true;
+            this.mostrarNotiError = false;
+            this.cdr.detectChanges();
+            // Si el formulario no es válido, marcar todos los campos como "tocados"
+            this.reclamoForm.markAllAsTouched();
+          }
+          this.reclamoForm.reset();
+          this.cdr.detectChanges();
+        }
+    })
   }
+
+  close(event:boolean){
+    this.loading = false;
+    this.mostrarNotificacion = event;
+    this.cdr.detectChanges(); 
+  }
+
 }

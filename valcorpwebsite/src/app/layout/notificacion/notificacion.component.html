@@ -1,0 +1,35 @@
+@if(tipo){
+    <div class="notification">
+      <div class="notification-header flex justify-between">
+       <div class="flex  items-center">
+        <div class="mx-auto flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full sm:mx-0 sm:h-10 sm:w-10">
+          <svg class="h-6 w-6 text-[#28C76F]" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+          </svg>
+        </div>
+        <span class="text-[#1E293B] font-[550] text-[15px]">¡Éxito!</span>
+       </div>
+        <button mat-icon-button (click)="close()">
+          <mat-icon class="text-[#28C76F]">close</mat-icon>
+        </button>
+      </div>
+      <div class="notification-body text-[#1E293B] pl-[48px] pr-[20px]">
+        Los datos fueron guardados correctamente.
+      </div>
+      <div class="progress-bar">
+        <div class="progress" [style.width.%]="progress()"></div>
+      </div>
+    </div>
+  }@else { <div class="notification_error">
+    <div class="notification-header_error">
+      <mat-icon>check_circle</mat-icon>
+      <span>¡Error!</span>
+      <button mat-icon-button (click)="close()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+    <div class="notification-body">
+      {{texto? texto : "Datos no ingresados, por favor completar los espacios."}}
+    </div>
+  </div>}
+  

@@ -42,9 +42,9 @@ export class ProyectosComponent {
       colorIcono:'#473374',
       titulo:'Urb. Los Prados',
       marcaAguaLogoProyecto:'../../../../public/assets/PRADOS-NUEVO.png',
-      precioDesde:'Proximamente',
-      cuotasDesde:'s/795',
-      lotesDesde:'60m',
+      precioDesde:undefined,
+      cuotasDesde:undefined,
+      lotesDesde:undefined,
       ruta:'/proyectos/Prados',
     },
 

@@ -24,7 +24,10 @@ export const routes: Routes = [
       {
         path: 'libro-reclamaciones', loadComponent: () => import('./landing/componentes/libro-reclamaciones/libro-reclamaciones.component')
     },
-
+    
+    {
+        path: 'contacto', loadComponent: () => import('./landing/pages/contactar/contactar.component')
+    },
     {
         path: '', redirectTo: 'home', pathMatch: 'full'
     },

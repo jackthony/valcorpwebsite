@@ -2,6 +2,8 @@ section{
  /* Green to blue gradient */
     position: relative;
     overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+
 }
 section::before{
     content: "";
@@ -29,9 +31,12 @@ h3{
     color: #fff;
     font-size: 65px;
     display: block;
-   padding: 10px 0;
+   padding: 20px 0;
+   font-weight: 600;
    text-align: end;
    margin: 0;
+   font-family: 'Montserrat', sans-serif;
+
 }
 
 .imgBx_info_precios{

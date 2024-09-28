@@ -19,19 +19,35 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 80px;
+    padding: 20px 0;
     z-index: 1000;
     background: transparent;
     font-family: 'Montserrat', sans-serif;
 }
 
 .container_nav.active{
-    background-color: rgba(127, 127, 127, 0.334);
+    background-color: rgb(255, 255, 255);
 }
 
 .container_nav.active .menu-burger span{
 background-color: #266fdc;
 }
 
+.container_nav.active .bg{
+    background-color: transparent;
+}
+
+.container_nav.active .bg .mat,.container_nav.active .content_contact .numero_contact{
+    color: #266fdc !important;
+}
+
+.container_nav.active  .content_contact{
+    border: 3px solid  #266fdc !important;
+}
+
+.container_nav.active .bg a{
+    color: #266fdc !important;
+}
 a.active_proyectos{
     color: #266fdc !important;
 
@@ -80,6 +96,7 @@ a.active_proyectos{
 
 }
 
+
 .logo{
    width: 200px;
    height: 120px;
@@ -110,6 +127,9 @@ a.active_proyectos{
 .menu{
     display: none;
 }
+
+
+
 
 .menu-burger {
     width: 35px;
@@ -160,6 +180,11 @@ a.active_proyectos{
 
 
 @media screen  and (max-width:1000px) {
+
+    .container_nav.active[_ngcontent-ng-c2496714338] .bg[_ngcontent-ng-c2496714338] a[_ngcontent-ng-c2496714338]{
+        color: #fff;
+    }
+
     .content_nav{
         top: -100%;
         position: fixed;
@@ -186,7 +211,14 @@ a.active_proyectos{
         flex-direction: column;
     }
     
+    .nav_link.active_link{
+        color: #ffffff ;
+        background-color: #266fdc40;
+    }
 
+    .container_nav.active .bg{
+        background-color: #fff;
+    }
 
     .nav_link{
         color: #323e50;
@@ -213,6 +245,10 @@ a.active_proyectos{
         cursor: pointer;
 
     }
+
+    .container_nav.active .bg a{
+        color: rgb(59, 63, 82) !important;
+    }
     .numero_contact{
         color:  #245CB5;
         font-size: 45px;
@@ -221,9 +257,7 @@ a.active_proyectos{
     
 
     }
-    .nav_link:hover{
-        background-color: initial;
-    }
+   
     .logo{
         z-index: 10000;
         padding-left: 30px;

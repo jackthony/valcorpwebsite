@@ -7,26 +7,32 @@
         style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 100;"></a>
 
         <img src={{urlImg}} alt="proyecto">
-        <span class="precio_span" [ngStyle]="{'background-color':colorIcono}" >Desde: {{precioDesde}}
+        <span class="precio_span" [ngStyle]="{'background-color':colorIcono}" *ngIf="precioDesde != undefined" >Desde: {{precioDesde}}
+        </span>
+        <span class="precio_span py-2" [ngStyle]="{'background-color':colorIcono}" *ngIf="precioDesde == undefined" >PROXIMAMENTE
         </span>
         <div class="logo_proyecto_marca" [ngStyle]="{'background-image': 'url(' + marcaAguaLogoProyecto + ')'}"></div>
      </div> 
-     <div class="content_proyecto_detalle">
-         <div class="wrapper_datalles">
-            <h3 class="titulo_proyecto_detalle">{{titulo}}</h3>
-            <span>Chimbote</span>
-            <div class="content_detalles_urb">
-                <div><fa-icon [icon]="casa"[ngStyle]="{'color' :colorIcono}"></fa-icon>
-                    <p>Lotes desde: {{lotesDesde}}</p></div>
-                <div>
-                    <fa-icon [icon]="casa" [ngStyle]="{'color' :colorIcono}"></fa-icon>
-                    <p>Hasta 60 meses - Sin interes</p>
+     <div class="content_proyecto_detalle flex flex-col" [ngStyle]="{'width':lotesDesde == undefined?'35%':'fit',
+     'padding':lotesDesde == undefined?'0px 45px 0px 45px':'','text-align': lotesDesde==undefined? 'center': ''}">
+        <h3 class="titulo_proyecto_detalle pl-[45px]">{{titulo}}</h3>
+        <div class="flex justify-between items-center">
+            <div class="wrapper_datalles">
+                <span *ngIf="lotesDesde != undefined">Chimbote</span>
+                <div class="content_detalles_urb" *ngIf="lotesDesde!= undefined">
+                    <div><fa-icon [icon]="casa"[ngStyle]="{'color' :colorIcono}"></fa-icon>
+                        <p>Lotes desde: {{lotesDesde}}</p></div>
+                    <div>
+                        <fa-icon [icon]="casa" [ngStyle]="{'color' :colorIcono}"></fa-icon>
+                        <p >Hasta 60 meses - Sin interes</p>
+                    </div>
                 </div>
-            </div>
-         </div>
-         <div class="content_couta_precio">
-             <span>Cuotas desde :</span>
-             <p class="precio_coutas" [ngStyle]="{'background-color':colorPrecio}">{{cuotasDesde}}</p>
-         </div>
+                <p class="text-center w-full bg-[#2457A1] py-4 rounded-xl text-[#fff] text-[25px] font-[600]" *ngIf="lotesDesde == undefined">PROXIMAMENTE</p>
+             </div>
+             <div class="content_couta_precio" *ngIf="cuotasDesde != undefined">
+                 <span>Cuotas desde :</span>
+                 <p class="precio_coutas" [ngStyle]="{'background-color':colorPrecio}">{{cuotasDesde}}</p>
+             </div>
+        </div>
      </div>
 </div>
