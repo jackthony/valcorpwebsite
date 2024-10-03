@@ -4,24 +4,64 @@
   padding: 20px;
   font-family: 'Arial', sans-serif;
   margin-top: 80px;
+  margin-bottom: 30px;
+  text-align: justify;
 }
 
 h1 {
   color: #003366; 
   text-align: left;
-  font-size: 2.5rem;
+  font-size: 3rem;
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
 
-h3, h4 {
+h2, h3, h4 {
   color: #333;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 p {
   color: #555;
   font-size: 1rem;
   line-height: 1.6;
+  margin-bottom: 30px;
+  margin-top: 30px;
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+/* Estilos específicos para dispositivos móviles */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+    margin-top: 50px; /* Reducir el espacio superior en móviles */
+    margin-bottom: 20px; /* Reducir el espacio inferior en móviles */
+  }
+
+  h1 {
+    font-size: 2.2rem; /* Disminuir tamaño del título principal */
+    margin-top: 20px;
+    margin-bottom: 30px;
+  }
+
+  h2, h3, h4 {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  p {
+    font-size: 0.9rem; /* Reducir un poco el tamaño del texto */
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  section {
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 }

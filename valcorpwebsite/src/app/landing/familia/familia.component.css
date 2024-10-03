@@ -22,6 +22,12 @@ h3{
     text-align: center;
 }
 
+.slide-custom img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .slide-custom{
  display: flex;
  justify-content: center;
