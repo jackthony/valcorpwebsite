@@ -19,7 +19,18 @@
 
 
 @defer (on viewport) {
-    <app-proyectos></app-proyectos>
+<app-proyectos></app-proyectos>
+}@placeholder {
+    <div class="spinner">
+        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+      </div>
+}@loading{
+    <div class="spinner">
+        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+      </div>
+}
+
+@defer (on viewport) {
 <app-familia></app-familia>
 }@placeholder {
     <div class="spinner">

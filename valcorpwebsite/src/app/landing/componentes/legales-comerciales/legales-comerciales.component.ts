@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './legales-comerciales.component.html',
   styleUrl: './legales-comerciales.component.css'
 })
-export class LegalesComercialesComponent {
+export default class LegalesComercialesComponent {
 
 }

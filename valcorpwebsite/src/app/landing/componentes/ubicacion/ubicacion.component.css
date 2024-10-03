@@ -172,4 +172,7 @@ button{
     .col{
         flex-direction: column !important;
     }
+    .container_google_maps[_ngcontent-ng-c1019430110]{
+        padding-left: 0;
+    }
 }

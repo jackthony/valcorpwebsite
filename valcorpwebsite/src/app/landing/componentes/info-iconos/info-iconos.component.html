@@ -1,210 +1,230 @@
 @if (tituloInput === 'Prados') {
-    <div class="content_info_proyecto">
-    <div class="content_img_info_proyecto">
-           <img loading="lazy" src='../../../../public/assets/V4 copia.png' loading="lazy" alt="" />
-    </div>
-    <div class="content_info_proyecto_detalles">
-       <div class="content_info_proyecto_mas_detalles agua" >
-           <img loading="lazy" src="../../../../public/assets/AGUA-POTABLE.png" loading="lazy"/>
-               <div class="modal_detalles">
-                  <img src='../../../../public/assets/AGUA-POTABLE-modal.png' loading="lazy"alt="agua potable">
+    @defer (on idle) {
+        <div class="content_info_proyecto">
+          <div class="content_img_info_proyecto">
+            <img loading="lazy" src='../../../../public/assets/V4 copia.png' alt="Proyecto"/>
+          </div>
+          <div class="content_info_proyecto_detalles">
+            <div class="content_info_proyecto_mas_detalles agua">
+              <img loading="lazy" src="../../../../public/assets/AGUA-POTABLE.png" alt="Agua Potable"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/AGUA-POTABLE-modal.png' loading="lazy" alt="Detalle Agua Potable"/>
               </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles energia">
-           <img loading="lazy" src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png" loading="lazy"/>
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/ENERGÍA-ELÉCTRICA-modal.png'  loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles desague">
-           <img loading="lazy" src="../../../../public/assets/DESAGÜE.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/DESAGÛE-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles cerco">
-           <img loading="lazy" src="../../../../public/assets/CERCO-PERIMÉTRICO.png" loading="lazy"/>
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/CERCO-PERIMÉTRICO-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles pistas">
-           <img loading="lazy" src="../../../../public/assets/PISTAS-Y-VEREDAS.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PISTAS-Y-VEREDAS-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles portico">
-           <img loading="lazy" src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PORTICO-DE-INGRESO-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="grande">
-           <div class="content_info_proyecto_mas_detalles parques">
-               <img loading="lazy"
-               src="../../../../public/assets/PARQUES-BIOSALUDABLES.png" loading="lazy"/>
-               <div class="modal_detalles">
-                   <img src='../../../../public/assets/PARQUE-RECREATIVOS-modal.png' loading="lazy"alt="agua potable">
-               </div>
-           </div>
-           <div class="content_info_proyecto_mas_detalles  parrilas">
-               <img loading="lazy" src="../../../../public/assets/ZONA-DE-PARRILLAS.png"  loading="lazy"
-               />
-               <div class="modal_detalles">
-                   <img src='../../../../public/assets/HIDRANTE-modal.png' loading="lazy" alt="agua potable">
-               </div>
-           </div>
-       </div>
-    </div>
-</div>
+            </div>
+            <div class="content_info_proyecto_mas_detalles energia">
+              <img loading="lazy" src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png" alt="Energía Eléctrica"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/ENERGÍA-ELÉCTRICA-modal.png' loading="lazy" alt="Detalle Energía Eléctrica"/>
+              </div>
+            </div>
+            <div class="content_info_proyecto_mas_detalles desague">
+              <img loading="lazy" src="../../../../public/assets/DESAGÜE.png" alt="Desagüe"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/DESAGÛE-modal.png' loading="lazy" alt="Detalle Desagüe"/>
+              </div>
+            </div>
+            <div class="content_info_proyecto_mas_detalles cerco">
+              <img loading="lazy" src="../../../../public/assets/CERCO-PERIMÉTRICO.png" alt="Cerco Perimétrico"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/CERCO-PERIMÉTRICO-modal.png' loading="lazy" alt="Detalle Cerco Perimétrico"/>
+              </div>
+            </div>
+            <div class="content_info_proyecto_mas_detalles pistas">
+              <img loading="lazy" src="../../../../public/assets/PISTAS-Y-VEREDAS.png" alt="Pistas y Veredas"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/PISTAS-Y-VEREDAS-modal.png' loading="lazy" alt="Detalle Pistas y Veredas"/>
+              </div>
+            </div>
+            <div class="content_info_proyecto_mas_detalles portico">
+              <img loading="lazy" src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" alt="Pórtico de Ingreso"/>
+              <div class="modal_detalles">
+                <img src='../../../../public/assets/PORTICO-DE-INGRESO-modal.png' loading="lazy" alt="Detalle Pórtico de Ingreso"/>
+              </div>
+            </div>
+            <div class="grande">
+              <div class="content_info_proyecto_mas_detalles parques">
+                <img loading="lazy" src="../../../../public/assets/PARQUES-BIOSALUDABLES.png" alt="Parques Biosaludables"/>
+                <div class="modal_detalles">
+                  <img src='../../../../public/assets/PARQUE-RECREATIVOS-modal.png' loading="lazy" alt="Detalle Parques"/>
+                </div>
+              </div>
+              <div class="content_info_proyecto_mas_detalles parrilas">
+                <img loading="lazy" src="../../../../public/assets/ZONA-DE-PARRILLAS.png" alt="Zona de Parrillas"/>
+                <div class="modal_detalles">
+                  <img src='../../../../public/assets/HIDRANTE-modal.png' loading="lazy" alt="Detalle Hidrante"/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      }@placeholder {
+        <div class="spinner">
+          <mat-spinner></mat-spinner> 
+        </div>
+      }
 }
 @else if (tituloInput === 'Huertos') {
-<div class="content_info_proyecto">
-    <div class="content_img_info_proyecto">
-           <img loading="lazy" src='../../../../public/assets/V4 copia.png'loading="lazy"  alt="" />
-    </div>
-    <div class="content_info_proyecto_detalles">
-       <div class="content_info_proyecto_mas_detalles agua" >
-           <img loading="lazy" src="../../../../public/assets/AGUA-POTABLE.png"/>
-               <div class="modal_detalles">
-                  <img src='../../../../public/assets/AGUA-POTABLE-modal.png'loading="lazy"  alt="agua potable">
-              </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles energia">
-           <img loading="lazy" src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png"/>
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/ENERGÍA-ELÉCTRICA-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles desague">
-           <img loading="lazy" src="../../../../public/assets/DESAGÜE.png" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/DESAGÛE-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles cerco">
-           <img loading="lazy" src="../../../../public/assets/CERCO-PERIMÉTRICO.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/CERCO-PERIMÉTRICO-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles pistas">
-           <img loading="lazy" src="../../../../public/assets/PISTAS-Y-VEREDAS.png" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PISTAS-Y-VEREDAS-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles portico">
-           <img loading="lazy" src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PORTICO-DE-INGRESO-modal.png' loading="lazy" alt="agua potable">
-           </div>
-       </div>
-
-        <div class="grande">
-            <div class="content_info_proyecto_mas_detalles parques">
-                <img loading="lazy"
-                src="../../../../public/assets/PARQUES-BIOSALUDABLES.png" loading="lazy"/>
-                <div class="modal_detalles">
-                    <img src='../../../../public/assets/PARQUE-RECREATIVOS-modal.png' loading="lazy" alt="agua potable">
-                </div>
-            </div>
-            <div class="content_info_proyecto_mas_detalles  parrilas">
-                <img loading="lazy" src="../../../../public/assets/ZONA-DE-PARRILLAS.png"  loading="lazy"
-                />
-                <div class="modal_detalles">
-                    <img src='../../../../public/assets/HIDRANTE-modal.png'  loading="lazy"alt="agua potable">
-                </div>
-            </div>
+@defer (on viewport) {
+    <div class="content_info_proyecto">
+        <div class="content_img_info_proyecto">
+               <img loading="lazy" src='../../../../public/assets/V4 copia.png'loading="lazy"  alt="" />
         </div>
-           
+        <div class="content_info_proyecto_detalles">
+           <div class="content_info_proyecto_mas_detalles agua" >
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/agua-potable.webp"/>
+                   <div class="modal_detalles">
+                      <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-agua-potable-robles.webp'loading="lazy"  alt="agua potable">
+                  </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles energia">
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/energia-electrica.webp"/>
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-energía-eléctrica-huertos.webp' loading="lazy" alt="agua potable">
+               </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles desague">
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/desague.webp"/>
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-desague-huertos.webp' loading="lazy" alt="agua potable">
+               </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles cerco">
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/cerco-perimetrico.webp" loading="lazy" />
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-cerco-perimétrico-huertos.webp' loading="lazy" alt="agua potable">
+               </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles pistas">
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/pistos-veredas.webp" />
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-pistas-veredas-huertos.webp' loading="lazy" alt="agua potable">
+               </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles portico">
+               <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/portico-ingreso.webp" loading="lazy" />
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-portico-ingreso-huertos.webp' loading="lazy" alt="agua potable">
+               </div>
+           </div>
+    
+            <div class="grande">
+                <div class="content_info_proyecto_mas_detalles parques">
+                    <img loading="lazy"
+                    src="../../../../public/assets/imagenes-huertos/iconos/parques-recreativos.webp" loading="lazy"/>
+                    <div class="modal_detalles">
+                        <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-parques-recreativos-huertos.webp' loading="lazy" alt="agua potable">
+                    </div>
+                </div>
+                <div class="content_info_proyecto_mas_detalles  parrilas">
+                    <img loading="lazy" src="../../../../public/assets/imagenes-huertos/iconos/hidrantes.webp"  loading="lazy"
+                    />
+                    <div class="modal_detalles">
+                        <img src='../../../../public/assets/imagenes-huertos/fichas-tecnicas/ft-hidrantes-huertos.webp'  loading="lazy"alt="agua potable">
+                    </div>
+                </div>
+            </div>
+               
+        </div>
     </div>
-</div>
+}@placeholder {
+    <div class="spinner">
+        <mat-spinner></mat-spinner> 
+      </div>
+}@loading {
+    <div class="spinner">
+        <mat-spinner></mat-spinner> 
+      </div>
+}
 }
 @else {
-<div class="content_info_proyecto">
-    <div class="content_img_info_proyecto">
-           <img loading="lazy" src='../../../../public/assets/MODELO-ROBLES-1.webp'loading="lazy"  alt="" />
-    </div>
-    <div class="content_info_proyecto_detalles">
-       <div class="content_info_proyecto_mas_detalles agua" >
-           <img loading="lazy" src="../../../../public/assets/AGUA-POTABLE.png"/>
+@defer (on viewport) {
+    <div class="content_info_proyecto">
+        <div class="content_img_info_proyecto">
+               <img loading="lazy" src='../../../../public/assets/MODELO-ROBLES-1.webp'loading="lazy"  alt="" />
+        </div>
+        <div class="content_info_proyecto_detalles">
+           <div class="content_info_proyecto_mas_detalles agua" >
+               <img loading="lazy" src="../../../../public/assets/AGUA-POTABLE.png"/>
+                   <div class="modal_detalles">
+                      <img src='../../../../public/assets/AGUA-POTABLE-modal.png' loading="lazy" alt="agua potable">
+                  </div>
+           </div>
+           <div class="content_info_proyecto_mas_detalles energia">
+               <img loading="lazy" src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png" loading="lazy" />
                <div class="modal_detalles">
-                  <img src='../../../../public/assets/AGUA-POTABLE-modal.png' loading="lazy" alt="agua potable">
-              </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles energia">
-           <img loading="lazy" src="../../../../public/assets/ENERGÍA-ELÉCTRICA.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/ENERGÍA-ELÉCTRICA-modal.png'  loading="lazy" alt="agua potable">
+                   <img src='../../../../public/assets/ENERGÍA-ELÉCTRICA-modal.png'  loading="lazy" alt="agua potable">
+               </div>
            </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles desague">
-           <img loading="lazy" src="../../../../public/assets/DESAGÜE.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/DESAGÛE-modal.png' loading="lazy" alt="agua potable">
+           <div class="content_info_proyecto_mas_detalles desague">
+               <img loading="lazy" src="../../../../public/assets/DESAGÜE.png" loading="lazy" />
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/DESAGÛE-modal.png' loading="lazy" alt="agua potable">
+               </div>
            </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles cerco">
-           <img loading="lazy" src="../../../../public/assets/CERCO-PERIMÉTRICO.png" loading="lazy" />
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/CERCO-PERIMÉTRICO-modal.png' loading="lazy" alt="agua potable">
+           <div class="content_info_proyecto_mas_detalles cerco">
+               <img loading="lazy" src="../../../../public/assets/CERCO-PERIMÉTRICO.png" loading="lazy" />
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/CERCO-PERIMÉTRICO-modal.png' loading="lazy" alt="agua potable">
+               </div>
            </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles pistas">
-           <img loading="lazy" src="../../../../public/assets/PISTAS-Y-VEREDAS.png" loading="lazy"/>
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PISTAS-Y-VEREDAS-modal.png'loading="lazy" alt="agua potable">
+           <div class="content_info_proyecto_mas_detalles pistas">
+               <img loading="lazy" src="../../../../public/assets/PISTAS-Y-VEREDAS.png" loading="lazy"/>
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/PISTAS-Y-VEREDAS-modal.png'loading="lazy" alt="agua potable">
+               </div>
            </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles portico">
-           <img loading="lazy" src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" loading="lazy"/>
-           <div class="modal_detalles">
-               <img src='../../../../public/assets/PORTICO-DE-INGRESO-modal.png'  loading="lazy" alt="agua potable">
+           <div class="content_info_proyecto_mas_detalles portico">
+               <img loading="lazy" src="../../../../public/assets/PÓRTICO-DE-INGRESO.png" loading="lazy"/>
+               <div class="modal_detalles">
+                   <img src='../../../../public/assets/PORTICO-DE-INGRESO-modal.png'  loading="lazy" alt="agua potable">
+               </div>
            </div>
-       </div>
-       <div class="content_info_proyecto_mas_detalles  cancha">
-        <img loading="lazy" src="../../../../public/assets/CANCHA-DE-FÚTBOL.png "  loading="lazy"
-        />
-        <div class="modal_detalles">
-            <img src='../../../../public/assets/CHANCHA-DE-FÚTBOL-modal.png' loading="lazy" alt="agua potable">
+           <div class="content_info_proyecto_mas_detalles  cancha">
+            <img loading="lazy" src="../../../../public/assets/CANCHA-DE-FÚTBOL.png "  loading="lazy"
+            />
+            <div class="modal_detalles">
+                <img src='../../../../public/assets/CHANCHA-DE-FÚTBOL-modal.png' loading="lazy" alt="agua potable">
+            </div>
+        </div>
+               <div class="content_info_proyecto_mas_detalles parques">
+                   <img loading="lazy"
+                   src="../../../../public/assets/PARQUES-BIOSALUDABLES.png"/>
+                   <div class="modal_detalles">
+                       <img src='../../../../public/assets/PARQUE-RECREATIVOS-modal.png' loading="lazy" alt="agua potable">
+                   </div>
+               </div>
+               <div class="content_info_proyecto_mas_detalles  parrilas">
+                   <img loading="lazy" src="../../../../public/assets/ZONA-DE-PARRILLAS.png"  
+                   />
+                   <div class="modal_detalles">
+                       <img src='../../../../public/assets/ZONA-DE-PARRILLA-modal.png' loading="lazy" alt="agua potable">
+                   </div>
+               </div>
+    
+               <div class="grande">
+                <div class="content_info_proyecto_mas_detalles parques">
+                    <img loading="lazy"
+                    src="../../../../public/assets/VÓLEY-PLAYA.png"/>
+                    <div class="modal_detalles">
+                        <img src='../../../../public/assets/VÓLEY-PLAYA-modal.png' loading="lazy" alt="agua potable">
+                    </div>
+                </div>
+                <div class="content_info_proyecto_mas_detalles  parrilas">
+                    <img loading="lazy" src="../../../../public/assets/HIDRANTES.png"  
+                    />
+                    <div class="modal_detalles">
+                        <img src='../../../../public/assets/HIDRANTE-modal.png' loading="lazy"alt="agua potable">
+                    </div>
+                </div>
+               </div>
+               
         </div>
     </div>
-           <div class="content_info_proyecto_mas_detalles parques">
-               <img loading="lazy"
-               src="../../../../public/assets/PARQUES-BIOSALUDABLES.png"/>
-               <div class="modal_detalles">
-                   <img src='../../../../public/assets/PARQUE-RECREATIVOS-modal.png' loading="lazy" alt="agua potable">
-               </div>
-           </div>
-           <div class="content_info_proyecto_mas_detalles  parrilas">
-               <img loading="lazy" src="../../../../public/assets/ZONA-DE-PARRILLAS.png"  
-               />
-               <div class="modal_detalles">
-                   <img src='../../../../public/assets/ZONA-DE-PARRILLA-modal.png' loading="lazy" alt="agua potable">
-               </div>
-           </div>
-
-           <div class="grande">
-            <div class="content_info_proyecto_mas_detalles parques">
-                <img loading="lazy"
-                src="../../../../public/assets/VÓLEY-PLAYA.png"/>
-                <div class="modal_detalles">
-                    <img src='../../../../public/assets/VÓLEY-PLAYA-modal.png' loading="lazy" alt="agua potable">
-                </div>
-            </div>
-            <div class="content_info_proyecto_mas_detalles  parrilas">
-                <img loading="lazy" src="../../../../public/assets/HIDRANTES.png"  
-                />
-                <div class="modal_detalles">
-                    <img src='../../../../public/assets/HIDRANTE-modal.png' loading="lazy"alt="agua potable">
-                </div>
-            </div>
-           </div>
-           
-    </div>
-</div>
+}@placeholder {
+    <div class="spinner">
+        <mat-spinner></mat-spinner> 
+      </div>
+}
 }
 
 
