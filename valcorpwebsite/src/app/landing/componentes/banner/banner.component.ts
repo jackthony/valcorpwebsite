@@ -17,6 +17,7 @@ export class BannerComponent {
   @Input() colorParrafoInicio?: string;
   @Input() vidUrl?: string;
   @Input() pdfUrl?: string;
+  @Input() tipo_grafia?: string;
   @Output() load = new EventEmitter<boolean>();  // Emite un booleano
 
 

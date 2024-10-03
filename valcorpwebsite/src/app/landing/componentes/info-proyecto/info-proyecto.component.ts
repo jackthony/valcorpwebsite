@@ -16,6 +16,7 @@ import { InfoIconosComponent } from '../info-iconos/info-iconos.component';
 export class InfoProyectoComponent implements OnInit {
   @Input() imgModelo?: string;
   @Input() color?: string;
+  @Input() tipo_grafia?: string;
   //signal
   tituloSignal = input({
      surname:'surTitulo',

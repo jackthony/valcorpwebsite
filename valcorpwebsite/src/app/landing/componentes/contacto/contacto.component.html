@@ -1,30 +1,30 @@
 <section>
-  <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F'}">Contactanos</h3>
+  <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F','font-family':tipo_grafia}" >Contactanos</h3>
   <div class="content_contact">
     <form [formGroup]="formContact" class="Formulario" (ngSubmit)="enviar()">
-      <label class="titulo_formulario">Contactanos</label>
+      <label class="titulo_formulario"  [ngStyle]="{'font-family': tipo_grafia}">Contactanos</label>
 
       <div class="conten_input">
         <input type="text" placeholder="Nombre Completo" formControlName="nombreCompleto"/>
-        <div *ngIf="hasError('nombreCompleto', 'required')">El nombre es requerido.</div>
+        <div *ngIf="hasError('nombreCompleto', 'required')" class="text-red-500">El nombre es requerido.</div>
         <div *ngIf="hasError('nombreCompleto', 'minlength')">El nombre debe tener al menos 3 caracteres.</div>
       </div>
 
       <div class="conten_input">
         <input type="number" placeholder="Número" formControlName="numero"/>
-        <div *ngIf="hasError('numero', 'required')">El número es requerido.</div>
+        <div *ngIf="hasError('numero', 'required')" class="text-red-500">El número es requerido.</div>
         <div *ngIf="hasError('numero', 'pattern')">Debe ingresar solo dígitos.</div>
       </div>
 
       <div class="conten_input">
         <input type="email" placeholder="Correo" formControlName="correo"/>
-        <div *ngIf="hasError('correo', 'required')">El correo es requerido.</div>
+        <div *ngIf="hasError('correo', 'required')" class="text-red-500">El correo es requerido.</div>
         <div *ngIf="hasError('correo', 'email')">El formato del correo es incorrecto.</div>
       </div>
 
       <div class="conten_input">
         <input type="text" placeholder="Proyecto de interés" formControlName="proyecto"/>
-        <div *ngIf="hasError('proyecto', 'required')">El proyecto es requerido.</div>
+        <div *ngIf="hasError('proyecto', 'required')" class="text-red-500">El proyecto es requerido.</div>
       </div>
 
       <div class="conten_input">
@@ -36,13 +36,13 @@
           <input type="checkbox" formControlName="aceptarTerminos"/>
           <span>He leído y acepto el Tratamiento de mis datos personales.</span>
         </div>
-        <div *ngIf="hasError('aceptarTerminos', 'requiredTrue')">Debe aceptar el tratamiento de datos.</div>
+        <div *ngIf="hasError('aceptarTerminos', 'requiredTrue')" class="text-red-500">Debe aceptar el tratamiento de datos.</div>
 
         <div class="permiso">
           <input type="checkbox" formControlName="aceptarComunicaciones"/>
           <span>He leído y acepto la Política para envío de comunicaciones comerciales.</span>
         </div>
-        <div *ngIf="hasError('aceptarComunicaciones', 'requiredTrue')">Debe aceptar la política de comunicaciones comerciales.</div>
+        <div *ngIf="hasError('aceptarComunicaciones', 'requiredTrue')" class="text-red-500">Debe aceptar la política de comunicaciones comerciales.</div>
       </div>
 
       <button class="btn_send_form_contact" type="submit" [disabled]="formContact.invalid">Enviar</button>

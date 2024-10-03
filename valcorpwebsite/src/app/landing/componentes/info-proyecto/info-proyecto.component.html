@@ -8,7 +8,7 @@
   </div>
 <section [hidden]="!bannerLoaded" [ngStyle]="{'background': 'linear-gradient(to bottom right, ' + color + ', ' + color + ')'}" >
     <div class="content_titulo">
-        <h3>Informacion del Proyecto</h3>
+        <h3 [ngStyle]="{'font-family': tipo_grafia}">Informacion del Proyecto</h3>
     </div>
 @defer (on viewport) {
   <app-info-iconos [tituloInput]='titulo'></app-info-iconos>

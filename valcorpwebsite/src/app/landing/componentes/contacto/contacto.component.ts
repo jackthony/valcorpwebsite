@@ -15,6 +15,7 @@ import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angula
 export class ContactoComponent implements OnInit {
   @Input() color: string | undefined; // Definición correcta de @Input()
   @Input() imgModelo: string | undefined; // Añadimos imgModelo como @Input
+  @Input() tipo_grafia: string | undefined; // Añadimos imgModelo como @Input
 
   formContact!: FormGroup;
 

@@ -54,7 +54,6 @@ img{
     justify-content: center;
     top: 0;
     width: 50%;
-    padding-left: 50px;
 
 }
 
@@ -87,7 +86,7 @@ button{
 .col{
     flex-direction: unset;
 }
-@media screen and (max-width:1200px) {
+@media screen and (max-width:1220px) {
     .content_titulo h3{
         font-size: 35px;
     
@@ -98,6 +97,10 @@ button{
     .container_google_maps{
         width: 95%;
         padding-right: 0;
+    }
+    .screen{
+     position: relative;
+     top: 80px;
     }
     }
 
@@ -174,5 +177,8 @@ button{
     }
     .container_google_maps[_ngcontent-ng-c1019430110]{
         padding-left: 0;
+    }
+    .screen{
+        top: 0;
     }
 }

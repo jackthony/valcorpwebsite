@@ -13,6 +13,7 @@ export class FacilidadesPagoComponent {
   @Input() imgPrecio?: string;
   @Input() imgModelo?: string;
   @Input() color?: string;
+  @Input() tipo_grafia?: string;
 
 
 }

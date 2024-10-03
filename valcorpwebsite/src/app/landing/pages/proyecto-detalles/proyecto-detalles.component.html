@@ -7,7 +7,11 @@
         <app-banner  [imgUrlBanner]="proyecto.bgUrlImg" 
         [logoUrlProyecto]="proyecto.logoUrl" 
         [colorParrafoInicio]="proyecto.color" 
-        [vidUrl]="proyecto.vidUrl" (load)="recibir($event)" [pdfUrl]="proyecto.pdfUrl" ></app-banner>
+        [vidUrl]="proyecto.vidUrl" 
+        (load)="recibir($event)" 
+        [pdfUrl]="proyecto.pdfUrl" 
+         [tipo_grafia]="proyecto.tipo_grafia"
+        ></app-banner>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 
@@ -18,7 +22,7 @@
             </div>
          }
          @defer (on viewport) {
-            <app-info-proyecto [imgModelo]="" [color]="proyecto.color" [titulo]="proyecto.titulo" ></app-info-proyecto>
+            <app-info-proyecto [imgModelo]="" [color]="proyecto.color" [titulo]="proyecto.titulo"  [tipo_grafia]="proyecto.tipo_grafia"></app-info-proyecto>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 
@@ -29,7 +33,7 @@
             </div>
          }
          @defer (on viewport) {
-            <app-facilidades-pago [imgPromo]="proyecto.promo" [imgPrecio]="proyecto.precio" [color]="proyecto.color"></app-facilidades-pago>
+            <app-facilidades-pago [imgPromo]="proyecto.promo" [imgPrecio]="proyecto.precio" [color]="proyecto.color" [tipo_grafia]="proyecto.tipo_grafia"></app-facilidades-pago>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 
@@ -40,7 +44,7 @@
             </div>
          }
          @defer (on viewport) {
-            <app-ubicacion [color]="proyecto.color"  [proyectoMap]="proyecto.titulo" [imgModelo]="proyecto.urlModelo"></app-ubicacion>
+            <app-ubicacion [color]="proyecto.color"  [proyectoMap]="proyecto.titulo" [imgModelo]="proyecto.urlModelo" [tipo_grafia]="proyecto.tipo_grafia"></app-ubicacion>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 
@@ -51,7 +55,7 @@
             </div>
          }
          @defer (on viewport) {
-            <app-contacto [color]="proyecto.color" [imgModelo]="proyecto.urlModeloContacto" ></app-contacto>
+            <app-contacto [color]="proyecto.color" [imgModelo]="proyecto.urlModeloContacto" [tipo_grafia]="proyecto.tipo_grafia" ></app-contacto>
          }@placeholder {
             <div class="spinner">
                 <mat-spinner></mat-spinner> 

@@ -13,6 +13,19 @@ body {
   padding: 0;
 }
 
+@font-face {
+  font-family: 'Mortina';
+  src: url('./public/assets/fuentes/Mortina\ DEMO.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Chiladepia';
+  src: url('./public/assets/fuentes/Chiladepia\ Sans\ Serif.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 :root{
 	--mdc-filled-text-field-container-color: #fff;

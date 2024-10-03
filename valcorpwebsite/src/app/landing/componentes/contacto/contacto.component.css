@@ -37,7 +37,7 @@ section::after{
 }
 
 h3{
-    font-size: 45px;
+    font-size: 4.5rem;
     font-weight: bolder;
     color: #2B549F;
     background-color: #fff;
@@ -166,20 +166,20 @@ span{
 
 @media screen and (max-width:1200px) {
     .titulo_seccion {
-        font-size: 40px;
+        font-size: 4rem;
     }
 }
 
 @media screen and (max-width:950px) {
 
     .titulo_seccion {
-        font-size: 30px;
+        font-size: 3rem;
     }
 }
 
 @media screen and (max-width:600px) {
     .titulo_seccion {
-        font-size: 25px;
+        font-size: 2rem;
         width: 100%;
         text-align: center;
     }
@@ -189,13 +189,16 @@ span{
     .conten_input input{
         width: 100%;
     }
+    .content_contact{
+        margin: 0;
+    }
     .titulo_formulario
-{ font-size: 18px;}
+{ font-size: 18px; opacity: 0; visibility: hidden;}
 }
 
 @media screen and (max-width:450px) {
     .titulo_seccion {
-        font-size: 26px;
+        font-size: 2rem;
         width: 100%;
         padding: 10px 0 !important;
         text-align: center;

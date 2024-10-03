@@ -208,7 +208,6 @@ img{
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.5);
 }
 .agua:hover .modal_detalles, .energia:hover .modal_detalles,.parques:hover .modal_detalles,.desague:hover .modal_detalles,.cerco:hover .modal_detalles,
  .pistas:hover .modal_detalles,.portico:hover .modal_detalles,.parques:hover .modal_detalles, .parrilas:hover .modal_detalles{
@@ -253,8 +252,8 @@ img{
         font-size: 25px;
     }
     .content_info_proyecto_mas_detalles{
-        width: 120px;
-        height: 120px;
+        width: 180px;
+        height: 180px;
     }
     .content_info_proyecto{
         flex-direction: column-reverse;
@@ -262,17 +261,38 @@ img{
         gap: 0;
     }
     .content_info_proyecto_detalles{
-        transform: translateY(45px);
-       padding-bottom: 25px;
        margin-left: 0;
+       padding: 7rem 0;
+
+    }
+    .content_img_info_proyecto{
+      display: none;
+    }
+    .modal_detalles{
+      width: 200px;
+      height: 200px;
+      margin: auto;
+      top: 38%;
+      left: 35%;
+    }
+    
+    .modal_detalles img{
+      transform: scale(1.5);
     }
 
+
 }
-@media screen and (max-width:650px) {
+
+@media screen and (max-width:660px) {
   .skeleton-content{
     display:flex;
     flex-direction: column;
 }
+.content_info_proyecto_mas_detalles {
+  width: 150px ;
+  height: 150px ;
+}
+
 }
 
 @media screen and (max-width:500px) {
@@ -285,12 +305,10 @@ img{
     .modal_detalles{
       width: 150px;
       height: 150px;
-  left: 102px;
+  left: 35%;
 
     }
-    .content_info_proyecto .content_info_proyecto_mas_detalles.desague .modal_detalles, .content_info_proyecto .content_info_proyecto_mas_detalles.portico .modal_detalles{
-      left: 105px;
-    }
+
   
     .content_titulo{
       padding: 5px 0;
@@ -298,8 +316,8 @@ img{
     
     
    .content_info_proyecto_mas_detalles{
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
    }
    .content_img_info_proyecto{
     height: 500px;
@@ -311,4 +329,15 @@ img{
    .content_img_info_proyecto[_ngcontent-ng-c4245189850] img[_ngcontent-ng-c4245189850]{
     transform: translateY(10px) scale(.9) !important;
 }
+}
+
+
+@media screen and (max-height:600px) {
+  .content_img_info_proyecto[_ngcontent-ng-c2658079684] img[_ngcontent-ng-c2658079684]{
+    transform:   translateY(10px) scale(1.5)
+  }
+  .content_info_proyecto_mas_detalles[_ngcontent-ng-c2658079684]{
+    width: 120px;
+    height: 120px;
+  }
 }

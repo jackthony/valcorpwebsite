@@ -16,5 +16,6 @@ export class UbicacionComponent {
      ubiMaps = input<string>();
      proyectoMap = input<string>();
      imgModelo = input<string>();
+     tipo_grafia = input<string>();
 
 }

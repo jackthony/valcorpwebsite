@@ -44,11 +44,11 @@ img{
 button{
     outline: none;
     border: none;
-    padding: 5px 40px;
-    font-size: 30px;
+    padding: 10px 40px;
+    font-size: 2rem;
     font-weight: 600;
     color: #fff;
-    border-radius: 15px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
@@ -62,14 +62,20 @@ button{
 
 }
 
+@media screen and (max-width:950px) {
+
+  .content_banner{
+     height: auto;
+     width: auto;
+     margin-left: 0;
+  }
+}
+
 
 @media screen and (max-width:450px) {
-    .content_banner
-      {
-        height: 150px;
-      }
+
       .content_banner button{
-         font-size: 18px;
+         font-size: 1.5rem;
       }
 
 }

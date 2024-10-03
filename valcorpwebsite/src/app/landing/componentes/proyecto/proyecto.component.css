@@ -108,7 +108,7 @@ p{
 }
 
 .precio_coutas{
-    font-size: 45px;
+    font-size: 2rem;
     font-weight: bolder;
     color: #fff;
     display: inline-block;
@@ -163,6 +163,7 @@ p{
     padding: 0 !important;
   }
 
+
     .content_img_proyecto{
         width: 92%;
         height: 350px;
@@ -204,6 +205,9 @@ p{
     }
     .content_couta_precio[_ngcontent-ng-c1617021110]{
         padding: 0;
+    }
+    span[_ngcontent-ng-c3058896264]{
+        font-size: 0.5rem;
     }
 }
 
