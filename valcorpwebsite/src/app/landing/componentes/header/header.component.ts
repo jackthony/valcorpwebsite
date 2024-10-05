@@ -63,7 +63,6 @@ export class HeaderComponent {
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(event: Event): void {
     const scrollOffset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    console.log(`Desplazamiento: ${scrollOffset}`);
     this.scrollY = 0 < scrollOffset;
   }
 

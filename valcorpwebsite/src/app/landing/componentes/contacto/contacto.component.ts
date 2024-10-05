@@ -18,7 +18,6 @@ export class ContactoComponent implements OnInit {
   @Input() tipo_grafia: string | undefined; // Añadimos imgModelo como @Input
 
   formContact!: FormGroup;
-
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -54,6 +53,7 @@ export class ContactoComponent implements OnInit {
 
       // Abre WhatsApp en una nueva pestaña
       window.open(whatsappUrl, '_blank');
+      this.formContact.reset();
     } else {
       // Si el formulario es inválido, marcamos todos los campos como tocados para mostrar errores
       this.formContact.markAllAsTouched();

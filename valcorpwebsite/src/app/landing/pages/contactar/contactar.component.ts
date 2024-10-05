@@ -1,19 +1,23 @@
-import { CommonModule } from '@angular/common';
-import { Component, input } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import {ReactiveFormsModule} from '@angular/forms';
+import { NgStyle, NgIf } from '@angular/common'; // Importa NgIf
+import { Component, Input, OnInit } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contactar',
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule],
+  imports: [MatFormFieldModule, MatInputModule, MatButtonModule, NgStyle, NgIf, ReactiveFormsModule], // Añade NgIf a los imports
   templateUrl: './contactar.component.html',
-  styleUrl: './contactar.component.css'
+  styleUrls: ['./contactar.component.css'],
 })
-export default class ContactarComponent {
+export default class ContactarComponent implements OnInit {
+  @Input() color: string | undefined; // Definición correcta de @Input()
+  @Input() imgModelo: string | undefined; // Añadimos imgModelo como @Input
+  @Input() tipo_grafia: string | undefined; // Añadimos imgModelo como @Input
 
   formContact!: FormGroup;
-
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
@@ -31,14 +35,15 @@ export default class ContactarComponent {
 
   enviar(): void {
     if (this.formContact.valid) {
-
+      // Extraemos los valores del formulario
       const nombreCompleto = this.formContact.value.nombreCompleto;
       const numero = this.formContact.value.numero;
       const correo = this.formContact.value.correo;
       const proyecto = this.formContact.value.proyecto;
       const mensaje = this.formContact.value.mensaje;
 
-      const telefonoWhatsApp = '+51970492990'; 
+      // Número de WhatsApp al que se enviará el mensaje
+      const telefonoWhatsApp = '+51970492990'; // Reemplaza con tu número de WhatsApp
 
       // Crear el mensaje para WhatsApp
       const texto = `Hola, mi nombre es ${nombreCompleto}. Mi número es ${numero}, mi correo es ${correo}, y estoy interesado en el proyecto ${proyecto}. ${mensaje ? 'Mensaje adicional: ' + mensaje : ''}`;
@@ -48,11 +53,14 @@ export default class ContactarComponent {
 
       // Abre WhatsApp en una nueva pestaña
       window.open(whatsappUrl, '_blank');
+      this.formContact.reset();
     } else {
-
+      // Si el formulario es inválido, marcamos todos los campos como tocados para mostrar errores
       this.formContact.markAllAsTouched();
     }
   }
+
+  // Verifica si el campo tiene un error específico
   hasError(controlName: string, errorName: string) {
     const control = this.formContact.get(controlName);
     return control?.hasError(errorName) && control.touched;

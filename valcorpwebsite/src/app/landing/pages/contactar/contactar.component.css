@@ -1,8 +1,8 @@
 section{
+    font-family: 'Montserrat', sans-serif;
     background: linear-gradient(to bottom right, #1e3a8a, #1e40af); /* Degradado de azul */
     position: relative;
     overflow: hidden;
-    font-family: 'Montserrat', sans-serif;
 }
 section::before{
     content: "";
@@ -29,11 +29,25 @@ section::after{
     color: #fff;
     font-size: 65px;
     display: block;
-    padding: 15px 0;
-    padding: 10px 0;
+    padding: 35px 0;
     text-align: center;
-    margin: 0;
+    margin-top: 100px;
+    font-family: 'Montserrat', sans-serif;
+
 }
+
+h3{
+    font-size: 4.5rem;
+    font-weight: bolder;
+    color: #2B549F;
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    padding: 35px 0 ;
+    margin: 0 0 px 0 ;
+    
+}
+
 .content_contact{
     position: relative;
     height: 100%;
@@ -63,11 +77,11 @@ img{
 
 .Formulario{
     z-index: 200;
-    padding: 30px 0;
     justify-content: center;
     align-items: center;
     display: flex;
     flex-direction: column;
+    margin: 40px;
 }
 
 .conten_input{
@@ -152,20 +166,20 @@ span{
 
 @media screen and (max-width:1200px) {
     .titulo_seccion {
-        font-size: 40px;
+        font-size: 4rem;
     }
 }
 
 @media screen and (max-width:950px) {
 
     .titulo_seccion {
-        font-size: 30px;
+        font-size: 3rem;
     }
 }
 
 @media screen and (max-width:600px) {
     .titulo_seccion {
-        font-size: 25px;
+        font-size: 2rem;
         width: 100%;
         text-align: center;
     }
@@ -175,16 +189,21 @@ span{
     .conten_input input{
         width: 100%;
     }
+    .content_contact{
+        margin: 0;
+    }
     .titulo_formulario
-{ font-size: 18px;}
+{ font-size: 18px; opacity: 0; visibility: hidden;}
 }
 
 @media screen and (max-width:450px) {
     .titulo_seccion {
-        font-size: 26px;
+        font-size: 2rem;
         width: 100%;
+        padding: 10px 0 !important;
         text-align: center;
     }
+
     .conten_input{
         width: 300px;
     }
