@@ -1,15 +1,17 @@
 .containr_proyecto{
     position: relative;
     z-index: 10;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    flex-direction: row;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 3px #3b3b3b8a
 }
 
 
 .content_img_proyecto{
-    height: 500px;
+    height: 62%;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -52,6 +54,7 @@
 .content_proyecto_detalle{
     background-color: #fff;
     display: flex;
+    height: 38%;
     border-radius: 0;
 
 } 
@@ -64,7 +67,7 @@
 }
 
 .wrapper_datalles{
-    flex: 1;
+    flex: 2;
     padding: 10px 20px 15px 45px;
     line-height: 21px;
 }
@@ -122,8 +125,10 @@ p{
     gap: 5px;
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    padding:  0 20px;
+    margin-right:  8px;
+    padding-left: 12px;
 }
 
 .content_couta_precio::after{
@@ -137,15 +142,22 @@ p{
     
 .logo_proyecto_marca{
     position: absolute;
-    top: 350px;
+    top: 200px;
     right: 0;
+    border-radius: 10px 0 0 10px;
     width: 150px;
     height: 80px;
     letter-spacing: .5px;
-    background-color: #ffffff;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: #ffffffd3;
+    filter: blur(10%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.logo_proyecto_marca img{
+    width: 90%;
+    height: 80%;
 }
 
 @media screen and (max-width:1180px) {
@@ -161,38 +173,26 @@ p{
   }
 
 
-    .content_img_proyecto{
-        width: 92%;
-        height: 350px;
-    }
+
     span[_ngcontent-ng-c1617021110]{
         font-size: 11px;
     }
-     .precio_coutas{
-         font-size: 15px;
-    }
+
     .content_proyecto_detalle{
-        width: 60%;
         padding:  0 10px;
         padding-bottom: 20px;
-    }
-    .titulo_proyecto_detalle{
-        font-size: 15px;
-        line-height: 15px;
-    }
-    .wrapper_datalles span , .wrapper_datalles p{
-        font-size: 0.8rem ;
-        line-height: 15px;
+        justify-content: center;
     }
 
     .content_couta_precio::after{
-        height: 70%;
-        top: 30%;
+        height: 100%;
+        top: 35%;
         opacity: 1;
+        border: 1px solid #222222;
         
     }
     .wrapper_datalles {
-        flex: 1;
+        flex: 2;
         padding: 5px 15px 15px 30px;
         line-height: 21px;
     }
@@ -220,37 +220,36 @@ p{
         flex-direction: column;
     }
   
-    .titulo_proyecto_detalle{
-        text-align: center;
-    }
     .wrapper_datalles{
         padding: 0;
     }
-    .wrapper_datalles span {
-        font-size: 10px;
-    }
- 
-    .content_img_proyecto{
-        width: 95%;
-        height: 260px;
-        border: 8px solid #fff;
-    }
+
+ .precio_span{
+    font-size: 1rem;
+ }
+
       .titulo_proyecto_detalle{
-        font-size: 13px;
-        line-height: 15px;
+        line-height: 20px;
         padding-top: 5px;
+        font-size: 1.2rem;
+        padding-left: 15px;
+    }
+    .content_couta_precio[_ngcontent-ng-c1862636283] {
+     padding-left: 15px;
+     padding-right: 8px;
+     margin-right: 8px;
     }
     fa-icon{
         color: #91BF24;
-        font-size: 10px;
     }
-    .containr_proyecto{
-        padding: 18px 0;
+  
+    span{
+        font-size: 0.7rem;
     }
 
     .wrapper_datalles p{
-        font-size: 0.6rem;
-        line-height: 10px;
+        line-height: 20px;
+        text-wrap: wrap;
     }
 
     .content_couta_precio
@@ -267,10 +266,7 @@ p{
         align-items: center;
         flex-direction: column;
         gap: 0;
-    }
-
-    .content_proyecto_detalle .precio_coutas,.content_couta_precio span{
-        font-size: 10px;
+        top: 5px;
     }
 
     .logo_proyecto_marca{
@@ -281,9 +277,7 @@ p{
         padding: 0;
     }
 
-    .precio_span{
-        font-size: 8px;
-    }
+
     .content_detalles_urb{
         gap: 0;
         line-height: 13px;
@@ -296,7 +290,7 @@ p{
         flex-direction: column;
     }
     .precio_coutas{
-        padding: 5px 10px;
+        padding: 15px 5px;
     }
     .content_detalles_urb {
 
@@ -313,26 +307,34 @@ p{
         width: 100% !important;
     }
    .aea{
-    text-align: center;
     width: 97%;
    }
     .col{
-        flex-direction: column;
         gap: 5px;
+        padding-top: 10px;
+        
     }
-    .content_couta_precio[_ngcontent-ng-c1933162572]::after{
-        opacity: 0;
-        visibility: 0;
+    .precio_coutas{
+        font-size: 1rem;
+        padding: 8px 18px;
     }
-    .wrapper_datalles[_ngcontent-ng-c1933162572] {
-        align-items: center;
+    span{
+        font-size: .6rem;
     }
-    .content_couta_precio::after{
-        opacity: 0;
-        visibility: 0;
-    }
+
     .content_proyecto_detalle[_ngcontent-ng-c2844566257]{
         padding-bottom: 5px;
+    }
+
+    .wrapper_datalles p{
+        font-size: .7rem;
+        line-height: 15px;
+    }
+    .content_couta_precio[_ngcontent-ng-c1862636283]::after {
+        height: 100%;
+        top: 35%;
+        opacity: 1;
+        border: 1px solid #292929;
     }
 }
 @media screen and (min-width:699px) {
@@ -346,5 +348,6 @@ p{
     .titulo_proyecto_detalle{
         padding-left: 45px;
         width: 100%;
+        margin: 15px 0 0 0;
 }
 }

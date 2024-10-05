@@ -1,7 +1,7 @@
 
 <h2 class="titulo_proyectos">Nuestros Proyectos</h2>
 
-<section class="container_proyectos ">
+<section class="container_proyectos  ">
 
       @for (proyecto of ProyectosImg; track proyecto) {
           @defer (on viewport) {
@@ -14,6 +14,8 @@
             [lotesDesde]="proyecto.lotesDesde"
             [cuotasDesde]="proyecto.cuotasDesde"
             [routerLink]="proyecto.ruta"
+            class="w-full lg:w-fit"
+
             ></app-proyecto>
         
           }@placeholder {

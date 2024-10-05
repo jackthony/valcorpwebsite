@@ -1,10 +1,10 @@
 h1{
-    font-size: 80px !important;
     color: #fff;
     font-weight: 600;
     font-family: 'Montserrat', sans-serif;
     -webkit-text-stroke: 2px rgb(255, 255, 255); /* Borde negro */
     -webkit-text-fill-color: rgb(255, 255, 255); /* Relleno blanco */
+    font: normal;
 }
 .image-container {
     position: relative;

@@ -272,7 +272,7 @@ img{
       width: 200px;
       height: 200px;
       margin: auto;
-      top: 38%;
+      top: 32%;
       left: 35%;
     }
     
@@ -303,9 +303,9 @@ img{
     }
 
     .modal_detalles{
-      width: 150px;
-      height: 150px;
-  left: 35%;
+      width: 200px;
+      height: 200px;
+  left: 25%;
 
     }
 
@@ -316,8 +316,8 @@ img{
     
     
    .content_info_proyecto_mas_detalles{
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
    }
    .content_img_info_proyecto{
     height: 500px;
