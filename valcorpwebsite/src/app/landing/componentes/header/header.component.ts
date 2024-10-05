@@ -37,8 +37,8 @@ export class HeaderComponent {
     { url: '/home', title: 'Inicio' },
     { url: '/nosotros', title: 'Nosotros' },
     { title: 'Proyectos', subUrl:[{linkUrl:'robles',titulo:'Robles' ,open:true}, {linkUrl:'huertos',titulo:'Huertos', open:true},{linkUrl:'prados',titulo:'Prados', open:true}] },
-    { url: '/nuestro-proposito', title: 'Nuestro Propósito' },
-    { url: '/contacto', title: 'Contactanos' },
+    { url: '/nuestro-proposito', title: 'Preguntas Frecuentes' },
+    { url: '/contacto', title: 'Contáctanos' },
   ];
 
   proyectos =[

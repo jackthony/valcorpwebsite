@@ -11,31 +11,50 @@ import {ReactiveFormsModule} from '@angular/forms';
   styleUrl: './contactar.component.css'
 })
 export default class ContactarComponent {
-  color = input<string>();
+
   formContact!: FormGroup;
- 
-   
-  constructor(private fb: FormBuilder) { }
+
+  constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    // Inicializamos el formulario con validaciones, incluyendo los permisos
     this.formContact = this.fb.group({
-      nombreCompleto: ['', Validators.required],
-      numero: [, Validators.required],
-      correo: ['', Validators.required],
-      proyecto: ['', Validators.required]
+      nombreCompleto: ['', [Validators.required, Validators.minLength(3)]],
+      numero: ['', [Validators.required, Validators.pattern('^[0-9]+$')]], // Solo números
+      correo: ['', [Validators.required, Validators.email]], // Email válido
+      proyecto: ['', Validators.required],
+      mensaje: [''],
+      aceptarTerminos: [false, Validators.requiredTrue],  // Validamos que el usuario acepte los términos
+      aceptarComunicaciones: [false, Validators.requiredTrue]  // Validamos que acepte las comunicaciones comerciales
     });
   }
 
   enviar(): void {
     if (this.formContact.valid) {
-      // Lógica para enviar el formulario
-      console.log(this.formContact.value);
+
+      const nombreCompleto = this.formContact.value.nombreCompleto;
+      const numero = this.formContact.value.numero;
+      const correo = this.formContact.value.correo;
+      const proyecto = this.formContact.value.proyecto;
+      const mensaje = this.formContact.value.mensaje;
+
+      const telefonoWhatsApp = '+51970492990'; 
+
+      // Crear el mensaje para WhatsApp
+      const texto = `Hola, mi nombre es ${nombreCompleto}. Mi número es ${numero}, mi correo es ${correo}, y estoy interesado en el proyecto ${proyecto}. ${mensaje ? 'Mensaje adicional: ' + mensaje : ''}`;
+
+      // Crear la URL para WhatsApp
+      const whatsappUrl = `https://wa.me/${telefonoWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+      // Abre WhatsApp en una nueva pestaña
+      window.open(whatsappUrl, '_blank');
     } else {
+
       this.formContact.markAllAsTouched();
     }
   }
-
-  hasError(controlName: string, errorName: string){
-  return this.formContact.get(controlName)?.hasError(errorName)  &&  this.formContact.get(controlName)?.touched
+  hasError(controlName: string, errorName: string) {
+    const control = this.formContact.get(controlName);
+    return control?.hasError(errorName) && control.touched;
   }
 }

@@ -1,5 +1,8 @@
-<section class="container_proyectos">
-    <h2 class="titulo_proyectos">Nuestros Proyectos</h2>
+
+<h2 class="titulo_proyectos">Nuestros Proyectos</h2>
+
+<section class="container_proyectos ">
+
       @for (proyecto of ProyectosImg; track proyecto) {
           @defer (on viewport) {
             <app-proyecto [colorPrecio]="proyecto.colorPrecio" 
@@ -11,12 +14,13 @@
             [lotesDesde]="proyecto.lotesDesde"
             [cuotasDesde]="proyecto.cuotasDesde"
             [routerLink]="proyecto.ruta"
-            style="width: 100%;"
             ></app-proyecto>
+        
           }@placeholder {
              <p>componentes</p>
           }@loading {
              <p>cargando...</p>
           }
     }
+   
 </section>

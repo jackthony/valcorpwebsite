@@ -2,11 +2,12 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     min-height: fit-content;
     background: linear-gradient(331deg, #245CB5, #0062ff);
     position: relative;
     overflow: hidden;
+    padding: 5rem;
+    gap: 30px; 
 }
 
 section::before {

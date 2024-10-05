@@ -1,4 +1,4 @@
-<div class="containr_proyecto">
+<div class="containr_proyecto flex-1 " >
     <div class="content_img_proyecto" > 
         <a 
         [routerLink]="routerLink"
@@ -15,7 +15,7 @@
             <img [src]="marcaAguaLogoProyecto" alt="logo_proyecto_marca" loading="lazy">
         </div>
      </div> 
-     <div class="content_proyecto_detalle flex flex-col" [ngStyle]="{'width':lotesDesde == undefined?'35%':'fit',
+     <div class="content_proyecto_detalle flex flex-col" [ngStyle]="{'width':lotesDesde == undefined?'100%':'fit',
      'padding':lotesDesde == undefined?'0px 45px 0px 45px':'','text-align': lotesDesde==undefined? 'center': ''}" [ngClass]="{'proximamente': lotesDesde ===undefined}">
         <h3 class="titulo_proyecto_detalle  " [ngClass]="{'titulo_proximamente': lotesDesde ===undefined}">{{titulo}}</h3>
         <div class="flex justify-between items-center col">

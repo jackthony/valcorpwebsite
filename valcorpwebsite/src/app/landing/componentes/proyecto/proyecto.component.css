@@ -1,25 +1,22 @@
 .containr_proyecto{
     position: relative;
     z-index: 10;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    padding: 3rem 0;
+    flex-direction: row;
 }
 
 
 .content_img_proyecto{
-    width: 900px;
     height: 500px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    border-radius: 50px;
-    border: 15px solid #fff;
     position: relative;
     overflow: hidden;
-
+    border-radius: 0;
+    
 }
 
 
@@ -48,19 +45,22 @@
 
 .titulo_proyecto_detalle{
     margin: 0;
+    width: 100%;
 
 }
 
 .content_proyecto_detalle{
-    border-radius: 0 0 45px 45px;
     background-color: #fff;
     display: flex;
+    border-radius: 0;
+
 } 
 .titulo_proyecto_detalle{
     color: #2457A1;
     font-size: 30px;
     font-weight: 900;
     line-height: 25px;
+    padding-top: 15px;
 }
 
 .wrapper_datalles{
@@ -137,14 +137,12 @@ p{
     
 .logo_proyecto_marca{
     position: absolute;
-    top: 0;
+    top: 350px;
     right: 0;
     width: 150px;
     height: 80px;
-    padding: 15px;
     letter-spacing: .5px;
     background-color: #ffffff;
-    border-radius: 0 0 0 45px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -153,7 +151,6 @@ p{
 @media screen and (max-width:1180px) {
     .proximamente{
         padding: 10px !important;
-        width: 45% !important;
     }
 }
 
@@ -348,5 +345,6 @@ p{
 @media screen and (min-width:900px) {
     .titulo_proyecto_detalle{
         padding-left: 45px;
-    }
+        width: 100%;
+}
 }

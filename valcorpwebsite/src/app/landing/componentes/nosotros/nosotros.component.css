@@ -3,8 +3,17 @@
   }
 
 .imagen_incio_nosotros{
-  width: 100%;
-  height: 100vh;
+  max-width: 100%;  /* El video no será más grande que el contenedor */
+  height: auto;     /* Mantiene la proporción del video */
+  display: block;   /* Asegura que el video ocupe el ancho completo disponible */
+  margin: 0 auto;   /* Centra el video */
+
+}
+.imagen_grupo{
+  max-width: 80%;  /* El video no será más grande que el contenedor */
+  height: auto;     
+  display: block;   
+  margin: 0 auto;   
 }
 
   video{
@@ -40,7 +49,7 @@
  .content_titulo{
   display: flex;
   justify-content: space-around;
-  transform: translateY(70px);
+  transform: translateY(35px);
   background-color: #2457A1;
   padding: 15px 0;
   margin-bottom: 15px;
@@ -205,12 +214,12 @@
   }
 
   .mySwiper {
-    height: 80%;
+    height: 60%;
     width: 100%;
   }
 
   .mySwiper2 {
-    height: 20%;
+    height: 15%;
     box-sizing: border-box;
     padding: 10px 0;
   }
@@ -232,7 +241,9 @@
     object-fit: cover;
   }
 
+
   @media screen and (max-width:1200px) {
+    
     .about_text{
       font-size: 1.4rem;
     }
@@ -247,9 +258,20 @@
        width: 350px;
        height: 300px;
     }
+    .imagen_grupo{
+      max-width: 100%;  /* El video no será más grande que el contenedor */
+      height: auto;     /* Mantiene la proporción del video */
+      display: block;   /* Asegura que el video ocupe el ancho completo disponible */
+      margin: 0 auto;
+      }
   }
 
   @media screen and (max-width:900px) {
+    video {
+      width: 100%;  /* El video se ajustará al 100% del ancho de la pantalla en móviles */
+      height: auto; /* Mantendrá las proporciones correctas */
+      margin-top: 80px;
+    }
     .about_text{
       font-size: 1.1rem;
     }
@@ -266,9 +288,20 @@
     .mission img , #vision{
        height: 200px;
     }
+    .imagen_grupo{
+      max-width: 100%;  /* El video no será más grande que el contenedor */
+      height: auto;     /* Mantiene la proporción del video */
+      display: block;   /* Asegura que el video ocupe el ancho completo disponible */
+      margin: 0 auto;
+      }
 }
 
 @media screen and (max-width:650px) {
+  video {
+    width: 100%;  /* El video se ajustará al 100% del ancho de la pantalla en móviles */
+    height: auto; /* Mantendrá las proporciones correctas */
+    margin-top: 80px;
+  }
    .mission,.content{
       flex-direction: column;
    }
@@ -291,6 +324,12 @@
    h3{
     font-size: 1.8rem;
    }
+   .imagen_grupo{
+    max-width: 100%;  /* El video no será más grande que el contenedor */
+    height: auto;     /* Mantiene la proporción del video */
+    display: block;   /* Asegura que el video ocupe el ancho completo disponible */
+    margin: 0 auto;
+    }
 }
 
 p{
@@ -298,4 +337,40 @@ p{
  text-align: justify;
 
   line-height: 30px;
+}
+
+@media (max-width: 600px) {
+  video {
+    width: 100%;  /* El video se ajustará al 100% del ancho de la pantalla en móviles */
+    height: auto; /* Mantendrá las proporciones correctas */
+    margin-top: 80px;
+  }
+  .mySwiper {
+    height: 100%;  /* El slider principal será más pequeño en móviles */
+  }
+
+  .mySwiper2 {
+    height: 10%;  /* Reducimos la altura de las miniaturas para que ocupen menos espacio */
+  }
+
+  .mySwiper2 swiper-slide {
+    width: 25%;  /* Mostramos 4 miniaturas a la vez en lugar de 5 */
+    opacity: 0.4;  /* Las miniaturas inactivas siguen con menos opacidad */
+  }
+
+  .mySwiper2 .swiper-slide-thumb-active {
+    opacity: 1; /* La miniatura activa se ve con mayor opacidad */
+  }
+
+  swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Las imágenes llenan el espacio disponible */
+  }
+  .imagen_grupo{
+  max-width: 100%;  /* El video no será más grande que el contenedor */
+  height: auto;     /* Mantiene la proporción del video */
+  display: block;   /* Asegura que el video ocupe el ancho completo disponible */
+  margin: 0 auto;
+  }
 }
