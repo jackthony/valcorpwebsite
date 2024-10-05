@@ -12,6 +12,7 @@ export const proyectoList:proyecto[] = [
         color: '#EF8619',
         urlModelo:"../../public/assets/V1 copia.webp",
         urlModeloContacto:"../../public/assets/V1 copia.webp",
+        urlModeloFacilidades:"../../public/assets/V1 copia.webp",
         estado: true,
         vidUrl: '../../public/assets/VIDEO-HUERTOS-SAN-JOSE.webm',
         pdfUrl:"../../public/assets/HUERTOS.pdf",
@@ -44,6 +45,7 @@ export const proyectoList:proyecto[] = [
        precio :'../../public/assets/INFO-PRECIOS-ROBLES.png',
        bgUrlImg : '../../public/assets/image.webp',
        urlModeloContacto:"../../public/assets/V1 copia.png",
+       urlModeloFacilidades:"../../public/assets/V1 copia.webp",
        color: '#91BF24',
        tipo_grafia:"'Mortina', sans-serif",
        vidUrl: '../../public/assets/VIDEO-URB VILLA LOS ROBLES.webm',
@@ -72,5 +74,6 @@ vidUrl?: string,
 ubicacionMaps?:string,
 pdfUrl?:string
 tipo_grafia?:string
+urlModeloFacilidades?:string
    
    }

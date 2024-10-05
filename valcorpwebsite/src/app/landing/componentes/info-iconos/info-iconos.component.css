@@ -188,16 +188,16 @@ img{
 }
 
 .modal_detalles{
-  width: 300px;
-  height: 300px;
+  width: 450px;
+  height: 450px;
   color: #ccc;
   position: absolute;
   border-radius: 10px;
   z-index: 1000;
-  top: 145px;
+  top: 75px;
   opacity: 0;
   visibility: hidden;
-  left: 135px;
+  left: 35px;
   transition: .5s ease-in;
   padding: 0; /* Ajusta según sea necesario */
   margin: 0; /* Ajusta según sea necesario */
@@ -227,8 +227,11 @@ img{
         height: 150px;
     }
     .modal_detalles{
-      width: 200px;
-      height: 200px;
+      width: 300px;
+      height: 300px;
+  top: 145px;
+  left: 135px;
+
     }
     
     .content_img_info_proyecto[_ngcontent-ng-c4245189850] img[_ngcontent-ng-c4245189850]{
