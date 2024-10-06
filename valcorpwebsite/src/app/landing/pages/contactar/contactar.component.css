@@ -15,6 +15,22 @@ section::before{
     opacity: 0.2; /* Ajusta la opacidad de las líneas curvas */
 }
 
+.imgBx_Modelo,form{
+    animation: myAnim 0.8s ease 0s 1 normal backwards;
+  }
+  
+  
+  @keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+  }
+
+
 section::after{
     content: "";
     position: absolute;

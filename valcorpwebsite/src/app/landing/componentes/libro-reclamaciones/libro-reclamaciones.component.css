@@ -22,7 +22,27 @@ form {
     z-index: 9999;
 }
 
+h2{
+  font-size: 4rem !important;
+  font-weight: bolder;
+  color: #2B549F !important;
+  background-color: #fff;
+  width: 100%;
+  text-align: center;
+  padding: 15px 0 0 0 ;
   
+}
+
+h3{
+  margin: 0;
+  color: #2b549fc4;
+  padding: 10px 0 10px 0;
+  font-size: 22px;
+  font-weight: 600;
+}
+p{
+  margin: 0 !important;
+}
   mat-form-field {
     width: 100%;
     transition: 0.5s;
@@ -72,7 +92,7 @@ form {
   .container {
     max-width: 900px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 10px;
     font-family: 'Arial', sans-serif;
     margin-top: 80px;
   }

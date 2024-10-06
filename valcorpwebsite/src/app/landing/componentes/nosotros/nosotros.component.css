@@ -16,6 +16,23 @@
   margin: 0 auto;   
 }
 
+
+.mission,.anime{
+  animation: myAnim 0.8s ease 0s 1 normal backwards;
+  animation-delay: .5s;
+}
+
+
+@keyframes myAnim {
+0% {
+  transform: scale(0.5);
+}
+
+100% {
+  transform: scale(1);
+}
+}
+
   video{
     width: 100%;
     height: 100%;

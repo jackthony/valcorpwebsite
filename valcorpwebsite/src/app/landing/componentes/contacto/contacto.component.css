@@ -36,6 +36,21 @@ section::after{
 
 }
 
+.imgBx_Modelo,form{
+    animation: myAnim 0.8s ease 0s 1 normal backwards;
+  }
+  
+  
+  @keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+  }
+
 h3{
     font-size: 4.5rem;
     font-weight: bolder;

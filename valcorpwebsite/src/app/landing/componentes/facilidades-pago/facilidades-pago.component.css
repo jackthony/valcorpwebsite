@@ -16,6 +16,21 @@ section::before{
     opacity: 0.2; /* Subtle effect */
 }
 
+.imgBx_promo,.imgBx_modelo{
+    animation: myAnim 0.8s ease 0s 1 normal backwards;
+  }
+  
+  
+  @keyframes myAnim {
+  0% {
+    transform: scale(0.5);
+  }
+  
+  100% {
+    transform: scale(1);
+  }
+  }
+
 .content_titulo{
     background-color: #245CB5;
     display: block;

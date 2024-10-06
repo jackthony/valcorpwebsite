@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, inject, Input, OnChanges, SimpleChanges } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
@@ -14,19 +14,20 @@ import { Observable } from 'rxjs';
 import { NotificacionComponent } from '../../../layout/notificacion/notificacion.component';
 import { ChangeDetectorRef } from '@angular/core';
 import { MatSpinner } from '@angular/material/progress-spinner';
-import { faL } from '@fortawesome/free-solid-svg-icons';
+import {MatCardModule} from '@angular/material/card';
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatRadioModule} from '@angular/material/radio';
 @Component({
   selector: 'app-libro-reclamaciones',
   standalone: true,
   imports: [CommonModule, ReactiveFormsModule, FormsModule,
      MatInputModule, MatSelectModule, MatFormFieldModule, 
-     MatButtonModule, MatTooltipModule,NotificacionComponent,MatSpinner],
+     MatButtonModule, MatTooltipModule,NotificacionComponent,MatSpinner, FormsModule, MatRadioModule,MatCardModule,MatCheckboxModule],
   changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './libro-reclamaciones.component.html',
   styleUrls: ['./libro-reclamaciones.component.css']
 })
-export default class LibroReclamacionesComponent {
-
+export default class LibroReclamacionesComponent  implements OnInit{
 
   positionOptions: TooltipPosition[] = ['below', 'above', 'left', 'right'];
   position = new FormControl(this.positionOptions[0]);
@@ -54,6 +55,8 @@ export default class LibroReclamacionesComponent {
       proyectoList: ['', Validators.required],
       montoReclamado: ['', [Validators.required, Validators.pattern('^(S/\\s?)?\\d+(\\.\\d{1,2})?$')]],  // Solo números y decimales
       detalleReclamo: ['', Validators.required],
+      tipoReclamo: ['', Validators.required],
+
     });
 
     // Escuchar cambios en el campo "Monto Reclamado"
@@ -64,6 +67,8 @@ export default class LibroReclamacionesComponent {
           montoReclamado: `S/ ${value}`
         }, { emitEvent: false });  // Evitar emitir evento para no causar bucles infinitos
       });
+  }
+  ngOnInit(): void {
   }
 
 

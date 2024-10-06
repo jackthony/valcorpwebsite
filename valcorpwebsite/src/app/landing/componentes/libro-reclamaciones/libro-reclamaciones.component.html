@@ -4,14 +4,28 @@
     <app-notificacion (ocultarNoti)="close($event)" [tipo]="mostrarNotiError" ></app-notificacion>
   }
     <div class="content_titulo">
-      <h2>Libro de Reclamaciones</h2>
+      <h2 class="titulo_proyectos">Libro de Reclamaciones</h2>
     </div>
+
     <div class="content">
       <p class="about_text">
         Conforme a lo establecido en el Código de Protección y Defensa del Consumidor aprobado mediante Ley N°29571 y su Reglamento aprobado mediante Decreto Supremo No.011-2011-PCM y modificatorias, este establecimiento cuenta con un libro de reclamaciones de naturaleza virtual a su disposición, a efectos de que pueda formular su queja o reclamo. <br> <br>
         *Los campos indicados con asterisco son obligatorios.
       </p>
     </div>
+  <h3 class="py-3">Categoría del reclamo</h3>
+<div class="py-3 pt-5 border border-gray-300 px-4 rounded-xl">
+  <div class="bg-yellow-100 py-2 px-4 pt-3 rounded-xl border border-yellow-500 mb-2">
+     <div class="flex gap-2 py-1"><span class="text-yellow-600 font-[600] text-[17px]">Reclamo</span><p class="text-[15px] text-gray-500 font-[500]">Disconformidad relacionada a los productos o servicios.</p></div>
+     <div class="flex gap-2 py-1"><span class="text-yellow-600 font-[600] text-[17px]">Quejas</span><p class="text-[15px] text-gray-500 font-[500]">Disconformidad no relacionada a los  productos o servicios o, malestar o descontento a la atencion publico.</p></div>
+  </div>
+  <form [formGroup]="reclamoForm">
+    <mat-radio-group formControlName="tipoReclamo">
+      <mat-radio-button class="example-margin mr-2" value="reclamo" ><span class="about_text">Reclamo</span></mat-radio-button>
+      <mat-radio-button class="example-margin mr-2" value="queja" ><span class="about_text">Queja</span></mat-radio-button>
+    </mat-radio-group>
+  </form>
+</div>
   </div>
   
   <form [formGroup]="reclamoForm" (ngSubmit)="onSubmit() " >
@@ -160,21 +174,6 @@
         </small>
       </mat-form-field>
     </div>
-  
-    <!-- Monto Reclamado -->
-    <div class="flex flex-col gap-3">
-      <label for="montoReclamado" class="text-[16px] font-[500] pl-2 text-[#235799]">Monto Reclamado</label>
-      <mat-form-field appearance="fill">
-        <input matInput formControlName="montoReclamado" placeholder="Ingrese el monto" />
-        <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('required') && reclamoForm.get('montoReclamado')?.touched">
-          Este campo es requerido
-        </small>
-        <small class="error" *ngIf="reclamoForm.get('montoReclamado')?.hasError('pattern') && reclamoForm.get('montoReclamado')?.touched">
-          Introduce una cantidad válida (por ejemplo: 100 o 100.50)
-        </small>
-      </mat-form-field>
-    </div>
-  
     <!-- Detalle del Reclamo -->
     <div class="flex flex-col gap-3"  id="tarea" >
       <label for="detalleReclamo" class="text-[16px] font-[500] pl-2 text-[#235799]">Detalle del Reclamo</label>
@@ -189,7 +188,7 @@
 
      <div class="text-center divbtn">
     <p class="text-left">**Al brindar su correo electrónico, usted autoriza que, cualquier comunicación referente al reclamo se realice a través del mismo medio.<br> ***El tratamiento de sus datos personales en este portal tiene por finalidad gestionar de manera correcta los datos consignados en el reclamo o queja, conforme a las disposiciones legales aplicables.</p>
-      <button mat-raised-button type="submit" class="text-[#fff]"  [disabled]="!reclamoForm.valid">Enviar</button>
+      <button mat-raised-button type="submit" class="text-[#fff] pt-2"  [disabled]="!reclamoForm.valid">Enviar</button>
      </div>
     </div>
   </form>
