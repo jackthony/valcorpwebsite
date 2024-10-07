@@ -1,8 +1,8 @@
 <section>
-  <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F','font-family':tipo_grafia}" >Contactanos</h3>
+  <h3 class="titulo_seccion" [ngStyle]="{'background-color': '#1A325F','font-family':tipo_grafia}" >Contáctanos</h3>
   <div class="content_contact">
     <form [formGroup]="formContact" class="Formulario" (ngSubmit)="enviar()">
-      <label class="titulo_formulario"  [ngStyle]="{'font-family': tipo_grafia}">Contactanos</label>
+      <label class="titulo_formulario"  [ngStyle]="{'font-family': tipo_grafia}">Contáctanos</label>
 
       <div class="conten_input">
         <input type="text" placeholder="Nombre Completo" formControlName="nombreCompleto"/>
@@ -12,19 +12,19 @@
 
       <div class="conten_input">
         <input type="number" placeholder="Número" formControlName="numero"/>
-        <div *ngIf="hasError('numero', 'required')" class="text-red-500">El número es requerido.</div>
+        <div *ngIf="hasError('numero', 'required')" class="text-red-500">El número es obligatorio.</div>
         <div *ngIf="hasError('numero', 'pattern')">Debe ingresar solo dígitos.</div>
       </div>
 
       <div class="conten_input">
         <input type="email" placeholder="Correo" formControlName="correo"/>
-        <div *ngIf="hasError('correo', 'required')" class="text-red-500">El correo es requerido.</div>
+        <div *ngIf="hasError('correo', 'required')" class="text-red-500">El correo es obligatorio.</div>
         <div *ngIf="hasError('correo', 'email')">El formato del correo es incorrecto.</div>
       </div>
 
       <div class="conten_input">
         <input type="text" placeholder="Proyecto de interés" formControlName="proyecto"/>
-        <div *ngIf="hasError('proyecto', 'required')" class="text-red-500">El proyecto es requerido.</div>
+        <div *ngIf="hasError('proyecto', 'required')" class="text-red-500">El proyecto es obligatorio.</div>
       </div>
 
       <div class="conten_input">
@@ -34,13 +34,13 @@
       <div class="content_permisos">
         <div class="permiso">
           <input type="checkbox" formControlName="aceptarTerminos"/>
-          <span>He leído y acepto el Tratamiento de mis datos personales.</span>
+          <span>He leído y acepto el tratamiento de mis datos personales.</span>
         </div>
         <div *ngIf="hasError('aceptarTerminos', 'requiredTrue')" class="text-red-500">Debe aceptar el tratamiento de datos.</div>
 
         <div class="permiso">
           <input type="checkbox" formControlName="aceptarComunicaciones"/>
-          <span>He leído y acepto la Política para envío de comunicaciones comerciales.</span>
+          <span>He leído y acepto la política para el envío de comunicaciones comerciales.</span>
         </div>
         <div *ngIf="hasError('aceptarComunicaciones', 'requiredTrue')" class="text-red-500">Debe aceptar la política de comunicaciones comerciales.</div>
       </div>
