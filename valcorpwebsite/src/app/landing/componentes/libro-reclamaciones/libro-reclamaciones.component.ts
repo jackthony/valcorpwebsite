@@ -289,7 +289,7 @@ export default class LibroReclamacionesComponent implements OnInit {
   provincias: string[] = [];
   distritos: string[] = [];
   nombresDepartamentos: string[] = [];
-  proyectos = ['Proyecto1', 'Proyecto2'];
+  proyectos = ['Urb Villa Los Robles', 'Urb Los Huertos de San Jose'];
 
   constructor(private fb: FormBuilder, private dialog: MatDialog, private cdr: ChangeDetectorRef) {
     this.reclamoForm = this.fb.group({
@@ -358,35 +358,8 @@ export default class LibroReclamacionesComponent implements OnInit {
             this.mostrarNotiError = false;
             this.cdr.detectChanges();
           });
-  
-          // Send copy of the complaint to the client
-          const clientFormData = {
-            ...formData,        // Spread the original form data
-            correo: formData.correo // Use the client's email for the copy
-          };
-  
-          emailjs.send(
-            'service_0jss4tb',  // Same Service ID
-            'template_29ybmsm', // Same Template ID
-            clientFormData,      // Send email to client's email
-            'U8AJSYKAdhYUS25Qs' // Same User ID
-          ).then((result: EmailJSResponseStatus) => {
-            this.loading = false;
-            this.cdr.detectChanges();
-          }, (error) => {
-            this.loading = false;
-            this.mostrarNotiError = false;
-            this.cdr.detectChanges();
-          });
-        } else {
-          this.loading = false;
-          this.mostrarNotificacion = true;
-          this.mostrarNotiError = false;
-          this.cdr.detectChanges();
-          this.reclamoForm.markAllAsTouched();
-        }
-        this.reclamoForm.reset();
-        this.cdr.detectChanges();
+
+        } 
       }
     });
   }
