@@ -180,7 +180,12 @@
   .side-galley img{
     height: 200px;
   }
-
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
   h3{
     color: #fff;
     font-size: 45px;

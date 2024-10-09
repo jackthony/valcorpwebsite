@@ -41,7 +41,7 @@ h3{
   font-weight: 600;
 }
 p{
-  margin: 0 !important;
+  margin: 0 ;
 }
   mat-form-field {
     width: 100%;
@@ -143,16 +143,28 @@ p{
   }
 
   @media screen and (min-width:900px) {
+    span{
+      font-size: 14px;
+    }
     .gridContent{
       display: grid;
       gap: 15px;
       grid-template-columns: repeat(2, 1fr); /* Una sola columna en pantallas medianas */
 
     }
+    .titulo_proyectos{
+       font-size: 3rem !important;
+    }
   }
   
   /* Estilos responsivos para pantallas pequeñas (móviles) */
   @media (max-width: 600px) {
+    span{
+      font-size: 12px;
+    }
+    .p-parrafo{
+      font-size: 13px;
+    }
     form {
       gap: 12px;
       padding: 10px;
@@ -163,7 +175,9 @@ p{
       font-size: 16px; /* Mantiene el tamaño de la fuente en móviles */
       padding: 8px; /* Ajusta el padding */
     }
-  
+    .titulo_proyectos{
+      font-size: 2rem !important;
+   }
     button {
       padding: 15px 30px; /* Mantiene el botón más grande en móviles */
       font-size: 18px; /* Mantiene el tamaño de la fuente más grande */

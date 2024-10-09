@@ -1,8 +1,18 @@
 <section id="about">
     <div class="imagen_incio_nosotros">
+    @defer (on viewport) {
       <video  muted autoplay loop>
-       <source src="../../../../public/assets/nosotros_pages.mp4" alt="tractores" loading="lazy">
-      </video>
+        <source src="../../../../public/assets/nosotros_pages.mp4" alt="tractores" loading="lazy">
+       </video>
+    }@placeholder {
+      <div class="spinner">
+          <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+        </div>
+  }@loading {
+      <div class="spinner">
+          <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+        </div>
+  }
     </div>
 @defer (on viewport) {
   <div class="content_titulo">
@@ -31,13 +41,17 @@
           Ser la inmobiliaria líder en Chimbote reconocida por contribuir en la mejora del desarrollo urbano y ordenado del Este de Chimbote. Generando una versión moderna de la ciudad con proyectos innovadores y diseñadas en las necesidades de las familias modernas de Chimbote.
         </p>
        </div>
-        <img src="../../../../public/assets/VISIÓN.png" alt="ojo-vision" id="vision" loading="lazy" />
+        <img src="../../../../public/assets/VISION.png" alt="ojo-vision" id="vision" loading="lazy" />
     </div>
   </div>
 }@placeholder {
-  <p>Componentes</p>
+  <div class="spinner">
+      <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+    </div>
 }@loading {
-  <p>cargando...</p>
+  <div class="spinner">
+      <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+    </div>
 }
     
 @defer (on viewport) {
@@ -69,9 +83,13 @@
        </div>
   </div>
 }@placeholder {
-  <p>Componentes</p>
+  <div class="spinner">
+      <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+    </div>
 }@loading {
-  <p>cargando...</p>
+  <div class="spinner">
+      <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
+    </div>
 }
 
   </section>

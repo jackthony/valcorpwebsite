@@ -226,7 +226,7 @@ img{
   object-fit: cover;
 }
 .agua:hover .modal_detalles, .energia:hover .modal_detalles,.parques:hover .modal_detalles,.desague:hover .modal_detalles,.cerco:hover .modal_detalles,
- .pistas:hover .modal_detalles,.portico:hover .modal_detalles,.parques:hover .modal_detalles, .parrilas:hover .modal_detalles{
+ .pistas:hover .modal_detalles,.portico:hover .modal_detalles,.parques:hover .modal_detalles, .parrilas:hover .modal_detalles, .cancha:hover .modal_detalles{
    opacity: 1;
    visibility: visible;
 }
