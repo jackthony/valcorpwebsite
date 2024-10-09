@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  important:true,
   content: [
     './src/**/*.{html,ts}',  // Escanea todos los archivos HTML y TypeScript en la carpeta src
     './src/app/admin/**/*.{html,ts}',  // Archivos dentro de la carpeta admin

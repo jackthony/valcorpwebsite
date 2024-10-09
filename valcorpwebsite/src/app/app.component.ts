@@ -10,6 +10,7 @@ import { PieDePaginaComponent } from './landing/componentes/pie-de-pagina/pie-de
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { WhatsappButtonComponent } from './landing/componentes/whatsapp-button/whatsapp-button.component';
 import { RouterModule } from './app.routes'; // RouterModule for routing
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -30,5 +31,8 @@ import { RouterModule } from './app.routes'; // RouterModule for routing
   ]
 })
 export class AppComponent {
-  title = 'valcorpwebsite';
+  constructor(private titleService: Title) {
+    // Cambia el título de la página a lo que desees
+    this.titleService.setTitle('ValCorp');
+  }
 }

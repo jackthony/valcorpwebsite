@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { CUSTOM_ELEMENTS_SCHEMA, ChangeDetectionStrategy, Component, Signal, signal } from '@angular/core';
+import { MatIcon } from '@angular/material/icon';
 import { SwiperContainer, register } from 'swiper/element/bundle';
 register()
 @Component({
   selector: 'app-familia',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule,MatIcon],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './familia.component.html',
   styleUrls: ['./familia.component.scss'],

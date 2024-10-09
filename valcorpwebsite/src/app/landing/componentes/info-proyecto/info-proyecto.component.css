@@ -39,7 +39,7 @@ section::before{
 h3{
     width: 55%;
     color: #fff;
-    font-size: 4.5rem;
+    font-size: 4.1rem;
     display: block;
     font-weight: 600;
    padding: 10px 0 18px 0;
@@ -213,11 +213,15 @@ img{
 }
 
 
-
+@media screen and (max-width:1470px) {
+ h3{
+  font-size: 3.5rem;
+ }
+}
 
 @media screen and (max-width:1280px) {
     .content_titulo h3{
-        font-size: 3rem;
+        font-size: 2.6rem;
     }
     .content_info_proyecto_mas_detalles{
         width: 150px;

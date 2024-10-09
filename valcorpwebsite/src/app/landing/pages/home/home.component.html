@@ -1,22 +1,9 @@
 
-@defer (on viewport) {
-<section class="container_home">
-    <video autoplay muted loop>
-        <source src='../../../../public/assets/INTRO-1.mp4' type="video/mp4" loading="lazy">
-    </video>
-</section>
-
-}@placeholder {
-    <div class="spinner">
-        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
-      </div>
-}@loading {
-    <div class="spinner">
-        <mat-spinner></mat-spinner> <!-- Esto es un spinner de Angular Material, puedes usar otro si no lo tienes -->
-      </div>
-}
-
-
+    <section class="container_home">
+        <video autoplay muted loop>
+            <source src='../../../../public/assets/INTRO-1.mp4' type="video/mp4">
+        </video>
+    </section>
 
 @defer (on viewport) {
 <app-proyectos></app-proyectos>

@@ -63,13 +63,6 @@ h3{
       width: 100%;
     }
 
-    @media screen and(max-width:450px) {
-      .titulo{
-        font-size: 1.4rem;
-        font-weight: 500;
-      }
-    }
-
     h2{
       font-size: 45px;
       font-weight: bolder;
@@ -82,4 +75,34 @@ h3{
       margin: 0 0 30px 0 ;
       
   }
-  
+  mat-icon{
+    transition: 0.4s ease;
+  }
+  .absolute{
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+  }
+
+
+
+  swiper-slide:hover  .absolute{
+    opacity: 1;
+    visibility: visible;
+      background: #0000006c !important;
+  }
+
+
+
+  swiper-slide:hover mat-icon{
+    transform: scale(1.5);
+    transform: rotate(120deg); /* Gira el ícono 360 grados en hover */
+  }
+
+  @media screen and (max-width:450px) {
+
+    .absolute{
+      opacity: 1 !important;
+      visibility: visible !important;
+    }
+  }

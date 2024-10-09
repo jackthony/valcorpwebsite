@@ -327,13 +327,10 @@ img{
   left: 25%;
 
     }
-
   
     .content_titulo{
       padding: 5px 0;
     }
-    
-    
    .content_info_proyecto_mas_detalles{
     width: 100px;
     height: 100px;
@@ -351,12 +348,28 @@ img{
 }
 
 
-@media screen and (max-height:600px) {
-  .content_img_info_proyecto[_ngcontent-ng-c2658079684] img[_ngcontent-ng-c2658079684]{
-    transform:   translateY(10px) scale(1.5)
+@media screen and (max-height:600px) and (max-height:800px){
+  .content_img_info_proyecto img{
+    transform:   translateY(10px) scale(1.4);
   }
-  .content_info_proyecto_mas_detalles[_ngcontent-ng-c2658079684]{
+  .content_info_proyecto_mas_detalles{
     width: 120px;
     height: 120px;
   }
+  .modal_detalles{
+    width: 270px;
+    height: 270px;
+    top: 45px;
+    left: 75px;
+}
+ .robles{
+  width: 85px;
+  height: 80px;
+ }
+ .robles   .modal_detalles{
+  width: 230px;
+  height: 230px;
+  top: 25px;
+  left: 15px;
+}
 }

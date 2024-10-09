@@ -32,13 +32,12 @@ import { RouterModule, Routes } from '@angular/router';
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'home', 
     pathMatch: 'full'
   },
   {
     path: '**',
-    redirectTo: 'home',
-    pathMatch: 'full'
+    loadComponent: () => import('./landing/componentes/erro-404/erro-404.component')
   }
 ];
 
