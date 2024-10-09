@@ -8,6 +8,7 @@ module.exports = {
     './src/app/componentes/**/*.{html,ts}',   // Archivos dentro de componentes
     './src/app/pages/**/*.{html,ts}',   // Archivos dentro de pages
   ],
+  content: ['./src/app/*/.landing.{html,ts}'],
   theme: {
     extend: {
       fontFamily: {
