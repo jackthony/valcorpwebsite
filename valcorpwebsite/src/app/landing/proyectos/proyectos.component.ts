@@ -2,10 +2,11 @@ import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
 import { ProyectoComponent } from '../componentes/proyecto/proyecto.component';
 import { SwiperOptions } from 'swiper/types/swiper-options';
 import { SwiperContainer, register } from 'swiper/element/bundle';
+import { MatSpinner } from '@angular/material/progress-spinner';
 @Component({
   selector: 'app-proyectos',
   standalone: true,
-  imports: [ProyectoComponent],
+  imports: [ProyectoComponent,MatSpinner],
   schemas:[CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './proyectos.component.html',
   styleUrl: './proyectos.component.scss'

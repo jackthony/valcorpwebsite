@@ -11,6 +11,13 @@ section{
     flex-wrap: wrap;
 }
 
+.spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
 section::before {
     content: '';
     position: absolute;
