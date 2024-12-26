@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { BannerComponent } from '../../componentes/banner/banner.component';
 import { FacilidadesPagoComponent } from '../../componentes/facilidades-pago/facilidades-pago.component';
 import { InfoProyectoComponent } from '../../componentes/info-proyecto/info-proyecto.component';
@@ -9,6 +9,7 @@ import { MatProgressSpinner } from '@angular/material/progress-spinner';
 import { NgIf } from '@angular/common';
 import { OnInit } from '@angular/core';
 import { PradosProximamenteComponent } from "../../../layout/prados-proximamente/prados-proximamente.component";
+import { Meta, Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-proyecto-detalles',
@@ -19,6 +20,8 @@ import { PradosProximamenteComponent } from "../../../layout/prados-proximamente
 })
 export default class ProyectoDetallesComponent implements OnInit{
 
+  public title = inject(Title);
+  public meta = inject(Meta);
   ngOnInit(): void {
     this.scrollToTop()
   }

@@ -43,7 +43,7 @@ export default class ContactarComponent implements OnInit {
       const mensaje = this.formContact.value.mensaje;
 
       // Número de WhatsApp al que se enviará el mensaje
-      const telefonoWhatsApp = '+51970492990'; // Reemplaza con tu número de WhatsApp
+      const telefonoWhatsApp = '+51916792621'; // Reemplaza con tu número de WhatsApp
 
       // Crear el mensaje para WhatsApp
       const texto = `Hola, mi nombre es ${nombreCompleto}. Mi número es ${numero}, mi correo es ${correo}, y estoy interesado en el proyecto ${proyecto}. ${mensaje ? 'Mensaje adicional: ' + mensaje : ''}`;

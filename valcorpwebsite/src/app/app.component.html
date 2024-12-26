@@ -1,4 +1,5 @@
-<app-header/>
+<div *ngIf="!isLoading; else loading">
+    <app-header/>
 <router-outlet/>
 @defer (on viewport) {
     <app-pie-de-pagina></app-pie-de-pagina>
@@ -10,3 +11,10 @@
     <mat-spinner></mat-spinner> 
 }
 <app-whatsapp-button></app-whatsapp-button>
+</div>  
+
+<ng-template #loading>
+    <div class="loading-overlay">
+      <app-loading-spinner></app-loading-spinner>
+    </div>
+  </ng-template>
